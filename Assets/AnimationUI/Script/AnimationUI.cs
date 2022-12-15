@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 [ExecuteInEditMode]
@@ -19,9 +19,10 @@ public class AnimationUI : MonoBehaviour
         if(PlayOnStart)StartCoroutine(PlayAnimation());
     }
     public void Play() => StartCoroutine(PlayAnimation());
+    public void PlayReversed() => StartCoroutine(PlayReversedAnimation());
     IEnumerator PlayAnimation()
     {
-        LoadSingleton();
+        Singleton.LoadSingleton();
         for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
 
         foreach(Sequence sequence in AnimationSequence)
@@ -137,6 +138,134 @@ public class AnimationUI : MonoBehaviour
 
         atEndEvents?.Invoke(); //Function to call at end
 
+        atEndEvents = null;
+        atTimeEvents.Clear();
+        atTimes.Clear();
+    }
+
+
+    IEnumerator PlayReversedAnimation()
+    {
+        Singleton.LoadSingleton();
+        Array.Reverse(AnimationSequence);
+
+        for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
+        // for(int i = atTimeEvents.Count-1; i >= 0; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
+        
+        foreach(Sequence sequence in AnimationSequence)
+        {
+            if(sequence.SequenceType == Sequence.Type.Animation)
+            {
+                if(sequence.TargetComp == null)
+                {
+                    Debug.Log("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                
+                if(sequence.TargetType == Sequence.ObjectType.RectTransform)
+                {
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
+                        StartCoroutine(TaskAnchoredPosition(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchoredPositionEnd, sequence.AnchoredPositionStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalEulerAngles))
+                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalScale))
+                        StartCoroutine(TaskLocalScale(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
+                        StartCoroutine(TaskAnchorMax(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchorMaxEnd, sequence.AnchorMaxStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
+                        StartCoroutine(TaskAnchorMin(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchorMinEnd, sequence.AnchorMinStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
+                        StartCoroutine(TaskSizeDelta(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.SizeDeltaEnd, sequence.SizeDeltaStart, sequence.Duration
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
+                        StartCoroutine(TaskPivot(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.PivotEnd, sequence.PivotStart, sequence.Duration
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Transform)
+                {
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
+                        StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
+                            sequence.LocalPositionEnd, sequence.LocalPositionStart, sequence.Duration
+                        ));
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
+                            sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration
+                        ));
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                        StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
+                            sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Image)
+                {
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
+                        StartCoroutine(TaskColor(sequence.TargetComp.GetComponent<Image>(), 
+                            sequence.ColorEnd, sequence.ColorStart, sequence.Duration
+                        ));
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
+                        StartCoroutine(TaskFillAmount(sequence.TargetComp.GetComponent<Image>(), 
+                            sequence.FillAmountEnd, sequence.FillAmountStart, sequence.Duration
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        StartCoroutine(TaskAlpha(sequence.TargetComp.GetComponent<CanvasGroup>(), 
+                            sequence.AlphaEnd, sequence.AlphaStart, sequence.Duration
+                        ));
+                }
+            }
+            else if(sequence.SequenceType == Sequence.Type.Wait)
+            {
+                yield return new WaitForSecondsRealtime(sequence.Duration);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
+            {
+                Singleton.Instance.Game.SetActiveAllInput(!sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActive)
+            {
+                if(sequence.Target == null)
+                {
+                    // Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                sequence.Target.SetActive(!sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SFX)
+            {
+                if(sequence.SFX == null)
+                {
+                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                Singleton.Instance.Audio.PlaySound(sequence.SFX);
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sequence.SceneToLoad);
+            }
+            else if(sequence.SequenceType == Sequence.Type.UnityEvent)
+            {
+                sequence.Event?.Invoke();
+            }
+        }
+
+        atEndEvents?.Invoke(); //Function to call at end
+
+        Array.Reverse(AnimationSequence);
         atEndEvents = null;
         atTimeEvents.Clear();
         atTimes.Clear();
@@ -429,25 +558,7 @@ public class AnimationUI : MonoBehaviour
         };
     }
 
-    void LoadSingleton()
-    {
-        if(Singleton.Instance == null)
-        {
-            GameObject singleton = Resources.Load("SINGLETON") as GameObject;
-            if(singleton == null)
-            {
-                Debug.Log("SINGLETON not found in .../AnimationUI/Resources/SINGLETON. Please don't remove or move this to other folder.", singleton);
-                return;
-            }
 
-            PrefabUtility.InstantiatePrefab(singleton);
-            if(Singleton.Instance == null)
-            {
-                Debug.Log("Something went wrong with ", Singleton.Instance);
-                return;
-            }
-        }
-    }
     public delegate void Animation(float t);
     public Animation UpdateSequence;
 #region timing
@@ -478,7 +589,7 @@ public class AnimationUI : MonoBehaviour
     void InitFunction()//For preview
     {
         UpdateSequence = null;
-        LoadSingleton();
+        Singleton.LoadSingleton();
         foreach(Sequence sequence in AnimationSequence)
         {
             sequence.IsDone = false;

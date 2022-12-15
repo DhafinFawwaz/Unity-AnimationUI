@@ -15,8 +15,12 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] float _exitScale = 1f;
     [SerializeField] float _downScale  = 1.3f;
     [SerializeField] float _upScale  = 1f;
-    [SerializeField] Color _upColor  = Color.white;
+
+    [SerializeField] Color _enterColor  = Color.white;
+    [SerializeField] Color _exitColor  = Color.white;
     [SerializeField] Color _downColor  = new Color(0.8f, 0.8f, 0.8f,1);
+    [SerializeField] Color _upColor  = Color.white;
+    
     [SerializeField] Image _imageToResize;
 
     [SerializeField] Ease.Type _easeType = Ease.Type.OutBack;
@@ -45,13 +49,14 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             _pointerEnterEvent = new UnityEvent ();
             UnityEventTools.AddVoidPersistentListener(_pointerEnterEvent, EnterScaleAnimation);
-            UnityEventTools.AddVoidPersistentListener(_pointerEnterEvent, UpTintAnimation);
+            UnityEventTools.AddVoidPersistentListener(_pointerEnterEvent, EnterTintAnimation);
             UnityEventTools.AddIntPersistentListener(_pointerEnterEvent, PlaySound, 0);
         }
         if(_pointerExitEvent == null)
         {
             _pointerExitEvent = new UnityEvent ();
             UnityEventTools.AddVoidPersistentListener(_pointerExitEvent, ExitScaleAnimation);
+            UnityEventTools.AddVoidPersistentListener(_pointerExitEvent, ExitTintAnimation);
         }
         if(_pointerDownEvent == null)
         {
@@ -74,7 +79,12 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             _imageToResize = GetComponent<Image>();
             if(_imageToResize != null)
-            _upColor = _imageToResize.color;
+            {
+                _enterColor = _imageToResize.color;
+                _exitColor  = _imageToResize.color;
+                // _downColor  = _imageToResize.color;
+                _upColor    = _imageToResize.color;
+            }
         }
     }
     void OnValidate() => _easeFunction = Ease.GetEase(_easeType, _easePower);
@@ -123,6 +133,8 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void DownScaleAnimation(){StartCoroutine(TweenScale(_imageToResize.transform, _downScale));}
     public void UpScaleAnimation(){StartCoroutine(TweenScale(_imageToResize.transform, _upScale));}
 
+    public void EnterTintAnimation(){StartCoroutine(TweenTint(_imageToResize, _enterColor));}
+    public void ExitTintAnimation(){StartCoroutine(TweenTint(_imageToResize, _exitColor));}
     public void DownTintAnimation(){StartCoroutine(TweenTint(_imageToResize, _downColor));}
     public void UpTintAnimation(){StartCoroutine(TweenTint(_imageToResize, _upColor));}
 

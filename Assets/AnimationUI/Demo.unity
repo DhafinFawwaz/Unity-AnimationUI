@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.98950464}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -419,7 +419,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1893382901}
   m_Father: {fileID: 1936744054}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -445,8 +446,10 @@ MonoBehaviour:
   _exitScale: 1
   _downScale: 1.3
   _upScale: 1
-  _upColor: {r: 1, g: 0, b: 0, a: 0.98950464}
-  _downColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  _enterColor: {r: 1, g: 0, b: 0, a: 1}
+  _exitColor: {r: 1, g: 0, b: 0, a: 0}
+  _downColor: {r: 1, g: 1, b: 1, a: 1}
+  _upColor: {r: 1, g: 0, b: 0, a: 0}
   _imageToResize: {fileID: 1399520411}
   _easeType: 3
   _easePower: 3
@@ -460,18 +463,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1936744055}
-        m_TargetAssemblyTypeName: AnimationUI, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -494,7 +485,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1399520414}
         m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
-        m_MethodName: UpTintAnimation
+        m_MethodName: EnterTintAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -522,6 +513,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1399520414}
         m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
         m_MethodName: ExitScaleAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1399520414}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: ExitTintAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -620,7 +623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511, y: -200}
+  m_AnchoredPosition: {x: 43.93011, y: 100}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516647970
@@ -718,6 +721,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+--- !u!1 &1893382900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893382901}
+  - component: {fileID: 1893382903}
+  - component: {fileID: 1893382902}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1893382901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893382900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1399520413}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 174.9977, y: 41.0734}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893382902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893382900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1893382903
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893382900}
+  m_CullTransparentMesh: 1
 --- !u!1 &1899209722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationSequence:
-  - AtTime: At 0s [Wait 2s]
+  - AtTime: At 0s [Wait 0.5s]
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
@@ -1063,7 +1142,7 @@ MonoBehaviour:
     EasePower: 3
     TargetType: 4
     TargetComp: {fileID: 1936744054}
-    Duration: 2
+    Duration: 0.5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1102,11 +1181,11 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 1
     AlphaEnd: 0
-  - AtTime: At 2s [Canvas] [CanvasGroup]
-    StartTime: 2
+  - AtTime: At 0.5s [Canvas] [CanvasGroup]
+    StartTime: 0.5
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 20
+    PropertyRectHeight: 180
     PropertyRectY: 195
     SequenceType: 0
     EaseType: 1
@@ -1117,7 +1196,7 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 0
+    IsUnfolded: 1
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
@@ -1150,14 +1229,14 @@ MonoBehaviour:
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: -1
-    AlphaStart: 0
+    AlphaStart: 0.497
     AlphaEnd: 1
-  - AtTime: At 2s [Wait 0.5s]
-    StartTime: 2
+  - AtTime: At 0.5s [Wait 0.5s]
+    StartTime: 0.5
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 217
+    PropertyRectY: 378
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1202,12 +1281,12 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 0
     AlphaEnd: 1
-  - AtTime: At 2.5s [Image (3)] [RectTransform]
-    StartTime: 2.5
+  - AtTime: At 1s [Image (3)] [RectTransform]
+    StartTime: 1
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 239
+    PropertyRectY: 400
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1252,12 +1331,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 2.5s [Wait 1s]
-    StartTime: 2.5
+  - AtTime: At 1s [Wait 1s]
+    StartTime: 1
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 261
+    PropertyRectY: 422
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1302,12 +1381,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 3.5s [Image (3)] [RectTransform]
-    StartTime: 3.5
+  - AtTime: At 2s [Image (3)] [RectTransform]
+    StartTime: 2
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 283
+    PropertyRectY: 444
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1352,12 +1431,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 3.5s [Wait 0.5s]
-    StartTime: 3.5
+  - AtTime: At 2s [Wait 0.5s]
+    StartTime: 2
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 305
+    PropertyRectY: 466
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1402,62 +1481,12 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 0
     AlphaEnd: 1
-  - AtTime: At 4s [Demo2] [LoadScene]
-    StartTime: 4
+  - AtTime: At 2.5s [Canvas] [CanvasGroup]
+    StartTime: 2.5
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 327
-    SequenceType: 5
-    EaseType: 1
-    EasePower: 3
-    TargetType: 4
-    TargetComp: {fileID: 1936744054}
-    Duration: 0
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 1
-    IsDone: 0
-    Target: {fileID: 0}
-    IsActivating: 0
-    SFX: {fileID: 0}
-    SceneToLoad: Demo2
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 0, y: -267, z: 0}
-    AnchoredPositionEnd: {x: 0, y: -267, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
-    SizeDeltaStart: {x: 0, y: 0, z: 0}
-    SizeDeltaEnd: {x: 0, y: 0, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0, y: 0, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0, y: 0, z: 0}
-    PivotStart: {x: 0, y: 0, z: 0}
-    PivotEnd: {x: 0, y: 0, z: 0}
-    TargetTransTask: 0
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 0
-    ColorStart: {r: 0, g: 0, b: 0, a: 0}
-    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: -1
-    AlphaStart: 1
-    AlphaEnd: 0
-  - AtTime: At 4s [Canvas] [CanvasGroup]
-    StartTime: 4
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 389
+    PropertyRectHeight: 180
+    PropertyRectY: 488
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1467,7 +1496,7 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 0
+    IsUnfolded: 1
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
@@ -1501,19 +1530,19 @@ MonoBehaviour:
     FillAmountEnd: 0
     TargetCgTask: -1
     AlphaStart: 1
-    AlphaEnd: 0
-  - AtTime: At 4s [Unassigned] [SetActive to False]
-    StartTime: 4
+    AlphaEnd: 0.597
+  - AtTime: At 2.5s [Wait 0.5s]
+    StartTime: 2.5
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 80
-    PropertyRectY: 411
-    SequenceType: 3
+    PropertyRectHeight: 60
+    PropertyRectY: 671
+    SequenceType: 1
     EaseType: 1
     EasePower: 3
     TargetType: 4
     TargetComp: {fileID: 1936744054}
-    Duration: 0
+    Duration: 0.5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1551,10 +1580,10 @@ MonoBehaviour:
     FillAmountEnd: 0
     TargetCgTask: -1
     AlphaStart: 1
-    AlphaEnd: 0
-  PlayOnStart: 1
+    AlphaEnd: 0.597
+  PlayOnStart: 0
   CurrentTime: 0
-  TotalDuration: 6
+  TotalDuration: 4.5
   IsPlayingInEditMode: 0
 --- !u!225 &1936744056
 CanvasGroup:
@@ -1579,6 +1608,7 @@ GameObject:
   - component: {fileID: 2118498909}
   - component: {fileID: 2118498908}
   - component: {fileID: 2118498907}
+  - component: {fileID: 2118498910}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -1644,3 +1674,162 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -132}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2118498910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118498906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f82ec70748d4294b8c3b47304372236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.1
+  _enterScale: 1.2
+  _exitScale: 1
+  _downScale: 1.3
+  _upScale: 1
+  _enterColor: {r: 1, g: 1, b: 1, a: 1}
+  _exitColor: {r: 1, g: 1, b: 1, a: 1}
+  _downColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  _upColor: {r: 0, g: 0, b: 1, a: 0.1356326}
+  _imageToResize: {fileID: 2118498907}
+  _easeType: 3
+  _easePower: 3
+  _pointerClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1936744055}
+        m_TargetAssemblyTypeName: AnimationUI, Assembly-CSharp
+        m_MethodName: PlayReversed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _pointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: EnterScaleAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: UpTintAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _pointerExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: ExitScaleAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _pointerDownEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: DownScaleAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: DownTintAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _pointerUpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: UpScaleAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2118498910}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: UpTintAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
