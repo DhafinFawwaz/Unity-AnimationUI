@@ -3,7 +3,6 @@ using UnityEngine.Audio;
 
 #if UNITY_EDITOR
 using UnityEditor;
-[ExecuteInEditMode]
 #endif
 public class Singleton : MonoBehaviour
 {
