@@ -1,0 +1,94 @@
+        // if(sequenceType != Sequence.Type.UnityEvent && (Sequence.ObjectType)property.FindPropertyRelative("TargetType").enumValueIndex != Sequence.ObjectType.UnityEventDynamic)
+            // for wrong label
+            // if((Sequence.ObjectType)property.FindPropertyRelative("TargetType").enumValueIndex == Sequence.ObjectType.UnityEventDynamic)
+            // {
+            //     float time = property.FindPropertyRelative("StartTime").floatValue;
+            //     property.FindPropertyRelative("IsUnfolded").boolValue //Fix for when the label is wrong
+            //         = EditorGUI.Foldout(nextPosition, property.FindPropertyRelative("IsUnfolded").boolValue, "At "+time.ToString()+"s [UnityEventDynamic]");
+                
+            //     if(!property.FindPropertyRelative("IsUnfolded").boolValue)return;
+            // }
+
+
+
+
+
+
+
+Sequence.ObjectType targetType = (Sequence.ObjectType)serializedProperty.FindPropertyRelative("TargetType").enumValueIndex;
+
+                if(targetType == Sequence.ObjectType.RectTransform)
+                {
+                    Sequence.RtTask targetRtTask = (Sequence.RtTask)serializedProperty.FindPropertyRelative("TargetRtTask").enumValueIndex;
+                    
+                    if(targetRtTask == Sequence.RtTask.None)return;
+                    else if(targetRtTask == Sequence.RtTask.AnchoredPosition)
+                    {
+                    rect.y += _height;
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set Start"))
+                        {
+                            Debug.Log("Set Start");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("AnchoredPositionStart"), GUIContent.none
+                        );
+
+                        rect.y += _height;
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set End"))
+                        {
+                            Debug.Log("Set End");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("AnchoredPositionEnd"), GUIContent.none
+                        );
+                    }
+                    else if(targetRtTask == Sequence.RtTask.LocalScale)
+                    {
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set Start"))
+                        {
+                            Debug.Log("Set Start");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("LocalRotationStart"), GUIContent.none
+                        );
+
+                        rect.y += _height;
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set End"))
+                        {
+                            Debug.Log("Set End");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("LocalRotationEnd"), GUIContent.none
+                        );
+                    }
+                    else if(targetRtTask == Sequence.RtTask.LocalRotation)
+                    {
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set Start"))
+                        {
+                            Debug.Log("Set Start");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("LocalRotationStart"), GUIContent.none
+                        );
+
+                        rect.y += _height;
+                        if(GUI.Button(new Rect(rect.x, rect.y, rect.width/4-5, _height),"Set End"))
+                        {
+                            Debug.Log("Set End");
+                        }
+                        EditorGUI.PropertyField(new Rect(rect.x+rect.width/4, rect.y, rect.width*3/4, _height),
+                            serializedProperty.FindPropertyRelative("LocalRotationEnd"), GUIContent.none
+                        );
+                    }
+                    
+                }
+                else if(targetType == Sequence.ObjectType.Transform)
+                {
+
+                }
+                else if(targetType == Sequence.ObjectType.Image)
+                {
+                    
+                }
+
+

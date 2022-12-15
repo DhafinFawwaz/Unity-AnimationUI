@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEditor;
+using System.Collections;
 
 [CustomEditor(typeof(AnimationUI))]
 public class AnimationUIInspector : Editor
 {
+    
     public override void OnInspectorGUI()
     {
         AnimationUI animationUI = (AnimationUI)target;
@@ -15,11 +17,78 @@ public class AnimationUIInspector : Editor
             return;
         }
 
+#region buttons
+        if(!animationUI.IsPlaying)
+        {
+            if(GUILayout.Button("Preview Animation"))
+            {
+                animationUI.PreviewAnimation();
+            }
+        }
+        else 
+        {
+            Color defaultGUIColor = GUI.backgroundColor;
+            GUI.backgroundColor = Color.red;
+            if(GUILayout.Button("Stop Animation"))
+            {
+                animationUI.IsPlaying = false;
+            }
+            GUI.backgroundColor = defaultGUIColor;
+        }
+        GUILayout.BeginHorizontal();
+            if(GUILayout.Button("Preview Start"))
+            {
+                animationUI.PreviewStart();
+                
+            }
+            else if(GUILayout.Button("Preview End"))
+            {
+                animationUI.PreviewEnd();
+            }
+        GUILayout.EndHorizontal();
+#endregion buttons
+
+#region timing
+        animationUI.InitTime();
+        animationUI.CurrentTime = GUILayout.HorizontalSlider(animationUI.CurrentTime, 
+            0, animationUI.TotalDuration, GUILayout.ExpandWidth(true), GUILayout.Height(20));
+        if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+
+        Color defaultColor = GUI.backgroundColor;
+        GUI.backgroundColor = new Color(0.2f, 1, 0.2f);
+        Rect position = GUILayoutUtility.GetLastRect();
+        EditorGUI.ProgressBar(position, animationUI.CurrentTime/animationUI.TotalDuration, 
+            Mathf.Clamp((Mathf.Round(animationUI.CurrentTime*100)/100), 0, 100)
+                .ToString()+"/"+animationUI.TotalDuration.ToString()+" Seconds, ["+(Mathf.Round(animationUI.CurrentTime/animationUI.TotalDuration*10000)/100)
+                .ToString()+"%]"
+        );
+        GUI.backgroundColor = defaultColor;
+        
+        DrawDefaultInspector();
+
+#endregion timing
+
+#region List
         float _currentTime = 0;
+        
+        Rect rect = GUILayoutUtility.GetLastRect();
+
+        if(animationUI.AnimationSequence.Length > 0)
+            if(animationUI.AnimationSequence[0].PropertyRectY < 115)return; // prevent drawing the white element progress when list is not expanded
+        
         foreach(Sequence sequence in animationUI.AnimationSequence)
         {
-            sequence.AtTime = "At "+_currentTime.ToString() + "s";
+            Rect currentRect = new Rect(rect.x, sequence.PropertyRectY-3, 5, sequence.PropertyRectHeight+2);
+            if(animationUI.CurrentTime >= sequence.StartTime)
+            {
+                EditorGUI.DrawRect(currentRect, new Color(0.2f, 1, 0.2f, 0.4f));
+            }
 
+
+            sequence.AtTime = "At "+_currentTime.ToString() + "s";
+            sequence.StartTime = _currentTime;
+
+            if(sequence.Duration < 0)sequence.Duration = 0;// Clamp
             if(sequence.SequenceType == Sequence.Type.Animation)
             {
                 if(sequence.TargetComp != null)
@@ -57,7 +126,7 @@ public class AnimationUIInspector : Editor
                             // sequence.AtTime += " [Unassigned] [Transform]";
                         }
                     }
-                    else if(sequence.TargetType == Sequence.ObjectType.UnityEvent)
+                    else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                     {
                         sequence.AtTime += " [UnityEvent]";
                     }
@@ -72,15 +141,25 @@ public class AnimationUIInspector : Editor
                         sequence.AtTime += " [Unassigned] [Transform]";
                     else if(sequence.TargetType == Sequence.ObjectType.Image)
                         sequence.AtTime += " [Unassigned] [Image]";
-                    else if(sequence.TargetType == Sequence.ObjectType.UnityEvent)
+                    else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                         sequence.AtTime += " [UnityEvent]";
                 }
+
+#region preview element
+                if(sequence.TriggerStart)
+                {
+                    sequence.TriggerStart = false;
+                }
+                else if(sequence.TriggerEnd)
+                {
+                    sequence.TriggerEnd = false;
+                }
+#endregion preview element
             }
 
             else if(sequence.SequenceType == Sequence.Type.Wait)
             {
                 _currentTime += sequence.Duration;
-                sequence.StartTime = _currentTime;
                 sequence.AtTime += " [Wait "+sequence.Duration+"s]";
             }
             else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
@@ -107,11 +186,11 @@ public class AnimationUIInspector : Editor
             }
             else if(sequence.SequenceType == Sequence.Type.UnityEvent)
             {
-                sequence.AtTime += " [Custom] [UnityEvent]";
+                sequence.AtTime += " [UnityEvent]";
             }
         }
 
-        DrawDefaultInspector();
     }
+#endregion List
 
 }
