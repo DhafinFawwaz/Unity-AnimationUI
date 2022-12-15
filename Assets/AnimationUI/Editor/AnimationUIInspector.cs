@@ -18,7 +18,7 @@ public class AnimationUIInspector : Editor
         }
 
 #region buttons
-        if(!animationUI.IsPlaying)
+        if(!animationUI.IsPlayingInEditMode)
         {
             if(GUILayout.Button("Preview Animation"))
             {
@@ -31,7 +31,7 @@ public class AnimationUIInspector : Editor
             GUI.backgroundColor = Color.red;
             if(GUILayout.Button("Stop Animation"))
             {
-                animationUI.IsPlaying = false;
+                animationUI.IsPlayingInEditMode = false;
             }
             GUI.backgroundColor = defaultGUIColor;
         }
@@ -50,9 +50,14 @@ public class AnimationUIInspector : Editor
 
 #region timing
         animationUI.InitTime();
-        animationUI.CurrentTime = GUILayout.HorizontalSlider(animationUI.CurrentTime, 
+        // animationUI.CurrentTime
+        float sliderValue = GUILayout.HorizontalSlider(animationUI.CurrentTime, 
             0, animationUI.TotalDuration, GUILayout.ExpandWidth(true), GUILayout.Height(20));
-        if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+        if(sliderValue != animationUI.CurrentTime) //Happens when dragging progess bar
+        {
+            animationUI.CurrentTime = sliderValue;
+            if(!animationUI.IsPlayingInEditMode)animationUI.UpdateBySlider();
+        }
 
         Color defaultColor = GUI.backgroundColor;
         GUI.backgroundColor = new Color(0.2f, 1, 0.2f);
@@ -98,7 +103,12 @@ public class AnimationUIInspector : Editor
                     sequence.AtTime += " ["+sequence.TargetComp.name+"]";
                     if(sequence.TargetType == Sequence.ObjectType.Automatic)
                     {
-                        if(sequence.TargetComp.GetComponent<RectTransform>() != null)
+                        if(sequence.TargetComp.GetComponent<CanvasGroup>() != null)
+                        {
+                            sequence.TargetType = Sequence.ObjectType.CanvasGroup;
+                            sequence.AtTime += " [CanvasGroup]";
+                        }
+                        else if(sequence.TargetComp.GetComponent<RectTransform>() != null)
                         {
                             sequence.TargetType = Sequence.ObjectType.RectTransform;
                             sequence.AtTime += " [RectTransform]";
@@ -133,7 +143,14 @@ public class AnimationUIInspector : Editor
                         else
                         {
                             sequence.TargetComp = null;
-                            // sequence.AtTime += " [Unassigned] [Transform]";
+                        }
+                    }
+                    else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                    {
+                        if(sequence.TargetComp.GetComponent<CanvasGroup>() != null)sequence.AtTime += " [CanvasGroup]";
+                        else
+                        {
+                            sequence.TargetComp = null;
                         }
                     }
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
@@ -151,6 +168,8 @@ public class AnimationUIInspector : Editor
                         sequence.AtTime += " [Unassigned] [Transform]";
                     else if(sequence.TargetType == Sequence.ObjectType.Image)
                         sequence.AtTime += " [Unassigned] [Image]";
+                    else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                        sequence.AtTime += " [Unassigned] [CanvasGroup]";
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                         sequence.AtTime += " [UnityEvent]";
                 }
@@ -200,13 +219,13 @@ public class AnimationUIInspector : Editor
             {
                 sequence.TriggerStart = false;
                 animationUI.CurrentTime = sequence.StartTime-0.02f;
-                if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+                if(!animationUI.IsPlayingInEditMode)animationUI.UpdateBySlider();
             }
             else if(sequence.TriggerEnd)
             {
                 sequence.TriggerEnd = false;
                 animationUI.CurrentTime = sequence.StartTime+sequence.Duration;
-                if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+                if(!animationUI.IsPlayingInEditMode)animationUI.UpdateBySlider();
             }
 #endregion preview element
         }

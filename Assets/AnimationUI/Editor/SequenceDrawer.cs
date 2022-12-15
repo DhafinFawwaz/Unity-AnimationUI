@@ -61,6 +61,11 @@ public class SequenceDrawer : PropertyDrawer
                 if(imgTask.HasFlag(Sequence.ImgTask.Color))totalHeight+=_height*3;
                 if(imgTask.HasFlag(Sequence.ImgTask.FillAmount))totalHeight+=_height*3;
             }
+            else if(objectType == Sequence.ObjectType.CanvasGroup)
+            {
+                Sequence.CgTask cgTask = (Sequence.CgTask)property.FindPropertyRelative("TargetCgTask").enumValueFlag;
+                if(cgTask.HasFlag(Sequence.CgTask.Alpha))totalHeight+=_height*3;
+            }
 
 
 
@@ -366,6 +371,41 @@ public class SequenceDrawer : PropertyDrawer
                 if(imgTask.HasFlag(Sequence.ImgTask.FillAmount))DrawImgTask("FillAmount");
             }
 
+            else if(objectType == Sequence.ObjectType.CanvasGroup)
+            {
+                EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("TargetCgTask"), new GUIContent("Task"));
+                void DrawCgTask(string name)
+                {
+                    nextPosition.y += _height;
+                    EditorGUI.LabelField(new Rect(nextPosition.x, nextPosition.y, nextPosition.width, _height),
+                        new GUIContent(name)
+                    );
+                
+                    nextPosition.y += _height;
+                    if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set Start"))
+                    {
+                        if(name == "Alpha")property.FindPropertyRelative(name+"Start").floatValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<RectTransform>().GetComponent<CanvasGroup>().alpha;
+                    }
+                    EditorGUI.PropertyField(
+                        new Rect(nextPosition.x+nextPosition.width/4, nextPosition.y, nextPosition.width*3/4, _height),
+                        property.FindPropertyRelative(name+"Start"), GUIContent.none
+                    );
+
+                    nextPosition.y += _height;
+                    if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set End"))
+                    {
+                        if(name == "Alpha")property.FindPropertyRelative(name+"End").floatValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<RectTransform>().GetComponent<CanvasGroup>().alpha;
+                    }
+                    EditorGUI.PropertyField(
+                        new Rect(nextPosition.x+nextPosition.width/4, nextPosition.y, nextPosition.width*3/4, _height),
+                        property.FindPropertyRelative(name+"End"), GUIContent.none
+                    );
+                }
+                Sequence.CgTask cgTask = (Sequence.CgTask)property.FindPropertyRelative("TargetCgTask").enumValueFlag;
+                if(cgTask.HasFlag(Sequence.CgTask.Alpha))DrawCgTask("Alpha");
+            }
 
             
 

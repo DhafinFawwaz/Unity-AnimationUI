@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
     }
     void PlayDefaultSound()
     {
+        if(_defaultSound != null)
         _soundSource.PlayOneShot(_defaultSound);
     }
 

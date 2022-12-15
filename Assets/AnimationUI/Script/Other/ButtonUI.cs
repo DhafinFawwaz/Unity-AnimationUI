@@ -73,6 +73,7 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if(_imageToResize == null)
         {
             _imageToResize = GetComponent<Image>();
+            if(_imageToResize != null)
             _upColor = _imageToResize.color;
         }
     }
@@ -82,10 +83,12 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void Start() => _easeFunction = Ease.GetEase(_easeType, _easePower);
     public void PlaySound(AudioClip audioClip)
     {
+        if(Singleton.Instance != null)
         Singleton.Instance.Audio.PlaySound(audioClip);
     }
     public void PlaySound(int index)
     {
+        if(Singleton.Instance != null)
         Singleton.Instance.Audio.PlaySound(index);
     }
 

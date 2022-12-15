@@ -19,7 +19,7 @@ public class Sequence
     public Ease.Type EaseType = Ease.Type.Out;
     public Ease.Power EasePower = Ease.Power.Quart;
     public enum ObjectType{// Only for Animation
-        Automatic, RectTransform, Transform, Image, UnityEventDynamic
+        Automatic, RectTransform, Transform, Image, CanvasGroup, UnityEventDynamic
     }
     public ObjectType TargetType = ObjectType.Automatic;
     
@@ -128,8 +128,17 @@ public class Sequence
     [Range(0, 1)] public float FillAmountEnd;
 #endregion Image
 
-    // public delegate void Animation(float t);
-    // public Animation Update;
+#region CanvasGroup
+    [System.Flags]
+    public enum CgTask
+    {
+        None = 0,
+        Alpha = 1 << 0,
+    }
+    public CgTask TargetCgTask = CgTask.Alpha;
+    [Range(0, 1)] public float AlphaStart;
+    [Range(0, 1)] public float AlphaEnd;
+#endregion CanvasGroup
     public Ease.Function EaseFunction;
     public void Init()
     {

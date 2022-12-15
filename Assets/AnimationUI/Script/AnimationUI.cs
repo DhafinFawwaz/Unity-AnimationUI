@@ -10,13 +10,10 @@ using UnityEditor;
 public class AnimationUI : MonoBehaviour
 {
     public Sequence[] AnimationSequence;
-    public AnimationUI Play()
-    {
-        StartCoroutine(PlayAnimation());
-        return this;
-    }
+    public void Play() => StartCoroutine(PlayAnimation());
     IEnumerator PlayAnimation()
     {
+        LoadSingleton();
         for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
 
         foreach(Sequence sequence in AnimationSequence)
@@ -86,6 +83,13 @@ public class AnimationUI : MonoBehaviour
                             sequence.FillAmountStart, sequence.FillAmountEnd, sequence.Duration
                         ));
                 }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        StartCoroutine(TaskAlpha(sequence.TargetComp.GetComponent<CanvasGroup>(), 
+                            sequence.AlphaStart, sequence.AlphaEnd, sequence.Duration
+                        ));
+                }
             }
             else if(sequence.SequenceType == Sequence.Type.Wait)
             {
@@ -131,7 +135,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.anchoredPosition = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -143,7 +147,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.localScale = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -155,7 +159,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.localEulerAngles = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -167,7 +171,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.anchorMax = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -179,7 +183,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.anchorMin = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -191,7 +195,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.sizeDelta = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -203,7 +207,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             rt.pivot = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -218,7 +222,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             trans.localPosition = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -230,7 +234,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             trans.localScale = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -242,7 +246,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             trans.localEulerAngles = Vector3.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -257,7 +261,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             img.color = Color.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -269,7 +273,7 @@ public class AnimationUI : MonoBehaviour
         float t = (Time.time-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp01((Time.time-startTime)/duration);
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
             img.fillAmount = Mathf.LerpUnclamped(start, end, Ease.InOutQuart(t));
             yield return null;
         }
@@ -277,6 +281,20 @@ public class AnimationUI : MonoBehaviour
     }
 #endregion ImageTask
 
+#region CanvasGroupTask
+    IEnumerator TaskAlpha(CanvasGroup cg, float start, float end, float duration)
+    {
+        float startTime = Time.time;
+        float t = (Time.time-startTime)/duration;
+        while (t <= 1)
+        {
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            cg.alpha = Mathf.LerpUnclamped(start, end, Ease.InOutQuart(t));
+            yield return null;
+        }
+        cg.alpha = end;
+    }
+#endregion CanvasGroupTask
 #endregion Tasks
 
 #region Event
@@ -324,32 +342,30 @@ public class AnimationUI : MonoBehaviour
     }
     void Update()
     {
+        if(Application.isPlaying)return;
         ForceRepaint();
 
-        if(IsPlaying && CurrentTime < TotalDuration)
+        if(IsPlayingInEditMode && CurrentTime < TotalDuration)
         {
             CurrentTime = Mathf.Clamp(Time.time - _startTime, 0, TotalDuration);
             UpdateSequence(CurrentTime);
         } 
         else
         {
-            if(UpdateSequence != null && IsPlaying)UpdateSequence(TotalDuration); //Make sure the latest frame is called
-            IsPlaying = false;
+            if(UpdateSequence != null && IsPlayingInEditMode)UpdateSequence(TotalDuration); //Make sure the latest frame is called
+            IsPlayingInEditMode = false;
         }
     }
     public void UpdateBySlider()
     {
-        if(IsPlaying)return;
-        if(UpdateSequence == null)
-        {
-            InitFunction();
-            if(UpdateSequence == null)return;
-        }
+        if(Application.isPlaying)return;
+        if(IsPlayingInEditMode)return;
+        InitFunction();
         UpdateSequence(CurrentTime);
     }
     [HideInInspector] public float CurrentTime = 0; // Don't forget this variable might be in build
     [HideInInspector] public float TotalDuration = 0;
-    [HideInInspector] public bool IsPlaying = false;
+    [HideInInspector] public bool IsPlayingInEditMode = false;
     float _startTime = 0;
     public void PreviewAnimation()
     {
@@ -361,7 +377,7 @@ public class AnimationUI : MonoBehaviour
         }
         _startTime = Time.time;
         CurrentTime = 0;
-        IsPlaying = true;
+        IsPlayingInEditMode = true;
         UpdateSequence(0);// Make sure the first frame is called
     }
     public void PreviewStart()
@@ -373,7 +389,7 @@ public class AnimationUI : MonoBehaviour
             return;
         }
         CurrentTime = 0;
-        IsPlaying = false;
+        IsPlayingInEditMode = false;
         UpdateSequence(0);
     }
     public void PreviewEnd()
@@ -385,7 +401,7 @@ public class AnimationUI : MonoBehaviour
             Debug.Log("No animation exist");
             return;
         }
-        IsPlaying = false;
+        IsPlayingInEditMode = false;
         CurrentTime = TotalDuration;
         UpdateSequence(Mathf.Clamp01(TotalDuration));
     }
@@ -397,6 +413,25 @@ public class AnimationUI : MonoBehaviour
         };
     }
 
+    void LoadSingleton()
+    {
+        if(Singleton.Instance == null)
+        {
+            GameObject singleton = Resources.Load("SINGLETON") as GameObject;
+            if(singleton == null)
+            {
+                Debug.Log("SINGLETON not found in .../AnimationUI/Resources/SINGLETON. Please don't remove or move this to other folder.", singleton);
+                return;
+            }
+
+            PrefabUtility.InstantiatePrefab(singleton);
+            if(Singleton.Instance == null)
+            {
+                Debug.Log("Something went wrong with ", Singleton.Instance);
+                return;
+            }
+        }
+    }
     public delegate void Animation(float t);
     public Animation UpdateSequence;
 #region timing
@@ -427,22 +462,7 @@ public class AnimationUI : MonoBehaviour
     void InitFunction()
     {
         UpdateSequence = null;
-        if(Singleton.Instance == null)
-        {
-            GameObject singleton = Resources.Load("Prefab/SINGLETON") as GameObject;
-            if(Singleton.Instance == null)
-            {
-                Debug.Log("SINGLETON not found in Assets/Prefab/SINGLETON. Please don't remove or move this.", singleton);
-                return;
-            }
-
-            PrefabUtility.InstantiatePrefab(singleton);
-            if(Singleton.Instance == null)
-            {
-                Debug.Log("Something went wrong with ", Singleton.Instance);
-                return;
-            }
-        }
+        LoadSingleton();
         foreach(Sequence sequence in AnimationSequence)
         {
             sequence.IsDone = false;
@@ -457,34 +477,55 @@ public class AnimationUI : MonoBehaviour
                 if(sequence.TargetType == Sequence.ObjectType.RectTransform)
                 {
                     RectTransform rt = sequence.TargetComp.GetComponent<RectTransform>();
-                    void RtAnchoredPosition(float t) 
-                        => rt.anchoredPosition
+                    void RtAnchoredPosition(float t)
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.anchoredPosition
                         = Vector3.LerpUnclamped(sequence.AnchoredPositionStart, sequence.AnchoredPositionEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
-                    void RtLocalEulerAngles(float t) 
-                        => rt.localEulerAngles
+                    }
+                    void RtLocalEulerAngles(float t)
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.localEulerAngles
                         = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesStart,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void RtLocalScale(float t) 
-                        => rt.localScale
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.localScale
                         = Vector3.LerpUnclamped(sequence.LocalScaleStart, sequence.LocalScaleEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void RtSizeDelta(float t) 
-                        => rt.sizeDelta
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.sizeDelta
                         = Vector3.LerpUnclamped(sequence.SizeDeltaStart, sequence.SizeDeltaEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
-                    void AnchorMin(float t) 
-                        => rt.sizeDelta
+                    }    
+                    void AnchorMin(float t)
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.sizeDelta
                         = Vector3.LerpUnclamped(sequence.AnchorMinStart, sequence.AnchorMinEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void AnchorMax(float t) 
-                        => rt.sizeDelta
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.sizeDelta
                         = Vector3.LerpUnclamped(sequence.AnchorMaxStart, sequence.AnchorMaxStart,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void Pivot(float t) 
-                        => rt.sizeDelta
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        rt.sizeDelta
                         = Vector3.LerpUnclamped(sequence.PivotStart, sequence.PivotStart,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     
                     
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
@@ -507,17 +548,26 @@ public class AnimationUI : MonoBehaviour
                 {
                     Transform trans = sequence.TargetComp.transform;
                     void TransLocalPosition(float t) 
-                        => trans.localPosition
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        trans.localPosition
                         = Vector3.LerpUnclamped(sequence.LocalPositionStart, sequence.LocalPositionEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
-                    void TransLocalEulerAngles(float t) 
-                        => trans.localEulerAngles
+                    }
+                    void TransLocalEulerAngles(float t)
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        trans.localEulerAngles
                         = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesStart,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void TransLocalScale(float t) 
-                        => trans.localScale
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        trans.localScale
                         = Vector3.LerpUnclamped(sequence.LocalScaleStart, sequence.LocalScaleEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     
                     if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
                         UpdateSequence += TransLocalPosition;
@@ -530,25 +580,48 @@ public class AnimationUI : MonoBehaviour
                 {
                     Image img = sequence.TargetComp.GetComponent<Image>();
                     void TransColor(float t) 
-                        => img.color
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        img.color
                         = Color.LerpUnclamped(sequence.ColorStart, sequence.ColorEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     void TransFillAmount(float t) 
-                        => img.fillAmount
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        img.fillAmount
                         = Mathf.LerpUnclamped(sequence.FillAmountStart, sequence.FillAmountEnd,
                             sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
                     
                     if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
                         UpdateSequence += TransColor;
                     if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
                         UpdateSequence += TransFillAmount;
                 }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    CanvasGroup cg = sequence.TargetComp.GetComponent<CanvasGroup>();
+                    void CgAlpha(float t) 
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        cg.alpha
+                        = Mathf.LerpUnclamped(sequence.AlphaStart, sequence.AlphaEnd,
+                            sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                    }
+                    
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        UpdateSequence += CgAlpha;
+                }
                 else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                 {
                     Image img = sequence.TargetComp.GetComponent<Image>();
                     void EventDynamic(float t) 
-                        => sequence.EventDynamic?.Invoke(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration));
-                    UpdateSequence += EventDynamic;
+                    {
+                        if(t-sequence.StartTime < 0)return;
+                        sequence.EventDynamic?.Invoke(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration));
+                        UpdateSequence += EventDynamic;
+                    }
                 }
                 
             }
