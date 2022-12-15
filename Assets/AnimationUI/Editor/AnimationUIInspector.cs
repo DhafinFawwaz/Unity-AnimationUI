@@ -69,6 +69,8 @@ public class AnimationUIInspector : Editor
         );
         GUI.backgroundColor = defaultColor;
         
+        animationUI.PlayOnStart = GUILayout.Toggle(animationUI.PlayOnStart, new GUIContent("PlayOnStart"));
+
         DrawDefaultInspector();
 
 #endregion timing
@@ -206,6 +208,14 @@ public class AnimationUIInspector : Editor
                     sequence.AtTime += " ["+sequence.SFX.name+"] [SFX]";
                 else // if SFX isn't assigned in inspector
                     sequence.AtTime += " [Unassigned] [SFX]";
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                sequence.Duration = 0;
+                if(sequence.SceneToLoad != null || sequence.SceneToLoad != "")
+                    sequence.AtTime += " ["+sequence.SceneToLoad+"] [LoadScene]";
+                else
+                    sequence.AtTime += " [Unassigned] [LoadScene]";
             }
             else if(sequence.SequenceType == Sequence.Type.UnityEvent)
             {

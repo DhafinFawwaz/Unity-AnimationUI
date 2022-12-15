@@ -13,7 +13,7 @@ public class Sequence
     public float PropertyRectHeight;
     public float PropertyRectY;
     public enum Type{
-        Animation, Wait, SetActiveAllInput, SetActive, SFX, UnityEvent
+        Animation, Wait, SetActiveAllInput, SetActive, SFX, LoadScene, UnityEvent
     }
     public Type SequenceType = Type.Animation;
     public Ease.Type EaseType = Ease.Type.Out;
@@ -43,6 +43,10 @@ public class Sequence
 #region SFX
     public AudioClip SFX;
 #endregion SFX
+
+#region LoadScene
+    public string SceneToLoad = "";
+#endregion LoadScene
 
 #region UnityEvent
     public UnityEvent Event;

@@ -94,6 +94,11 @@ public class SequenceDrawer : PropertyDrawer
             property.FindPropertyRelative("PropertyRectHeight").floatValue = _height * 3;
             return _height * 3;
         }
+        else if(sequenceType == Sequence.Type.LoadScene)
+        {
+            property.FindPropertyRelative("PropertyRectHeight").floatValue = _height * 3;
+            return _height * 3;
+        }
         else if(sequenceType == Sequence.Type.UnityEvent)
         {
             property.FindPropertyRelative("PropertyRectHeight").floatValue = _height + (EditorGUI.GetPropertyHeight(property.FindPropertyRelative("Event"))+EditorGUIUtility.singleLineHeight);
@@ -139,6 +144,8 @@ public class SequenceDrawer : PropertyDrawer
             EditorGUI.DrawRect(backgroundRect, new Color(1, 0, 1, 0.1f));
         else if(sequenceType == Sequence.Type.SFX)
             EditorGUI.DrawRect(backgroundRect, new Color(1, 1, 0, 0.1f));
+        else if(sequenceType == Sequence.Type.LoadScene)
+            EditorGUI.DrawRect(backgroundRect, new Color(0.6f, 0.3f, 0f, 0.1f));
         else if(sequenceType == Sequence.Type.UnityEvent)
         {
             float time = property.FindPropertyRelative("StartTime").floatValue;
@@ -154,6 +161,7 @@ public class SequenceDrawer : PropertyDrawer
         
 #endregion label
         #region preview button
+        if(sequenceType != Sequence.Type.LoadScene)
         if(GUI.Button(new Rect(position.x+position.width-_buttonWidth*2, position.y, _buttonWidth, _height), "Start"))
         {
             property.FindPropertyRelative("TriggerStart").boolValue = true;
@@ -433,36 +441,16 @@ public class SequenceDrawer : PropertyDrawer
             nextPosition.y += _height;
             EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("SFX"));
         }
+        else if(sequenceType == Sequence.Type.LoadScene)
+        {
+            nextPosition.y += _height;
+            EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("SceneToLoad"));
+        }
         else if(sequenceType == Sequence.Type.UnityEvent)
         {
             nextPosition.y += _height;
             EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("Event"));
         }
 #endregion others
-        
-
-
     }
-
-    public int CountOnBits(long lValue)
-    {
-        int iCount = 0;
-        while (lValue != 0)//Loop the value while there are still bits
-        {
-            lValue = lValue & (lValue - 1);//Remove the end bit
-            iCount++;//Increment the count
-        }
-        //Return the count
-        return iCount;
-    }
-    // public int CountOnBits(int x)
-    // {
-    //     int count = 0;
-    //     while(x != 0)
-    //     {
-    //         if((x & 1) != 0) count++;
-    //         x = x >> 1;
-    //     }
-    //     return count;
-    // }
 }

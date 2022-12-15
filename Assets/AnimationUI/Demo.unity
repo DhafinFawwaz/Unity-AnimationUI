@@ -283,37 +283,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &561744212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 561744213}
-  m_Layer: 0
-  m_Name: AnimationUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &561744213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561744212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.49, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738522999
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 511, y: -200}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516647970
@@ -868,6 +837,7 @@ MonoBehaviour:
     Target: {fileID: 0}
     IsActivating: 1
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -917,6 +887,7 @@ MonoBehaviour:
     Target: {fileID: 0}
     IsActivating: 1
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -946,6 +917,7 @@ MonoBehaviour:
     TargetCgTask: 1
     AlphaStart: 0
     AlphaEnd: 0
+  PlayOnStart: 0
   CurrentTime: 0.5
   TotalDuration: 0.5
   IsPlayingInEditMode: 0
@@ -1080,12 +1052,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationSequence:
-  - AtTime: At 0s [Canvas] [CanvasGroup]
+  - AtTime: At 0s [Wait 2s]
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 180
-    PropertyRectY: 115
+    PropertyRectHeight: 60
+    PropertyRectY: 133
+    SequenceType: 1
+    EaseType: 1
+    EasePower: 3
+    TargetType: 4
+    TargetComp: {fileID: 1936744054}
+    Duration: 2
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: -267, z: 0}
+    AnchoredPositionEnd: {x: 0, y: -267, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: -1
+    AlphaStart: 1
+    AlphaEnd: 0
+  - AtTime: At 2s [Canvas] [CanvasGroup]
+    StartTime: 2
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 195
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1095,11 +1117,12 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1129,12 +1152,12 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 0
     AlphaEnd: 1
-  - AtTime: At 0s [Wait 0.5s]
-    StartTime: 0
+  - AtTime: At 2s [Wait 0.5s]
+    StartTime: 2
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 298
+    PropertyRectHeight: 20
+    PropertyRectY: 217
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1144,11 +1167,12 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1178,12 +1202,12 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 0
     AlphaEnd: 1
-  - AtTime: At 0.5s [Image (3)] [RectTransform]
-    StartTime: 0.5
+  - AtTime: At 2.5s [Image (3)] [RectTransform]
+    StartTime: 2.5
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 360
+    PropertyRectY: 239
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1198,6 +1222,7 @@ MonoBehaviour:
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1227,12 +1252,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 0.5s [Wait 1s]
-    StartTime: 0.5
+  - AtTime: At 2.5s [Wait 1s]
+    StartTime: 2.5
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 382
+    PropertyRectHeight: 20
+    PropertyRectY: 261
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1242,11 +1267,12 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1276,12 +1302,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 1.5s [Image (3)] [RectTransform]
-    StartTime: 1.5
+  - AtTime: At 3.5s [Image (3)] [RectTransform]
+    StartTime: 3.5
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 444
+    PropertyRectY: 283
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1296,6 +1322,7 @@ MonoBehaviour:
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1325,12 +1352,12 @@ MonoBehaviour:
     TargetCgTask: 0
     AlphaStart: 0
     AlphaEnd: 0
-  - AtTime: At 1.5s [Wait 0.5s]
-    StartTime: 1.5
+  - AtTime: At 3.5s [Wait 0.5s]
+    StartTime: 3.5
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 466
+    PropertyRectHeight: 20
+    PropertyRectY: 305
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1340,11 +1367,12 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: 
     Event:
       m_PersistentCalls:
         m_Calls: []
@@ -1374,18 +1402,18 @@ MonoBehaviour:
     TargetCgTask: -1
     AlphaStart: 0
     AlphaEnd: 1
-  - AtTime: At 2s [Canvas] [CanvasGroup]
-    StartTime: 2
+  - AtTime: At 4s [Demo2] [LoadScene]
+    StartTime: 4
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 180
-    PropertyRectY: 528
-    SequenceType: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 327
+    SequenceType: 5
     EaseType: 1
     EasePower: 3
     TargetType: 4
-    TargetComp: {fileID: 1936744056}
-    Duration: 0.5
+    TargetComp: {fileID: 1936744054}
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1394,12 +1422,13 @@ MonoBehaviour:
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
+    SceneToLoad: Demo2
     Event:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
-    AnchoredPositionStart: {x: -300, y: 100, z: 0}
-    AnchoredPositionEnd: {x: 511, y: -200, z: 0}
+    AnchoredPositionStart: {x: 0, y: -267, z: 0}
+    AnchoredPositionEnd: {x: 0, y: -267, z: 0}
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
@@ -1421,10 +1450,111 @@ MonoBehaviour:
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: -1
-    AlphaStart: 0
-    AlphaEnd: 1
+    AlphaStart: 1
+    AlphaEnd: 0
+  - AtTime: At 4s [Canvas] [CanvasGroup]
+    StartTime: 4
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 389
+    SequenceType: 0
+    EaseType: 1
+    EasePower: 3
+    TargetType: 4
+    TargetComp: {fileID: 1936744054}
+    Duration: 2
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: -267, z: 0}
+    AnchoredPositionEnd: {x: 0, y: -267, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: -1
+    AlphaStart: 1
+    AlphaEnd: 0
+  - AtTime: At 4s [Unassigned] [SetActive to False]
+    StartTime: 4
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 80
+    PropertyRectY: 411
+    SequenceType: 3
+    EaseType: 1
+    EasePower: 3
+    TargetType: 4
+    TargetComp: {fileID: 1936744054}
+    Duration: 0
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: -267, z: 0}
+    AnchoredPositionEnd: {x: 0, y: -267, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: -1
+    AlphaStart: 1
+    AlphaEnd: 0
+  PlayOnStart: 1
   CurrentTime: 0
-  TotalDuration: 2.5
+  TotalDuration: 6
   IsPlayingInEditMode: 0
 --- !u!225 &1936744056
 CanvasGroup:

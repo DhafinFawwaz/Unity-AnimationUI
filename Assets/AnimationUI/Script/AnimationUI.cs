@@ -10,6 +10,14 @@ using UnityEditor;
 public class AnimationUI : MonoBehaviour
 {
     public Sequence[] AnimationSequence;
+    [HideInInspector] public bool PlayOnStart = false;
+    void Start()
+    {
+#if UNITY_EDITOR
+        if(Application.isPlaying)
+#endif
+        if(PlayOnStart)StartCoroutine(PlayAnimation());
+    }
     public void Play() => StartCoroutine(PlayAnimation());
     IEnumerator PlayAnimation()
     {
@@ -103,7 +111,7 @@ public class AnimationUI : MonoBehaviour
             {
                 if(sequence.Target == null)
                 {
-                    Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    // Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
                     continue;
                 }
                 sequence.Target.SetActive(sequence.IsActivating);
@@ -112,10 +120,18 @@ public class AnimationUI : MonoBehaviour
             {
                 if(sequence.SFX == null)
                 {
-                    Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
                     continue;
                 }
                 Singleton.Instance.Audio.PlaySound(sequence.SFX);
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sequence.SceneToLoad);
+            }
+            else if(sequence.SequenceType == Sequence.Type.UnityEvent)
+            {
+                sequence.Event?.Invoke();
             }
         }
 
@@ -459,7 +475,7 @@ public class AnimationUI : MonoBehaviour
         CurrentTime = Mathf.Clamp(CurrentTime, 0, TotalDuration);
     }
 #endregion timing
-    void InitFunction()
+    void InitFunction()//For preview
     {
         UpdateSequence = null;
         LoadSingleton();
