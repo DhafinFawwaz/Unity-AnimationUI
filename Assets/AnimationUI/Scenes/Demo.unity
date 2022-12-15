@@ -523,7 +523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: 100}
+  m_AnchoredPosition: {x: -170, y: 100}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516647970
@@ -879,18 +879,18 @@ MonoBehaviour:
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
+    PropertyRectHeight: 20
     PropertyRectY: 115
     SequenceType: 2
     EaseType: 2
     EasePower: 3
     TargetType: 2
     TargetComp: {fileID: 1899209724}
-    Duration: 0.5
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 1
     Target: {fileID: 0}
     IsActivating: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 137
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -972,13 +972,13 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 159
     SequenceType: 3
     EaseType: 3
     EasePower: 3
     TargetType: 1
     TargetComp: {fileID: 1899209724}
-    Duration: 0.5
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1017,8 +1017,8 @@ MonoBehaviour:
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 221
+    PropertyRectHeight: 20
+    PropertyRectY: 181
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1028,7 +1028,7 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 0
     Target: {fileID: 0}
     IsActivating: 1
@@ -1063,18 +1063,18 @@ MonoBehaviour:
     StartTime: 1
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 283
+    PropertyRectHeight: 20
+    PropertyRectY: 203
     SequenceType: 4
     EaseType: 2
     EasePower: 3
     TargetType: 2
     TargetComp: {fileID: 1899209724}
-    Duration: 0.5
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 1
     Target: {fileID: 0}
     IsActivating: 1
@@ -1110,7 +1110,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 345
+    PropertyRectY: 225
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -1156,7 +1156,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 367
+    PropertyRectY: 247
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -1202,13 +1202,13 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 180
-    PropertyRectY: 389
+    PropertyRectY: 269
     SequenceType: 0
     EaseType: 3
     EasePower: 3
     TargetType: 1
     TargetComp: {fileID: 1516647969}
-    Duration: 0.5
+    Duration: 5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1222,7 +1222,7 @@ MonoBehaviour:
         m_Calls: []
     TargetRtTask: 1
     AnchoredPositionStart: {x: 0, y: 160, z: 0}
-    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    AnchoredPositionEnd: {x: -170, y: 100, z: 0}
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 572
+    PropertyRectY: 452
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 594
+    PropertyRectY: 474
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -1340,7 +1340,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 616
+    PropertyRectY: 496
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -1386,13 +1386,13 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 638
+    PropertyRectY: 518
     SequenceType: 3
     EaseType: 3
     EasePower: 3
     TargetType: 1
     TargetComp: {fileID: 1899209724}
-    Duration: 0.5
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -1431,18 +1431,18 @@ MonoBehaviour:
     StartTime: 4
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 660
+    PropertyRectHeight: 20
+    PropertyRectY: 540
     SequenceType: 2
     EaseType: 2
     EasePower: 3
     TargetType: 2
     TargetComp: {fileID: 1899209724}
-    Duration: 0.5
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
+    IsUnfolded: 0
     IsDone: 1
     Target: {fileID: 0}
     IsActivating: 1
@@ -1473,8 +1473,8 @@ MonoBehaviour:
     ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
     FillAmountStart: 0
     FillAmountEnd: 0
-  CurrentTime: 4
-  TotalDuration: 4
+  CurrentTime: 7
+  TotalDuration: 7
   IsPlaying: 0
 --- !u!1 &2118498906
 GameObject:

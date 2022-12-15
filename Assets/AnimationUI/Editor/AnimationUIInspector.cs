@@ -81,7 +81,9 @@ public class AnimationUIInspector : Editor
             Rect currentRect = new Rect(rect.x, sequence.PropertyRectY-3, 5, sequence.PropertyRectHeight+2);
             if(animationUI.CurrentTime >= sequence.StartTime)
             {
-                EditorGUI.DrawRect(currentRect, new Color(0.2f, 1, 0.2f, 0.4f));
+                float currentSideLoadingRectHeight = (sequence.Duration == 0) ? currentRect.height : Mathf.Lerp(0, currentRect.height, (animationUI.CurrentTime-sequence.StartTime)/sequence.Duration);
+                Rect sideLoadingRect = new Rect(currentRect.x, currentRect.y, currentRect.width, currentSideLoadingRectHeight);
+                EditorGUI.DrawRect(sideLoadingRect, new Color(0.2f, 1, 0.2f, 0.4f));
             }
 
 
@@ -153,16 +155,7 @@ public class AnimationUIInspector : Editor
                         sequence.AtTime += " [UnityEvent]";
                 }
 
-#region preview element
-                if(sequence.TriggerStart)
-                {
-                    sequence.TriggerStart = false;
-                }
-                else if(sequence.TriggerEnd)
-                {
-                    sequence.TriggerEnd = false;
-                }
-#endregion preview element
+
             }
 
             else if(sequence.SequenceType == Sequence.Type.Wait)
@@ -172,10 +165,12 @@ public class AnimationUIInspector : Editor
             }
             else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
             {
+                sequence.Duration = 0;
                 sequence.AtTime += " [SetActiveAllInput to "+sequence.IsActivating+"]";
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
             {
+                sequence.Duration = 0;
                 if(sequence.Target != null)
                 {
                     sequence.AtTime += " ["+sequence.Target.name+"] [SetActive to "+sequence.IsActivating+"]";
@@ -187,6 +182,7 @@ public class AnimationUIInspector : Editor
             }
             else if(sequence.SequenceType == Sequence.Type.SFX)
             {
+                sequence.Duration = 0;
                 if(sequence.SFX != null)
                     sequence.AtTime += " ["+sequence.SFX.name+"] [SFX]";
                 else // if SFX isn't assigned in inspector
@@ -194,12 +190,29 @@ public class AnimationUIInspector : Editor
             }
             else if(sequence.SequenceType == Sequence.Type.UnityEvent)
             {
+                sequence.Duration = 0;
                 sequence.AtTime += " [UnityEvent]";
             }
+
+
+#region preview element
+            if(sequence.TriggerStart)
+            {
+                sequence.TriggerStart = false;
+                animationUI.CurrentTime = sequence.StartTime-0.02f;
+                if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+            }
+            else if(sequence.TriggerEnd)
+            {
+                sequence.TriggerEnd = false;
+                animationUI.CurrentTime = sequence.StartTime+sequence.Duration;
+                if(!animationUI.IsPlaying)animationUI.UpdateBySlider();
+            }
+#endregion preview element
         }
 
-    }
 #endregion List
+    }
 
 
 }

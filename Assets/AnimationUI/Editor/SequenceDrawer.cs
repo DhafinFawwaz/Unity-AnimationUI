@@ -116,18 +116,6 @@ public class SequenceDrawer : PropertyDrawer
         if(sequenceType == Sequence.Type.Animation)
         {
             EditorGUI.DrawRect(backgroundRect, new Color(1, 0, 0, 0.1f));
-
-#region preview button
-            if(GUI.Button(new Rect(position.x+position.width-_buttonWidth*2, position.y, _buttonWidth, _height), "Start"))
-            {
-                property.FindPropertyRelative("TriggerEnd").boolValue = true;
-            }
-            else if(GUI.Button(new Rect(position.x+position.width-_buttonWidth, position.y, _buttonWidth, _height), "End"))
-            {
-                property.FindPropertyRelative("TriggerStart").boolValue = true;
-            }
-#endregion preview button
-
             // Special labeling case for UnityEvent
             if((Sequence.ObjectType)property.FindPropertyRelative("TargetType").enumValueIndex == Sequence.ObjectType.UnityEventDynamic)
             {
@@ -136,8 +124,6 @@ public class SequenceDrawer : PropertyDrawer
                 property.FindPropertyRelative("IsUnfolded").boolValue //Fix for when the label is wrong
                     = EditorGUI.Foldout(nextPosition, property.FindPropertyRelative("IsUnfolded").boolValue, 
                     "At "+time.ToString()+"s [UnityEventDynamic]");
-                
-                if(!property.FindPropertyRelative("IsUnfolded").boolValue)return;
             }
         }
         else if(sequenceType == Sequence.Type.Wait)
@@ -154,18 +140,27 @@ public class SequenceDrawer : PropertyDrawer
             EditorGUI.DrawRect(backgroundRect, new Color(0, 1, 1, 0.1f));
             property.FindPropertyRelative("IsUnfolded").boolValue //Fix for when the label is wrong
                 = EditorGUI.Foldout(nextPosition, property.FindPropertyRelative("IsUnfolded").boolValue, "At "+time.ToString()+"s [UnityEvent]");
-            if(!property.FindPropertyRelative("IsUnfolded").boolValue)return;
-
         }
         if(sequenceType != Sequence.Type.UnityEvent && ((Sequence.ObjectType)property.FindPropertyRelative("TargetType").enumValueIndex != Sequence.ObjectType.UnityEventDynamic))
         {
             property.FindPropertyRelative("IsUnfolded").boolValue
                 = EditorGUI.Foldout(nextPosition, property.FindPropertyRelative("IsUnfolded").boolValue, label);
-            if(!property.FindPropertyRelative("IsUnfolded").boolValue)return;
         }
+        
 #endregion label
-        
-        
+        #region preview button
+        if(GUI.Button(new Rect(position.x+position.width-_buttonWidth*2, position.y, _buttonWidth, _height), "Start"))
+        {
+            property.FindPropertyRelative("TriggerStart").boolValue = true;
+        }
+        else if(GUI.Button(new Rect(position.x+position.width-_buttonWidth, position.y, _buttonWidth, _height), "End"))
+        {
+            property.FindPropertyRelative("TriggerEnd").boolValue = true;
+        }
+#endregion preview button
+
+        if(!property.FindPropertyRelative("IsUnfolded").boolValue)return;
+
 
         // Type
         nextPosition.y += _height;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 #if UNITY_EDITOR
 using UnityEditor;
-[ExecuteAlways]
+[ExecuteInEditMode]
 #endif
 public class AnimationUI : MonoBehaviour
 {
