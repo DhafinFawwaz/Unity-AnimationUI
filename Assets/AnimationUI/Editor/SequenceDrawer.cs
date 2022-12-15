@@ -2,8 +2,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteAlways]
-[ExecuteInEditMode]
 [CustomPropertyDrawer(typeof(Sequence))]
 public class SequenceDrawer : PropertyDrawer
 {
@@ -68,7 +66,7 @@ public class SequenceDrawer : PropertyDrawer
 
 
             property.FindPropertyRelative("PropertyRectHeight").floatValue = _height*6 + totalHeight;
-            return _height*6 + totalHeight;
+            return _height*6 + totalHeight +1;
         }
 #region others
         else if(sequenceType == Sequence.Type.Wait)
@@ -391,7 +389,7 @@ public class SequenceDrawer : PropertyDrawer
         else if(sequenceType == Sequence.Type.SetActive)
         {
             nextPosition.y += _height;
-            EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("TargetComp"), new GUIContent("GameObject"));
+            EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("Target"), new GUIContent("GameObject"));
             nextPosition.y += _height;
             EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("IsActivating"));
         }

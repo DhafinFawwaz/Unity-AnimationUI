@@ -27,6 +27,8 @@ public class Sequence
 
     public float Duration = 0.5f;
     public UnityEvent<float> EventDynamic;
+    public bool IsUnfolded = true;
+    public bool IsDone = false;
 
 #region SetActiveALlInput
     // public bool IsActivating = true;
@@ -44,7 +46,6 @@ public class Sequence
 
 #region UnityEvent
     public UnityEvent Event;
-    public bool IsUnfolded = true;
 #endregion UnityEvent
 
 

@@ -96,8 +96,16 @@ public class AnimationUIInspector : Editor
                     sequence.AtTime += " ["+sequence.TargetComp.name+"]";
                     if(sequence.TargetType == Sequence.ObjectType.Automatic)
                     {
-                        if(sequence.TargetComp.GetComponent<RectTransform>() != null)sequence.AtTime += " [RectTransform]";
-                        else if(sequence.TargetComp.transform != null)sequence.AtTime += " [Transform]";
+                        if(sequence.TargetComp.GetComponent<RectTransform>() != null)
+                        {
+                            sequence.TargetType = Sequence.ObjectType.RectTransform;
+                            sequence.AtTime += " [RectTransform]";
+                        }
+                        else if(sequence.TargetComp.transform != null)
+                        {
+                            sequence.TargetType = Sequence.ObjectType.Transform;
+                            sequence.AtTime += " [Transform]";
+                        }
                     }
                     else if(sequence.TargetType == Sequence.ObjectType.RectTransform)
                     {
@@ -168,11 +176,11 @@ public class AnimationUIInspector : Editor
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
             {
-                if(sequence.TargetComp != null)
+                if(sequence.Target != null)
                 {
-                    sequence.AtTime += " ["+sequence.TargetComp.name+"] [SetActive to "+sequence.IsActivating+"]";
+                    sequence.AtTime += " ["+sequence.Target.name+"] [SetActive to "+sequence.IsActivating+"]";
                 }
-                else // if TargetComp isn't assigned in inspector
+                else // if Target isn't assigned in inspector
                 {
                     sequence.AtTime += " [Unassigned] [SetActive to "+sequence.IsActivating+"]";
                 }
@@ -192,5 +200,6 @@ public class AnimationUIInspector : Editor
 
     }
 #endregion List
+
 
 }

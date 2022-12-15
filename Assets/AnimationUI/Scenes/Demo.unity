@@ -283,6 +283,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &725896832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343367, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_Name
+      value: SINGLETON
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289164062052602946, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
 --- !u!1 &738522999
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +410,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399520410
 GameObject:
@@ -368,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1399520411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,11 +547,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.69
+  m_FillAmount: 0.834
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -513,13 +574,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1899209724}
   - component: {fileID: 1899209725}
+  - component: {fileID: 1899209726}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1899209724
 Transform:
   m_ObjectHideFlags: 0
@@ -528,9 +590,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899209722}
   m_LocalRotation: {x: -0.054013833, y: -0.00625023, z: 0.0033111223, w: 0.9985151}
-  m_LocalPosition: {x: 5.5, y: -1.12, z: 0.58}
+  m_LocalPosition: {x: -3, y: 2, z: 0.58}
   m_LocalScale: {x: 10.14, y: 10.14, z: 10.14}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -587,6 +649,114 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1899209726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899209722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f54930f0f8f7f2478377a55d6c33e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationSequence:
+  - AtTime: At 0s [Wait 0.5s]
+    StartTime: 0
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 115
+    SequenceType: 1
+    EaseType: 1
+    EasePower: 3
+    TargetType: 0
+    TargetComp: {fileID: 0}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 0.5s [Unassigned] [SFX]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 177
+    SequenceType: 4
+    EaseType: 1
+    EasePower: 3
+    TargetType: 0
+    TargetComp: {fileID: 0}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 1
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  CurrentTime: 0.5
+  TotalDuration: 0.5
+  IsPlaying: 0
 --- !u!1 &1936744049
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +855,7 @@ RectTransform:
   - {fileID: 1399520413}
   - {fileID: 1516647969}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -705,31 +875,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationSequence:
-  - AtTime: At 0s [Wait 0.5s]
+  - AtTime: At 0s [SetActiveAllInput to False]
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 60
     PropertyRectY: 115
-    SequenceType: 1
-    EaseType: 1
+    SequenceType: 2
+    EaseType: 2
     EasePower: 3
-    TargetType: 3
-    TargetComp: {fileID: 1516647969}
+    TargetType: 2
+    TargetComp: {fileID: 1899209724}
     Duration: 0.5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
+    IsUnfolded: 1
+    IsDone: 1
     Target: {fileID: 0}
-    IsActivating: 1
+    IsActivating: 0
     SFX: {fileID: 0}
     Event:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
     TargetRtTask: 1
-    AnchoredPositionStart: {x: 0, y: 0, z: 0}
-    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
@@ -743,18 +914,18 @@ MonoBehaviour:
     PivotStart: {x: 0, y: 0, z: 0}
     PivotEnd: {x: 0, y: 0, z: 0}
     TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    LocalPositionStart: {x: 5.5, y: -1.12, z: 0.58}
+    LocalPositionEnd: {x: -3, y: 2, z: 0.58}
     TargetImgTask: 1
     ColorStart: {r: 0, g: 1, b: 0, a: 1}
     ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
     FillAmountStart: 0
     FillAmountEnd: 0
-  - AtTime: At 0.5s [Image (3)] [Image]
-    StartTime: 0.5
+  - AtTime: At 0s [Image (3)] [Image]
+    StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 180
+    PropertyRectHeight: 20
     PropertyRectY: 177
     SequenceType: 0
     EaseType: 1
@@ -765,63 +936,19 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
     Target: {fileID: 0}
-    IsActivating: 1
+    IsActivating: 0
     SFX: {fileID: 0}
     Event:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 0, y: 0, z: 0}
-    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
-    SizeDeltaStart: {x: 0, y: 0, z: 0}
-    SizeDeltaEnd: {x: 0, y: 0, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0, y: 0, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0, y: 0, z: 0}
-    PivotStart: {x: 0, y: 0, z: 0}
-    PivotEnd: {x: 0, y: 0, z: 0}
-    TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
-    ColorStart: {r: 0, g: 1, b: 0, a: 1}
-    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-  - AtTime: At 0.5s [Wait 0s]
-    StartTime: 0.5
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 60
-    PropertyRectY: 359
-    SequenceType: 1
-    EaseType: 1
-    EasePower: 3
-    TargetType: 1
-    TargetComp: {fileID: 1516647969}
-    Duration: 0
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    Target: {fileID: 0}
-    IsActivating: 1
-    SFX: {fileID: 0}
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 1
     TargetRtTask: 1
     AnchoredPositionStart: {x: 0, y: 160, z: 0}
-    AnchoredPositionEnd: {x: 170, y: 160, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 5, y: 10.14, z: 1}
+    LocalScaleEnd: {x: 10.14, y: 10.14, z: 10.14}
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
     SizeDeltaStart: {x: 0, y: 0, z: 0}
@@ -832,36 +959,37 @@ MonoBehaviour:
     AnchorMaxEnd: {x: 0, y: 0, z: 0}
     PivotStart: {x: 0, y: 0, z: 0}
     PivotEnd: {x: 0, y: 0, z: 0}
-    TargetTransTask: 1
+    TargetTransTask: 2
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
+    TargetImgTask: -1
     ColorStart: {r: 0, g: 1, b: 0, a: 1}
     ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-  - AtTime: At 0.5s [Image (3)] [RectTransform]
-    StartTime: 0.5
+    FillAmountStart: 0.197
+    FillAmountEnd: 0.834
+  - AtTime: At 0s [Image (2)] [SetActive to True]
+    StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 180
-    PropertyRectY: 421
-    SequenceType: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 199
+    SequenceType: 3
     EaseType: 3
     EasePower: 3
     TargetType: 1
-    TargetComp: {fileID: 1516647969}
+    TargetComp: {fileID: 1899209724}
     Duration: 0.5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    Target: {fileID: 0}
+    IsUnfolded: 0
+    IsDone: 1
+    Target: {fileID: 1399520410}
     IsActivating: 1
     SFX: {fileID: 0}
     Event:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 1
     TargetRtTask: 1
     AnchoredPositionStart: {x: 0, y: 160, z: 0}
     AnchoredPositionEnd: {x: 170, y: 100, z: 0}
@@ -885,8 +1013,468 @@ MonoBehaviour:
     ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
     FillAmountStart: 0
     FillAmountEnd: 0
-  currentTime: 2.5
-  TotalDuration: 2.5
+  - AtTime: At 0s [Wait 1s]
+    StartTime: 0
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 221
+    SequenceType: 1
+    EaseType: 1
+    EasePower: 3
+    TargetType: 3
+    TargetComp: {fileID: 1516647969}
+    Duration: 1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 1s [GUI_Select_31 1] [SFX]
+    StartTime: 1
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 283
+    SequenceType: 4
+    EaseType: 2
+    EasePower: 3
+    TargetType: 2
+    TargetComp: {fileID: 1899209724}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 1
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 8300000, guid: 94c46c3d834a4fb49a6560bf71a8d149, type: 3}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 5.5, y: -1.12, z: 0.58}
+    LocalPositionEnd: {x: -3, y: 2, z: 0.58}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 1s [Image (3)] [Image]
+    StartTime: 1
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 345
+    SequenceType: 0
+    EaseType: 1
+    EasePower: 3
+    TargetType: 3
+    TargetComp: {fileID: 1516647969}
+    Duration: 2
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 1s [Wait 1s]
+    StartTime: 1
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 367
+    SequenceType: 1
+    EaseType: 1
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1516647969}
+    Duration: 1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 160, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 2s [Image (3)] [RectTransform]
+    StartTime: 2
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 180
+    PropertyRectY: 389
+    SequenceType: 0
+    EaseType: 3
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1516647969}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 2s [Wait 1s]
+    StartTime: 2
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 572
+    SequenceType: 1
+    EaseType: 3
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1899209724}
+    Duration: 1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 3s [Test] [Transform]
+    StartTime: 3
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 594
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 2
+    TargetComp: {fileID: 1899209724}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 5.5, y: -1.12, z: 0.58}
+    LocalPositionEnd: {x: -3, y: 2, z: 0.58}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 3s [Wait 1s]
+    StartTime: 3
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 616
+    SequenceType: 1
+    EaseType: 3
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1899209724}
+    Duration: 1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 4s [Image (2)] [SetActive to False]
+    StartTime: 4
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 638
+    SequenceType: 3
+    EaseType: 3
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1899209724}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 1
+    Target: {fileID: 1399520410}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  - AtTime: At 4s [SetActiveAllInput to True]
+    StartTime: 4
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 660
+    SequenceType: 2
+    EaseType: 2
+    EasePower: 3
+    TargetType: 2
+    TargetComp: {fileID: 1899209724}
+    Duration: 0.5
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 1
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionStart: {x: 0, y: 160, z: 0}
+    AnchoredPositionEnd: {x: 170, y: 100, z: 0}
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TargetTransTask: 1
+    LocalPositionStart: {x: 5.5, y: -1.12, z: 0.58}
+    LocalPositionEnd: {x: -3, y: 2, z: 0.58}
+    TargetImgTask: 1
+    ColorStart: {r: 0, g: 1, b: 0, a: 1}
+    ColorEnd: {r: 1, g: 0.14134395, b: 0, a: 1}
+    FillAmountStart: 0
+    FillAmountEnd: 0
+  CurrentTime: 4
+  TotalDuration: 4
   IsPlaying: 0
 --- !u!1 &2118498906
 GameObject:
@@ -964,60 +1552,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -132}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &5262533743291398719
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262533744184343367, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
-      propertyPath: m_Name
-      value: SINGLETON
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
