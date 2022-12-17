@@ -526,7 +526,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0) // This may seem never going to happen, but it's actually happens and its a bug fix
+                            {
+                                sequence.IsDone = false;
+                                rt.anchoredPosition = sequence.AnchoredPositionStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -555,7 +559,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                rt.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -584,7 +592,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                rt.localScale = sequence.LocalScaleStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -613,7 +625,10 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0){
+                                sequence.IsDone = false;
+                                rt.sizeDelta = sequence.SizeDeltaStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -642,7 +657,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                rt.anchorMin = sequence.AnchorMinStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -671,7 +690,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                rt.anchorMax = sequence.AnchorMaxStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -700,7 +723,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                rt.pivot = sequence.PivotStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -750,7 +777,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                trans.localPosition = sequence.LocalPositionStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -779,7 +810,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                trans.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -808,7 +843,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                trans.localScale = sequence.LocalScaleStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -848,7 +887,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                img.color = sequence.ColorStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -877,7 +920,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                img.fillAmount = sequence.FillAmountStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -915,7 +962,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                cg.alpha = sequence.AlphaStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -951,7 +1002,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                cam.backgroundColor = sequence.BackgroundColorStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
@@ -980,7 +1035,11 @@ public class AnimationUI : MonoBehaviour
                     {
                         if(!sequence.IsDone)
                         {
-                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime < 0)
+                            {
+                                sequence.IsDone = false;
+                                cam.orthographicSize = sequence.OrthographicSizeStart;
+                            }
                             if(t-sequence.StartTime >= sequence.Duration)
                             {
                                 sequence.IsDone = true;
