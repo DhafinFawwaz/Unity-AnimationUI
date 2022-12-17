@@ -564,7 +564,7 @@ public class AnimationUI : MonoBehaviour
                             else  // 0 < t-sequence.StartTime < sequence.Duration
                             {
                                 rt.localEulerAngles
-                                = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesStart,
+                                = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesEnd,
                                     sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                             }
                         }
@@ -978,10 +978,32 @@ public class AnimationUI : MonoBehaviour
                     }
                     void CamOrthographicSize(float t) 
                     {
-                        if(t-sequence.StartTime < 0)return;
-                        cam.orthographicSize
-                        = Mathf.LerpUnclamped(sequence.OrthographicSizeStart, sequence.OrthographicSizeEnd,
-                            sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                        if(!sequence.IsDone)
+                        {
+                            if(t-sequence.StartTime < 0)return;
+                            if(t-sequence.StartTime >= sequence.Duration)
+                            {
+                                sequence.IsDone = true;
+                                cam.orthographicSize = sequence.OrthographicSizeEnd;
+                            }
+                            else  // 0 < t-sequence.StartTime < sequence.Duration
+                            {
+                                cam.orthographicSize
+                                = Mathf.LerpUnclamped(sequence.OrthographicSizeStart, sequence.OrthographicSizeEnd,
+                                    sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                            }
+                        }
+                        else if(t-sequence.StartTime < 0) // IsDone == true && t-sequence.StartTime < 0 
+                        {
+                            sequence.IsDone = false;
+                            cam.orthographicSize = sequence.OrthographicSizeStart;
+                        }
+                        else
+                        {
+                            cam.orthographicSize
+                            = Mathf.LerpUnclamped(sequence.OrthographicSizeStart, sequence.OrthographicSizeEnd,
+                                sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                        }
                     }
                     
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.BackgroundColor))
