@@ -168,11 +168,11 @@ public class SequenceDrawer : PropertyDrawer
 #endregion label
         #region preview button
         if(sequenceType != Sequence.Type.LoadScene)
-        if(GUI.Button(new Rect(position.x+position.width-_buttonWidth*2, position.y, _buttonWidth, _height), "Start"))
+        if(GUI.Button(new Rect(position.x+position.width-_buttonWidth*2, position.y-3, _buttonWidth, _height), "Start"))
         {
             property.FindPropertyRelative("TriggerStart").boolValue = true;
         }
-        else if(GUI.Button(new Rect(position.x+position.width-_buttonWidth, position.y, _buttonWidth, _height), "End"))
+        else if(GUI.Button(new Rect(position.x+position.width-_buttonWidth, position.y-3, _buttonWidth, _height), "End"))
         {
             property.FindPropertyRelative("TriggerEnd").boolValue = true;
         }

@@ -72,6 +72,10 @@ public class AnimationUIInspector : Editor
         animationUI.PlayOnStart = GUILayout.Toggle(animationUI.PlayOnStart, new GUIContent("PlayOnStart"));
 
         DrawDefaultInspector();
+        if(GUILayout.Button("Reverse Sequence"))
+        {
+            System.Array.Reverse(animationUI.AnimationSequence);
+        }
 
 #endregion timing
 
@@ -256,6 +260,8 @@ public class AnimationUIInspector : Editor
         }
 
 #endregion List
+
+        
     }
 
 

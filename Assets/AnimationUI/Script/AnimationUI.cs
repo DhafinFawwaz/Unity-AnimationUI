@@ -8,6 +8,7 @@ using System;
 #endif
 public class AnimationUI : MonoBehaviour
 {
+    [HideInInspector] public float TotalDuration = 0; //Value automatically taken care of by AnimationUIInspector
     public Sequence[] AnimationSequence;
     [HideInInspector] public bool PlayOnStart = false;
     void Start()
@@ -15,6 +16,7 @@ public class AnimationUI : MonoBehaviour
 #if UNITY_EDITOR
         if(Application.isPlaying)
 #endif
+        foreach(Sequence sequence in AnimationSequence)sequence.Init();
         if(PlayOnStart)StartCoroutine(PlayAnimation());
     }
     public void Play() => StartCoroutine(PlayAnimation());
@@ -153,13 +155,148 @@ public class AnimationUI : MonoBehaviour
         atTimes.Clear();
     }
 
-
+    IEnumerator ReverseArrayAtTime(float t)
+    {
+        yield return new WaitForSecondsRealtime(t);
+        Array.Reverse(AnimationSequence);
+    }
     IEnumerator PlayReversedAnimation()
     {
         Singleton.LoadSingleton();
         Array.Reverse(AnimationSequence);
-        yield return StartCoroutine(PlayAnimation());
+        ReverseArrayAtTime(TotalDuration);
+
+        for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
+        // for(int i = atTimeEvents.Count-1; i >= 0; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
+
+        foreach(Sequence sequence in AnimationSequence)
+        {
+            if(sequence.SequenceType == Sequence.Type.Animation)
+            {
+                if(sequence.TargetComp == null)
+                {
+                    Debug.Log("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+
+                if(sequence.TargetType == Sequence.ObjectType.RectTransform)
+                {
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
+                        StartCoroutine(TaskAnchoredPosition(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchoredPositionEnd, sequence.AnchoredPositionStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalEulerAngles))
+                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalScale))
+                        StartCoroutine(TaskLocalScale(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
+                        StartCoroutine(TaskAnchorMax(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchorMaxEnd, sequence.AnchorMaxStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
+                        StartCoroutine(TaskAnchorMin(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.AnchorMinEnd, sequence.AnchorMinStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
+                        StartCoroutine(TaskSizeDelta(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.SizeDeltaEnd, sequence.SizeDeltaStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
+                        StartCoroutine(TaskPivot(sequence.TargetComp.GetComponent<RectTransform>(), 
+                            sequence.PivotEnd, sequence.PivotStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Transform)
+                {
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
+                        StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
+                            sequence.LocalPositionEnd, sequence.LocalPositionStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
+                            sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                        StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
+                            sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Image)
+                {
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
+                        StartCoroutine(TaskColor(sequence.TargetComp.GetComponent<Image>(), 
+                            sequence.ColorEnd, sequence.ColorStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
+                        StartCoroutine(TaskFillAmount(sequence.TargetComp.GetComponent<Image>(), 
+                            sequence.FillAmountEnd, sequence.FillAmountStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        StartCoroutine(TaskAlpha(sequence.TargetComp.GetComponent<CanvasGroup>(), 
+                            sequence.AlphaEnd, sequence.AlphaStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Camera)
+                {
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.BackgroundColor))
+                        StartCoroutine(TaskBackgroundColor(sequence.TargetComp.GetComponent<Camera>(), 
+                            sequence.BackgroundColorEnd, sequence.BackgroundColorStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
+                        StartCoroutine(TaskOrthographicSize(sequence.TargetComp.GetComponent<Camera>(), 
+                            sequence.OrthographicSizeEnd, sequence.OrthographicSizeStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+            }
+            else if(sequence.SequenceType == Sequence.Type.Wait)
+            {
+                yield return new WaitForSecondsRealtime(sequence.Duration);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
+            {
+                Singleton.Instance.Game.SetActiveAllInput(!sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActive)
+            {
+                if(sequence.Target == null)
+                {
+                    // Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                sequence.Target.SetActive(!sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SFX)
+            {
+                if(sequence.SFX == null)
+                {
+                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                Singleton.Instance.Audio.PlaySound(sequence.SFX);
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sequence.SceneToLoad);
+            }
+            else if(sequence.SequenceType == Sequence.Type.UnityEvent)
+            {
+                sequence.Event?.Invoke();
+            }
+        }
+
+        atEndEvents?.Invoke(); //Function to call at end
+
         Array.Reverse(AnimationSequence);
+        atEndEvents = null;
+        atTimeEvents.Clear();
+        atTimes.Clear();
     }
 
 #region Tasks
@@ -427,7 +564,6 @@ public class AnimationUI : MonoBehaviour
         if(UpdateSequence != null)UpdateSequence(CurrentTime);
     }
     [HideInInspector] public float CurrentTime = 0; // Don't forget this variable might be in build
-    [HideInInspector] public float TotalDuration = 0;
     [HideInInspector] public bool IsPlayingInEditMode = false;
     float _startTime = 0;
     public void PreviewAnimation()
@@ -476,7 +612,10 @@ public class AnimationUI : MonoBehaviour
         };
     }
 
-
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
     public delegate void Animation(float t);
     public Animation UpdateSequence;
 #region timing
@@ -972,7 +1111,7 @@ public class AnimationUI : MonoBehaviour
                         Singleton.Instance.Game.SetActiveAllInput(!sequence.IsActivating);
                     }
                 }
-                sequence.IsDone = false;
+                // sequence.IsDone = false;
                 UpdateSequence += SetActiveALlInput;
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
