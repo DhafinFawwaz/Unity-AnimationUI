@@ -66,6 +66,12 @@ public class SequenceDrawer : PropertyDrawer
                 Sequence.CgTask cgTask = (Sequence.CgTask)property.FindPropertyRelative("TargetCgTask").enumValueFlag;
                 if(cgTask.HasFlag(Sequence.CgTask.Alpha))totalHeight+=_height*3;
             }
+            else if(objectType == Sequence.ObjectType.Camera)
+            {
+                Sequence.CamTask camTask = (Sequence.CamTask)property.FindPropertyRelative("TargetCamTask").enumValueFlag;
+                if(camTask.HasFlag(Sequence.CamTask.BackgroundColor))totalHeight+=_height*3;
+                if(camTask.HasFlag(Sequence.CamTask.OrthographicSize))totalHeight+=_height*3;
+            }
 
 
 
@@ -415,7 +421,46 @@ public class SequenceDrawer : PropertyDrawer
                 if(cgTask.HasFlag(Sequence.CgTask.Alpha))DrawCgTask("Alpha");
             }
 
-            
+            else if(objectType == Sequence.ObjectType.Camera)
+            {
+                EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("TargetCamTask"), new GUIContent("Task"));
+                void DrawCamTask(string name)
+                {
+                    nextPosition.y += _height;
+                    EditorGUI.LabelField(new Rect(nextPosition.x, nextPosition.y, nextPosition.width, _height),
+                        new GUIContent(name)
+                    );
+                
+                    nextPosition.y += _height;
+                    if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set Start"))
+                    {
+                        if(name == "BackgroundColor")property.FindPropertyRelative(name+"Start").colorValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<Transform>().GetComponent<Camera>().backgroundColor;
+                        else if(name == "OrthographicSize")property.FindPropertyRelative(name+"Start").floatValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<Transform>().GetComponent<Camera>().orthographicSize;
+                    }
+                    EditorGUI.PropertyField(
+                        new Rect(nextPosition.x+nextPosition.width/4, nextPosition.y, nextPosition.width*3/4, _height),
+                        property.FindPropertyRelative(name+"Start"), GUIContent.none
+                    );
+
+                    nextPosition.y += _height;
+                    if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set End"))
+                    {
+                        if(name == "BackgroundColor")property.FindPropertyRelative(name+"End").colorValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<Transform>().GetComponent<Camera>().backgroundColor;
+                        else if(name == "OrthographicSize")property.FindPropertyRelative(name+"End").floatValue = 
+                            property.FindPropertyRelative("TargetComp").GetSerializedValue<Transform>().GetComponent<Camera>().orthographicSize;
+                    }
+                    EditorGUI.PropertyField(
+                        new Rect(nextPosition.x+nextPosition.width/4, nextPosition.y, nextPosition.width*3/4, _height),
+                        property.FindPropertyRelative(name+"End"), GUIContent.none
+                    );
+                }
+                Sequence.CamTask camTask = (Sequence.CamTask)property.FindPropertyRelative("TargetCamTask").enumValueFlag;
+                if(camTask.HasFlag(Sequence.CamTask.BackgroundColor))DrawCamTask("BackgroundColor");
+                if(camTask.HasFlag(Sequence.CamTask.OrthographicSize))DrawCamTask("OrthographicSize");
+            }            
 
         }
 #region others

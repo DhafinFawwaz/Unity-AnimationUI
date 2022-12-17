@@ -110,6 +110,11 @@ public class AnimationUIInspector : Editor
                             sequence.TargetType = Sequence.ObjectType.CanvasGroup;
                             sequence.AtTime += " [CanvasGroup]";
                         }
+                        else if(sequence.TargetComp.GetComponent<Camera>() != null)
+                        {
+                            sequence.TargetType = Sequence.ObjectType.Camera;
+                            sequence.AtTime += " [Camera]";
+                        }
                         else if(sequence.TargetComp.GetComponent<RectTransform>() != null)
                         {
                             sequence.TargetType = Sequence.ObjectType.RectTransform;
@@ -155,6 +160,14 @@ public class AnimationUIInspector : Editor
                             sequence.TargetComp = null;
                         }
                     }
+                    else if(sequence.TargetType == Sequence.ObjectType.Camera)
+                    {
+                        if(sequence.TargetComp.GetComponent<Camera>() != null)sequence.AtTime += " [Camera]";
+                        else
+                        {
+                            sequence.TargetComp = null;
+                        }
+                    }
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                     {
                         sequence.AtTime += " [UnityEvent]";
@@ -172,6 +185,8 @@ public class AnimationUIInspector : Editor
                         sequence.AtTime += " [Unassigned] [Image]";
                     else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
                         sequence.AtTime += " [Unassigned] [CanvasGroup]";
+                    else if(sequence.TargetType == Sequence.ObjectType.Camera)
+                        sequence.AtTime += " [Unassigned] [Camera]";
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                         sequence.AtTime += " [UnityEvent]";
                 }

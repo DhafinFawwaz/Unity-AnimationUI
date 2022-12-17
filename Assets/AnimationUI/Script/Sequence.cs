@@ -19,7 +19,7 @@ public class Sequence
     public Ease.Type EaseType = Ease.Type.Out;
     public Ease.Power EasePower = Ease.Power.Quart;
     public enum ObjectType{// Only for Animation
-        Automatic, RectTransform, Transform, Image, CanvasGroup, UnityEventDynamic
+        Automatic, RectTransform, Transform, Image, CanvasGroup, Camera, UnityEventDynamic
     }
     public ObjectType TargetType = ObjectType.Automatic;
     
@@ -143,10 +143,29 @@ public class Sequence
     [Range(0, 1)] public float AlphaStart;
     [Range(0, 1)] public float AlphaEnd;
 #endregion CanvasGroup
+
+#region Camera
+    [System.Flags]
+    public enum CamTask
+    {
+        None = 0,
+        BackgroundColor = 1 << 0,
+        OrthographicSize = 2 << 0,
+    }
+    public CamTask TargetCamTask = CamTask.BackgroundColor;
+    public Color BackgroundColorStart;
+    public Color BackgroundColorEnd;
+    public float OrthographicSizeStart;
+    public float OrthographicSizeEnd;
+#endregion Camera
+
     public Ease.Function EaseFunction;
     public void Init()
     {
         EaseFunction = Ease.GetEase(EaseType, EasePower);
     }
+
+
+    public int TestInt = 0;
 
 }

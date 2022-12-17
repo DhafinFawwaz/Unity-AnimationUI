@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 
 #if UNITY_EDITOR
 using UnityEditor;
+[ExecuteInEditMode]
 #endif
 public class Singleton : MonoBehaviour
 {
@@ -14,13 +15,16 @@ public class Singleton : MonoBehaviour
     {
         if(Instance == null)Instance = this;
 
+#if UNITY_EDITOR
+        else if(!Application.isPlaying)DestroyImmediate(gameObject);
+#endif
         else Destroy(gameObject);
 
 #if UNITY_EDITOR
         if(Application.isPlaying)
 #endif
-
         DontDestroyOnLoad(gameObject);
+
     }
     
 
