@@ -521,138 +521,174 @@ public class AnimationUI : MonoBehaviour
                 sequence.Init();
                 if(sequence.TargetType == Sequence.ObjectType.RectTransform)
                 {
+
                     RectTransform rt = sequence.TargetComp.GetComponent<RectTransform>();
                     void RtAnchoredPosition(float t)
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.AnchoredPositionState = Sequence.State.During;
                             rt.anchoredPosition
                             = Vector3.LerpUnclamped(sequence.AnchoredPositionStart, sequence.AnchoredPositionEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.AnchoredPositionState == Sequence.State.During || 
+                            sequence.AnchoredPositionState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.anchoredPosition = sequence.AnchoredPositionEnd;
+                            rt.anchoredPosition = sequence.AnchoredPositionEnd;
+                            sequence.AnchoredPositionState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.AnchoredPositionState == Sequence.State.During ||
+                            sequence.AnchoredPositionState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.anchoredPosition = sequence.AnchoredPositionStart;
+                            rt.anchoredPosition = sequence.AnchoredPositionStart;
+                            sequence.AnchoredPositionState = Sequence.State.Before;
                         }
                     }
                     void RtLocalEulerAngles(float t)
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.LocalEulerAnglesState = Sequence.State.During;
                             rt.localEulerAngles
                             = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.LocalEulerAnglesState == Sequence.State.During || 
+                            sequence.LocalEulerAnglesState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.localEulerAngles = sequence.LocalEulerAnglesEnd;
+                            rt.localEulerAngles = sequence.LocalEulerAnglesEnd;
+                            sequence.LocalEulerAnglesState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.LocalEulerAnglesState == Sequence.State.During ||
+                            sequence.LocalEulerAnglesState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            rt.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            sequence.LocalEulerAnglesState = Sequence.State.Before;
                         }
                     }
                     void RtLocalScale(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.LocalScaleState = Sequence.State.During;
                             rt.localScale
                             = Vector3.LerpUnclamped(sequence.LocalScaleStart, sequence.LocalScaleEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.LocalScaleState == Sequence.State.During || 
+                            sequence.LocalScaleState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.localScale = sequence.LocalScaleEnd;
+                            rt.localScale = sequence.LocalScaleEnd;
+                            sequence.LocalScaleState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.LocalScaleState == Sequence.State.During ||
+                            sequence.LocalScaleState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.localScale = sequence.LocalScaleStart;
+                            rt.localScale = sequence.LocalScaleStart;
+                            sequence.LocalScaleState = Sequence.State.Before;
                         }
                     }
                     void RtSizeDelta(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.SizeDeltaState = Sequence.State.During;
                             rt.sizeDelta
                             = Vector3.LerpUnclamped(sequence.SizeDeltaStart, sequence.SizeDeltaEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.SizeDeltaState == Sequence.State.During || 
+                            sequence.SizeDeltaState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.sizeDelta = sequence.SizeDeltaEnd;
+                            rt.sizeDelta = sequence.SizeDeltaEnd;
+                            sequence.SizeDeltaState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.SizeDeltaState == Sequence.State.During ||
+                            sequence.SizeDeltaState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.sizeDelta = sequence.SizeDeltaStart;
+                            rt.sizeDelta = sequence.SizeDeltaStart;
+                            sequence.SizeDeltaState = Sequence.State.Before;
                         }
                     }    
-                    void AnchorMin(float t)
+                    void RtAnchorMin(float t)
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.AnchorMinState = Sequence.State.During;
                             rt.anchorMin
                             = Vector3.LerpUnclamped(sequence.AnchorMinStart, sequence.AnchorMinEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.AnchorMinState == Sequence.State.During || 
+                            sequence.AnchorMinState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.anchorMin = sequence.AnchorMinEnd;
+                            rt.anchorMin = sequence.AnchorMinEnd;
+                            sequence.AnchorMinState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.AnchorMinState == Sequence.State.During ||
+                            sequence.AnchorMinState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.anchorMin = sequence.AnchorMinStart;
+                            rt.anchorMin = sequence.AnchorMinStart;
+                            sequence.AnchorMinState = Sequence.State.Before;
                         }
                     }
-                    void AnchorMax(float t) 
+                    void RtAnchorMax(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.AnchorMaxState = Sequence.State.During;
                             rt.anchorMax
                             = Vector3.LerpUnclamped(sequence.AnchorMaxStart, sequence.AnchorMaxEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.AnchorMaxState == Sequence.State.During || 
+                            sequence.AnchorMaxState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.anchorMax = sequence.AnchorMaxEnd;
+                            rt.anchorMax = sequence.AnchorMaxEnd;
+                            sequence.AnchorMaxState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.AnchorMaxState == Sequence.State.During ||
+                            sequence.AnchorMaxState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.anchorMax = sequence.AnchorMaxStart;
+                            rt.anchorMax = sequence.AnchorMaxStart;
+                            sequence.AnchorMaxState = Sequence.State.Before;
                         }
                     }
-                    void Pivot(float t) 
+                    void RtPivot(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.PivotState = Sequence.State.During;
                             rt.pivot
                             = Vector3.LerpUnclamped(sequence.PivotStart, sequence.PivotEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.PivotState == Sequence.State.During || 
+                            sequence.PivotState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                rt.pivot = sequence.PivotEnd;
+                            rt.pivot = sequence.PivotEnd;
+                            sequence.PivotState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.PivotState == Sequence.State.During ||
+                            sequence.PivotState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                rt.pivot = sequence.PivotStart;
+                            rt.pivot = sequence.PivotStart;
+                            sequence.PivotState = Sequence.State.Before;
                         }
                     }
                     
@@ -666,11 +702,11 @@ public class AnimationUI : MonoBehaviour
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
                         UpdateSequence += RtSizeDelta;
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
-                        UpdateSequence += AnchorMax;
+                        UpdateSequence += RtAnchorMax;
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
-                        UpdateSequence += AnchorMin;
+                        UpdateSequence += RtAnchorMin;
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
-                        UpdateSequence += Pivot;
+                        UpdateSequence += RtPivot;
                     
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.Transform)
@@ -678,59 +714,74 @@ public class AnimationUI : MonoBehaviour
                     Transform trans = sequence.TargetComp.transform;
                     void TransLocalPosition(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.LocalPositionState = Sequence.State.During;
                             trans.localPosition
                             = Vector3.LerpUnclamped(sequence.LocalPositionStart, sequence.LocalPositionEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.LocalPositionState == Sequence.State.During || 
+                            sequence.LocalPositionState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                trans.localPosition = sequence.LocalPositionEnd;
+                            trans.localPosition = sequence.LocalPositionEnd;
+                            sequence.LocalPositionState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.LocalPositionState == Sequence.State.During ||
+                            sequence.LocalPositionState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                trans.localPosition = sequence.LocalPositionStart;
+                            trans.localPosition = sequence.LocalPositionStart;
+                            sequence.LocalPositionState = Sequence.State.Before;
                         }
                     }
                     void TransLocalEulerAngles(float t)
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.LocalEulerAnglesState = Sequence.State.During;
                             trans.localEulerAngles
                             = Vector3.LerpUnclamped(sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.LocalEulerAnglesState == Sequence.State.During || 
+                            sequence.LocalEulerAnglesState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                trans.localEulerAngles = sequence.LocalEulerAnglesEnd;
+                            trans.localEulerAngles = sequence.LocalEulerAnglesEnd;
+                            sequence.LocalEulerAnglesState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.LocalEulerAnglesState == Sequence.State.During ||
+                            sequence.LocalEulerAnglesState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                trans.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            trans.localEulerAngles = sequence.LocalEulerAnglesStart;
+                            sequence.LocalEulerAnglesState = Sequence.State.Before;
                         }
                     }
                     void TransLocalScale(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.LocalScaleState = Sequence.State.During;
                             trans.localScale
                             = Vector3.LerpUnclamped(sequence.LocalScaleStart, sequence.LocalScaleEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.LocalScaleState == Sequence.State.During || 
+                            sequence.LocalScaleState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                trans.localScale = sequence.LocalScaleEnd;
+                            trans.localScale = sequence.LocalScaleEnd;
+                            sequence.LocalScaleState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.LocalScaleState == Sequence.State.During ||
+                            sequence.LocalScaleState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                trans.localScale = sequence.LocalScaleStart;
+                            trans.localScale = sequence.LocalScaleStart;
+                            sequence.LocalScaleState = Sequence.State.Before;
                         }
                     }
                     
@@ -746,40 +797,50 @@ public class AnimationUI : MonoBehaviour
                     Image img = sequence.TargetComp.GetComponent<Image>();
                     void ImgColor(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.ColorState = Sequence.State.During;
                             img.color
                             = Color.LerpUnclamped(sequence.ColorStart, sequence.ColorEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.ColorState == Sequence.State.During || 
+                            sequence.ColorState == Sequence.State.Before))
                         {
-                                sequence.IsDone = true;
-                                img.color = sequence.ColorEnd;
+                            img.color = sequence.ColorEnd;
+                            sequence.ColorState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.ColorState == Sequence.State.During ||
+                            sequence.ColorState == Sequence.State.After))
                         {
-                                sequence.IsDone = false;
-                                img.color = sequence.ColorStart;
+                            img.color = sequence.ColorStart;
+                            sequence.ColorState = Sequence.State.Before;
                         }
                     }
                     void ImgFillAmount(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.ColorState = Sequence.State.During;
                             img.fillAmount
                             = Mathf.LerpUnclamped(sequence.FillAmountStart, sequence.FillAmountEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.ColorState == Sequence.State.During || 
+                            sequence.ColorState == Sequence.State.Before))
                         {
-                            sequence.IsDone = true;
                             img.fillAmount = sequence.FillAmountEnd;
+                            sequence.ColorState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.ColorState == Sequence.State.During ||
+                            sequence.ColorState == Sequence.State.After))
                         {
-                            sequence.IsDone = false;
                             img.fillAmount = sequence.FillAmountStart;
+                            sequence.ColorState = Sequence.State.Before;
                         }
                     }
                     
@@ -793,21 +854,26 @@ public class AnimationUI : MonoBehaviour
                     CanvasGroup cg = sequence.TargetComp.GetComponent<CanvasGroup>();
                     void CgAlpha(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.AlphaState = Sequence.State.During;
                             cg.alpha
                             = Mathf.LerpUnclamped(sequence.AlphaStart, sequence.AlphaEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.AlphaState == Sequence.State.During || 
+                            sequence.AlphaState == Sequence.State.Before))
                         {
-                            sequence.IsDone = true;
                             cg.alpha = sequence.AlphaEnd;
+                            sequence.AlphaState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.AlphaState == Sequence.State.During ||
+                            sequence.AlphaState == Sequence.State.After))
                         {
-                            sequence.IsDone = false;
                             cg.alpha = sequence.AlphaStart;
+                            sequence.AlphaState = Sequence.State.Before;
                         }
                     }
                     
@@ -819,40 +885,50 @@ public class AnimationUI : MonoBehaviour
                     Camera cam = sequence.TargetComp.GetComponent<Camera>();
                     void CamBackgroundColor(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.BackgroundColorState = Sequence.State.During;
                             cam.backgroundColor
                             = Color.LerpUnclamped(sequence.BackgroundColorStart, sequence.BackgroundColorEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.BackgroundColorState == Sequence.State.During || 
+                            sequence.BackgroundColorState == Sequence.State.Before))
                         {
-                            sequence.IsDone = true;
                             cam.backgroundColor = sequence.BackgroundColorEnd;
+                            sequence.BackgroundColorState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.BackgroundColorState == Sequence.State.During ||
+                            sequence.BackgroundColorState == Sequence.State.After))
                         {
-                            sequence.IsDone = false;
                             cam.backgroundColor = sequence.BackgroundColorStart;
+                            sequence.BackgroundColorState = Sequence.State.Before;
                         }
                     }
                     void CamOrthographicSize(float t) 
                     {
-                        if((0 < t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
                         {
+                            sequence.OrthographicSizeState = Sequence.State.During;
                             cam.orthographicSize
                             = Mathf.LerpUnclamped(sequence.OrthographicSizeStart, sequence.OrthographicSizeEnd,
                                 sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
                         }
-                        if(!sequence.IsDone && (t-sequence.StartTime >= sequence.Duration))
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.OrthographicSizeState == Sequence.State.During || 
+                            sequence.OrthographicSizeState == Sequence.State.Before))
                         {
-                            sequence.IsDone = true;
                             cam.orthographicSize = sequence.OrthographicSizeEnd;
+                            sequence.OrthographicSizeState = Sequence.State.After;
                         }
-                        else if(sequence.IsDone && (t-sequence.StartTime < 0))
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.OrthographicSizeState == Sequence.State.During ||
+                            sequence.OrthographicSizeState == Sequence.State.After))
                         {
-                            sequence.IsDone = false;
                             cam.orthographicSize = sequence.OrthographicSizeStart;
+                            sequence.OrthographicSizeState = Sequence.State.Before;
                         }
                     }
                     

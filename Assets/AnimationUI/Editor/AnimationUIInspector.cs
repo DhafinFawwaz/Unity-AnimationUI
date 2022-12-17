@@ -243,7 +243,7 @@ public class AnimationUIInspector : Editor
             if(sequence.TriggerStart)
             {
                 sequence.TriggerStart = false;
-                animationUI.CurrentTime = sequence.StartTime-0.02f;
+                animationUI.CurrentTime = sequence.StartTime;
                 if(!animationUI.IsPlayingInEditMode)animationUI.UpdateBySlider();
             }
             else if(sequence.TriggerEnd)

@@ -444,12 +444,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1753305456}
-  m_Father: {fileID: 802595057}
-  m_RootOrder: 6
+  m_Father: {fileID: 517101598}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.15108, y: -7.4000397}
+  m_AnchoredPosition: {x: 532.1511, y: 0.60002136}
   m_SizeDelta: {x: 749.8463, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57675432
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 126308779}
   - component: {fileID: 126308778}
   m_Layer: 5
-  m_Name: Stuff (4)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,13 +855,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1298456872}
   m_Father: {fileID: 802595057}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371, y: -135.40004}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -950, y: -123}
   m_SizeDelta: {x: 270.14, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126308778
@@ -1068,12 +1069,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1128225947}
-  m_Father: {fileID: 802595057}
-  m_RootOrder: 5
+  m_Father: {fileID: 1573533422}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.15108, y: 113.59996}
+  m_AnchoredPosition: {x: 532.151, y: 0.5999756}
   m_SizeDelta: {x: 749.8463, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259167676
@@ -1625,14 +1626,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 908126286}
   m_Father: {fileID: 802595057}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 377}
-  m_SizeDelta: {x: 1177.9135, y: 305.0508}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 180}
+  m_SizeDelta: {x: 1177.9135, y: 305.05078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473497468
 MonoBehaviour:
@@ -1743,7 +1745,7 @@ GameObject:
   - component: {fileID: 517101601}
   - component: {fileID: 517101600}
   m_Layer: 5
-  m_Name: Stuff (5)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1760,13 +1762,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 57675430}
   m_Father: {fileID: 802595057}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371, y: -8}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 207, y: -5}
   m_SizeDelta: {x: 270.1485, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517101600
@@ -1843,7 +1846,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+  m_BackGroundColor: {r: 0.9490164, g: 0.4352977, b: 0.40392286, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1929,7 +1932,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 342, y: 345}
-  m_SizeDelta: {x: 450, y: 89}
+  m_SizeDelta: {x: 400, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538768757
 MonoBehaviour:
@@ -2418,16 +2421,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2074557534}
   - {fileID: 473497467}
-  - {fileID: 908126286}
   - {fileID: 1573533422}
   - {fileID: 517101598}
-  - {fileID: 259167674}
-  - {fileID: 57675430}
-  - {fileID: 1298456872}
-  - {fileID: 1884527844}
   - {fileID: 126308776}
+  - {fileID: 1884527844}
+  - {fileID: 2074557534}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2832,12 +2831,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationSequence:
-  - AtTime: At 0s [SetActiveAllInput to False]
+  - AtTime: At 0s [Wait 0.1s]
     StartTime: 0
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
     PropertyRectY: 133
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 2074557534}
+    Duration: 0.1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: 168, y: 94.79993, z: 0}
+    AnchoredPositionEnd: {x: -163.00024, y: 94.79993, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.1s [SetActiveAllInput to False]
+    StartTime: 0.1
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 155
     SequenceType: 2
     EaseType: 3
     EasePower: 3
@@ -2848,7 +2918,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     IsUnfolded: 0
-    IsDone: 1
+    IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     SFX: {fileID: 0}
@@ -2857,43 +2927,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 49
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: -449, y: 540, z: 0}
     AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 0
-  - AtTime: At 0s [Wait 0.05s]
-    StartTime: 0
+  - AtTime: At 0.1s [Wait 0.05s]
+    StartTime: 0.1
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 155
+    PropertyRectY: 177
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -2913,43 +2998,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 49
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: -449, y: 540, z: 0}
     AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 0
-  - AtTime: At 0.05s [Title] [RectTransform]
-    StartTime: 0.05
+  - AtTime: At 0.15s [Title] [RectTransform]
+    StartTime: 0.15
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 199
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -2969,43 +3069,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
-    AnchoredPositionStart: {x: 15, y: 223, z: 0}
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 0, y: 223, z: 0}
     AnchoredPositionEnd: {x: 0, y: 716, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinState: 2
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxState: 2
+    AnchorMaxStart: {x: 0.5, y: 0.5, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.05s [Start] [RectTransform]
-    StartTime: 0.05
+  - AtTime: At 0.15s [Start] [RectTransform]
+    StartTime: 0.15
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 221
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3025,43 +3140,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 455, z: 0}
     AnchoredPositionEnd: {x: -303, y: 455, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.05s [Wait 0.05s]
-    StartTime: 0.05
+  - AtTime: At 0.15s [Wait 0.05s]
+    StartTime: 0.15
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 243
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3081,43 +3211,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.1s [Upgrade] [RectTransform]
-    StartTime: 0.1
+  - AtTime: At 0.2s [Upgrade] [RectTransform]
+    StartTime: 0.2
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 243
+    PropertyRectY: 265
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3137,43 +3282,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 345, z: 0}
     AnchoredPositionEnd: {x: -303, y: 345, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.1s [Wait 0.05s]
-    StartTime: 0.1
+  - AtTime: At 0.2s [Wait 0.05s]
+    StartTime: 0.2
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 265
+    PropertyRectY: 287
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3193,43 +3353,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.15s [Settings] [RectTransform]
-    StartTime: 0.15
+  - AtTime: At 0.25s [Settings] [RectTransform]
+    StartTime: 0.25
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 287
+    PropertyRectY: 309
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3249,43 +3424,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 235, z: 0}
     AnchoredPositionEnd: {x: -303, y: 235, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.15s [Wait 0.05s]
-    StartTime: 0.15
+  - AtTime: At 0.25s [Wait 0.05s]
+    StartTime: 0.25
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 309
+    PropertyRectY: 331
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3305,43 +3495,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.2s [Exit] [RectTransform]
-    StartTime: 0.2
+  - AtTime: At 0.3s [Exit] [RectTransform]
+    StartTime: 0.3
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 331
+    PropertyRectY: 353
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3361,267 +3566,58 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 0.2s [Wait 0.4s]
-    StartTime: 0.2
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 353
-    SequenceType: 1
-    EaseType: 2
-    EasePower: 3
-    TargetType: 1
-    TargetComp: {fileID: 1610808857}
-    Duration: 0.4
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 0
-    IsDone: 1
-    Target: {fileID: 0}
-    IsActivating: 0
-    SFX: {fileID: 0}
-    SceneToLoad: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 342, y: 125, z: 0}
-    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
-    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
-    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
-    PivotStart: {x: 0.5, y: 0.5, z: 0}
-    PivotEnd: {x: 1, y: 0.5, z: 0}
-    TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
-    ColorStart: {r: 0, g: 0, b: 0, a: 0}
-    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: 1
-    AlphaStart: 0
-    AlphaEnd: 0
-    TargetCamTask: 1
-    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
-    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    OrthographicSizeStart: 0
-    OrthographicSizeEnd: 0
-    TestInt: 122
-  - AtTime: At 0.6s [Home] [SetActive to False]
-    StartTime: 0.6
+  - AtTime: At 0.3s [Main Camera] [Camera]
+    StartTime: 0.3
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
     PropertyRectY: 375
-    SequenceType: 3
-    EaseType: 2
-    EasePower: 3
-    TargetType: 1
-    TargetComp: {fileID: 1610808857}
-    Duration: 0
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 0
-    IsDone: 0
-    Target: {fileID: 1936744049}
-    IsActivating: 0
-    SFX: {fileID: 0}
-    SceneToLoad: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 342, y: 125, z: 0}
-    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
-    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
-    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
-    PivotStart: {x: 0.5, y: 0.5, z: 0}
-    PivotEnd: {x: 1, y: 0.5, z: 0}
-    TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
-    ColorStart: {r: 0, g: 0, b: 0, a: 0}
-    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: 1
-    AlphaStart: 0
-    AlphaEnd: 0
-    TargetCamTask: 1
-    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
-    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    OrthographicSizeStart: 0
-    OrthographicSizeEnd: 0
-    TestInt: 122
-  - AtTime: At 0.6s [Settings] [SetActive to True]
-    StartTime: 0.6
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 397
-    SequenceType: 3
-    EaseType: 2
-    EasePower: 3
-    TargetType: 1
-    TargetComp: {fileID: 1610808857}
-    Duration: 0
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 0
-    IsDone: 0
-    Target: {fileID: 802595053}
-    IsActivating: 1
-    SFX: {fileID: 0}
-    SceneToLoad: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 342, y: 125, z: 0}
-    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
-    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
-    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
-    PivotStart: {x: 0.5, y: 0.5, z: 0}
-    PivotEnd: {x: 1, y: 0.5, z: 0}
-    TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
-    ColorStart: {r: 0, g: 0, b: 0, a: 0}
-    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: 1
-    AlphaStart: 0
-    AlphaEnd: 0
-    TargetCamTask: 1
-    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
-    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    OrthographicSizeStart: 0
-    OrthographicSizeEnd: 0
-    TestInt: 122
-  - AtTime: At 0.6s [Wait 0.5s]
-    StartTime: 0.6
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 419
-    SequenceType: 1
-    EaseType: 2
-    EasePower: 3
-    TargetType: 1
-    TargetComp: {fileID: 1610808857}
-    Duration: 0.5
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 0
-    IsDone: 1
-    Target: {fileID: 802595053}
-    IsActivating: 1
-    SFX: {fileID: 0}
-    SceneToLoad: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 1
-    AnchoredPositionStart: {x: 342, y: 125, z: 0}
-    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
-    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
-    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
-    PivotStart: {x: 0.5, y: 0.5, z: 0}
-    PivotEnd: {x: 1, y: 0.5, z: 0}
-    TargetTransTask: 1
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    TargetImgTask: 1
-    ColorStart: {r: 0, g: 0, b: 0, a: 0}
-    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: 1
-    AlphaStart: 0
-    AlphaEnd: 0
-    TargetCamTask: 1
-    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
-    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    OrthographicSizeStart: 0
-    OrthographicSizeEnd: 0
-    TestInt: 122
-  - AtTime: At 1.1s [Main Camera] [Camera]
-    StartTime: 1.1
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 441
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3641,49 +3637,206 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
     BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
-  - AtTime: At 1.1s [Exit] [RectTransform]
-    StartTime: 1.1
+  - AtTime: At 0.3s [Wait 0.2s]
+    StartTime: 0.3
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 463
-    SequenceType: 0
+    PropertyRectY: 397
+    SequenceType: 1
     EaseType: 2
     EasePower: 3
     TargetType: 1
     TargetComp: {fileID: 1610808857}
-    Duration: 0.4
+    Duration: 0.2
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 1
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 342, y: 125, z: 0}
+    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
+    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.5s [Home] [SetActive to False]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 419
+    SequenceType: 3
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1610808857}
+    Duration: 0
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 1936744049}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 342, y: 125, z: 0}
+    AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
+    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.5s [Settings] [SetActive to True]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 441
+    SequenceType: 3
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1610808857}
+    Duration: 0
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -3697,40 +3850,907 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     TargetRtTask: 1
+    AnchoredPositionState: 0
     AnchoredPositionStart: {x: 342, y: 125, z: 0}
     AnchoredPositionEnd: {x: -303, y: 125, z: 0}
+    LocalScaleState: 0
     LocalScaleStart: {x: 0, y: 0, z: 0}
     LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
     LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
     LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
     SizeDeltaStart: {x: 645.5, y: 89, z: 0}
     SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
     AnchorMinStart: {x: 0, y: 0, z: 0}
     AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
     AnchorMaxStart: {x: 0, y: 0, z: 0}
     AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
     PivotStart: {x: 0.5, y: 0.5, z: 0}
     PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
     TargetTransTask: 1
+    LocalPositionState: 0
     LocalPositionStart: {x: 0, y: 0, z: 0}
     LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
     TargetImgTask: 1
+    ColorState: 0
     ColorStart: {r: 0, g: 0, b: 0, a: 0}
     ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
     FillAmountStart: 0
     FillAmountEnd: 0
     TargetCgTask: 1
+    AlphaState: 0
     AlphaStart: 0
     AlphaEnd: 0
     TargetCamTask: 1
+    BackgroundColorState: 0
     BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
     BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.5s [TitleDropShadow] [RectTransform]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 463
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 473497467}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 0, y: 180, z: 0}
+    AnchoredPositionEnd: {x: 0, y: -176, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.5s [1] [RectTransform]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 485
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1573533422}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: -950, y: 112.99997, z: 0}
+    AnchoredPositionEnd: {x: -371, y: 112.99997, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.5s [Wait 0.05s]
+    StartTime: 0.5
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 507
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1573533422}
+    Duration: 0.05
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: -950, y: 112.99997, z: 0}
+    AnchoredPositionEnd: {x: -371, y: 112.99997, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.55s [2] [RectTransform]
+    StartTime: 0.55
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 529
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 517101598}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 207, y: -5, z: 0}
+    AnchoredPositionEnd: {x: -371, y: -5, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.55s [Wait 0.05s]
+    StartTime: 0.55
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 551
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1573533422}
+    Duration: 0.05
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: -950, y: 112.99997, z: 0}
+    AnchoredPositionEnd: {x: -371, y: 112.99997, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.6s [3] [RectTransform]
+    StartTime: 0.6
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 573
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 126308776}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: -950, y: -123, z: 0}
+    AnchoredPositionEnd: {x: -371, y: -123, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.6s [Wait 0.05s]
+    StartTime: 0.6
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 595
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1573533422}
+    Duration: 0.05
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: -950, y: 112.99997, z: 0}
+    AnchoredPositionEnd: {x: -371, y: 112.99997, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.65s [4] [RectTransform]
+    StartTime: 0.65000004
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 617
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1884527844}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 1044, y: -123, z: 0}
+    AnchoredPositionEnd: {x: 485.1908, y: -123, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.65s [Wait 0.05s]
+    StartTime: 0.65000004
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 639
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 1573533422}
+    Duration: 0.05
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 49
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: -950, y: 112.99997, z: 0}
+    AnchoredPositionEnd: {x: -371, y: 112.99997, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 0, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 0, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.7s [Back] [RectTransform]
+    StartTime: 0.70000005
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 661
+    SequenceType: 0
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 2074557534}
+    Duration: 0.4
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 0
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 168, y: 94.79993, z: 0}
+    AnchoredPositionEnd: {x: -163.00024, y: 94.79993, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.7s [SetActiveAllInput to True]
+    StartTime: 0.70000005
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 60
+    PropertyRectY: 683
+    SequenceType: 2
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 2074557534}
+    Duration: 0
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 1
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: 168, y: 94.79993, z: 0}
+    AnchoredPositionEnd: {x: -163.00024, y: 94.79993, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TestInt: 122
+  - AtTime: At 0.7s [Wait 0.1s]
+    StartTime: 0.70000005
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 745
+    SequenceType: 1
+    EaseType: 2
+    EasePower: 3
+    TargetType: 1
+    TargetComp: {fileID: 2074557534}
+    Duration: 0.1
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 0
+    Target: {fileID: 0}
+    IsActivating: 1
+    SFX: {fileID: 0}
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 1
+    AnchoredPositionState: 1
+    AnchoredPositionStart: {x: 168, y: 94.79993, z: 0}
+    AnchoredPositionEnd: {x: -163.00024, y: 94.79993, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 45}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 645.5, y: 89, z: 0}
+    SizeDeltaEnd: {x: 645.5, y: 89, z: 0}
+    AnchorMinState: 1
+    AnchorMinStart: {x: 1, y: 0.5, z: 0}
+    AnchorMinEnd: {x: 0.5, y: 0.5, z: 0}
+    AnchorMaxState: 1
+    AnchorMaxStart: {x: 1, y: 0.5, z: 0}
+    AnchorMaxEnd: {x: 0.5, y: 0.5, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0.5, y: 0.5, z: 0}
+    PivotEnd: {x: 1, y: 0.5, z: 0}
+    TransState: 0
+    TargetTransTask: 1
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 0
+    ColorStart: {r: 0, g: 0, b: 0, a: 0}
+    ColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 1
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 1
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0.9490196, g: 0.43529412, b: 0.40392157, a: 1}
+    BackgroundColorEnd: {r: 0.5137255, g: 0.91764706, b: 0.5764706, a: 1}
+    OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 122
   PlayOnStart: 0
   CurrentTime: 0
-  TotalDuration: 1.5
+  TotalDuration: 1.1
   IsPlayingInEditMode: 0
 --- !u!1 &852432911
 GameObject:
@@ -4171,12 +5191,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 802595057}
-  m_RootOrder: 2
+  m_Father: {fileID: 473497467}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 387.47263}
+  m_AnchoredPosition: {x: 0, y: 10.472565}
   m_SizeDelta: {x: 1177.9135, y: 305.0508}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908126287
@@ -6674,12 +7694,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 802595057}
-  m_RootOrder: 7
+  m_Father: {fileID: 126308776}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.225876, y: -135.40004}
+  m_AnchoredPosition: {x: 323.77417, y: 0}
   m_SizeDelta: {x: 333.0924, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298456874
@@ -12245,7 +13265,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 342, y: 455}
-  m_SizeDelta: {x: 450, y: 89}
+  m_SizeDelta: {x: 400, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1365589286
 CanvasRenderer:
@@ -13261,7 +14281,7 @@ GameObject:
   - component: {fileID: 1573533425}
   - component: {fileID: 1573533424}
   m_Layer: 5
-  m_Name: Stuff (7)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13278,13 +14298,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 259167674}
   m_Father: {fileID: 802595057}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371, y: 112.99997}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -950, y: 112.99997}
   m_SizeDelta: {x: 270.1485, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573533424
@@ -13497,8 +14518,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 342, y: 125}
-  m_SizeDelta: {x: 450, y: 89}
+  m_AnchoredPosition: {x: 341.9997, y: 125}
+  m_SizeDelta: {x: 400, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610808858
 MonoBehaviour:
@@ -13923,7 +14944,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 342, y: 235}
-  m_SizeDelta: {x: 450, y: 89}
+  m_SizeDelta: {x: 400, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715748828
 MonoBehaviour:
@@ -14808,7 +15829,7 @@ GameObject:
   - component: {fileID: 1884527847}
   - component: {fileID: 1884527846}
   m_Layer: 5
-  m_Name: Stuff (2)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14827,11 +15848,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 802595057}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 485.1908, y: -135.40004}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 1044, y: -123}
   m_SizeDelta: {x: 101.767, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884527846
@@ -15160,7 +16181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1936744051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15737,11 +16758,11 @@ RectTransform:
   m_Children:
   - {fileID: 1554421142}
   m_Father: {fileID: 802595057}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -163.00024, y: 94.79993}
+  m_AnchoredPosition: {x: 168, y: 94.79993}
   m_SizeDelta: {x: 200, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074557535
@@ -16106,8 +17127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 223}
-  m_SizeDelta: {x: 1262, y: 246}
+  m_AnchoredPosition: {x: 0, y: 223}
+  m_SizeDelta: {x: 1266, y: 251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128277430
 MonoBehaviour:

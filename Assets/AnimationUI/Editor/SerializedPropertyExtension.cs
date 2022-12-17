@@ -3,8 +3,6 @@ using System.Collections;
 using System.Linq;
 using System;
 using UnityEditor;
-using UnityEditor.UI;
-using UnityEngine.UI;
 public static class SerializedPropertyExtensions
 {
     public static T GetSerializedValue<T>(this SerializedProperty property)

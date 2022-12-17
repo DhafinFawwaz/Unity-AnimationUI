@@ -52,6 +52,9 @@ public class Sequence
     public UnityEvent Event;
 #endregion UnityEvent
 
+    public enum State{ // For snapping
+        Before, During, After
+    }
 
 #region RectTransform
     [System.Flags]
@@ -69,29 +72,37 @@ public class Sequence
 
     public RtTask TargetRtTask = RtTask.AnchoredPosition;
 
+    public State AnchoredPositionState = State.Before;
     public Vector3 AnchoredPositionStart;
     public Vector3 AnchoredPositionEnd;
 
+    public State LocalScaleState = State.Before;
     public Vector3 LocalScaleStart;
     public Vector3 LocalScaleEnd;
 
+    public State LocalEulerAnglesState = State.Before;
     public Vector3 LocalEulerAnglesStart;
     public Vector3 LocalEulerAnglesEnd;
 
+    public State SizeDeltaState = State.Before;
     public Vector3 SizeDeltaStart;
     public Vector3 SizeDeltaEnd;
 
+    public State AnchorMinState = State.Before;
     public Vector3 AnchorMinStart;
     public Vector3 AnchorMinEnd;
 
+    public State AnchorMaxState = State.Before;
     public Vector3 AnchorMaxStart;
     public Vector3 AnchorMaxEnd;
 
+    public State PivotState = State.Before;
     public Vector3 PivotStart;
     public Vector3 PivotEnd;
 #endregion RectTransform
 
 #region Transform
+    public State TransState = State.Before;
     [System.Flags]
     public enum TransTask
     {
@@ -103,6 +114,7 @@ public class Sequence
 
     public TransTask TargetTransTask = TransTask.LocalPosition;
 
+    public State LocalPositionState = State.Before;
     public Vector3 LocalPositionStart;
     public Vector3 LocalPositionEnd;
 
@@ -115,6 +127,7 @@ public class Sequence
 #endregion Transform
 
 #region Image
+    public State ImgState = State.Before;
     [System.Flags]
     public enum ImgTask
     {
@@ -125,9 +138,11 @@ public class Sequence
 
     public ImgTask TargetImgTask = ImgTask.Color;
 
+    public State ColorState = State.Before;
     public Color ColorStart;
     public Color ColorEnd;
 
+    public State FillAmountState = State.Before;
     [Range(0, 1)] public float FillAmountStart;
     [Range(0, 1)] public float FillAmountEnd;
 #endregion Image
@@ -140,6 +155,8 @@ public class Sequence
         Alpha = 1 << 0,
     }
     public CgTask TargetCgTask = CgTask.Alpha;
+
+    public State AlphaState = State.Before;
     [Range(0, 1)] public float AlphaStart;
     [Range(0, 1)] public float AlphaEnd;
 #endregion CanvasGroup
@@ -153,11 +170,17 @@ public class Sequence
         OrthographicSize = 2 << 0,
     }
     public CamTask TargetCamTask = CamTask.BackgroundColor;
+
+    public State BackgroundColorState = State.Before;
     public Color BackgroundColorStart;
     public Color BackgroundColorEnd;
+
+
+    public State OrthographicSizeState = State.Before;
     public float OrthographicSizeStart;
     public float OrthographicSizeEnd;
 #endregion Camera
+    
 
     public Ease.Function EaseFunction;
     public void Init()
