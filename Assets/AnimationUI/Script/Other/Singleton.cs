@@ -9,11 +9,20 @@ public class Singleton : MonoBehaviour
 {
     public AudioManager Audio;
     public GameManager Game;
-    public static Singleton Instance;
+    public static Singleton Instance
+    {
+        get
+        {
+            if(_instance == null)LoadSingleton();
+            return _instance;
+        }
+    }
+    static Singleton _instance;
+
     
     void Awake()
     {
-        if(Instance == null)Instance = this;
+        if(_instance == null)_instance = this;
 
 #if UNITY_EDITOR
         else if(!Application.isPlaying)DestroyImmediate(gameObject);
@@ -27,34 +36,21 @@ public class Singleton : MonoBehaviour
 
     }
     
-
-#if UNITY_EDITOR
-    // So that access to Singleton exist in edit mode
-    void OnEnable()
-    {
-        if(Application.isPlaying)return;
-
-        if(Instance == null)Instance = this;
-        // else DestroyImmediate(gameObject);
-    }
     public static void LoadSingleton()
     {
-        if(Singleton.Instance == null)
+        GameObject singleton = Resources.Load("SINGLETON") as GameObject;
+        if(singleton == null)
         {
-            GameObject singleton = Resources.Load("SINGLETON") as GameObject;
-            if(singleton == null)
-            {
-                Debug.Log("SINGLETON prefab not found in .../Resources/SINGLETON. Please don't remove or move this to other folder.", singleton);
-                return;
-            }
-
-            PrefabUtility.InstantiatePrefab(singleton);
-            if(Singleton.Instance == null)
-            {
-                Debug.Log("Something went wrong with ", Singleton.Instance);
-                return;
-            }
+            Debug.Log("SINGLETON prefab not found in .../Resources/SINGLETON. Please don't remove or move this to other folder.", singleton);
+            return;
         }
+
+        PrefabUtility.InstantiatePrefab(singleton);
+        if(_instance == null)
+        {
+            Debug.Log("Something went wrong with loading singleton", Singleton._instance);
+            return;
+        }
+        Debug.Log("Automatically loaded Singleton from .../Resources/SINGLETON");
     }
-#endif
 }

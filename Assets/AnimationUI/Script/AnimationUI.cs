@@ -27,7 +27,6 @@ public class AnimationUI : MonoBehaviour
     public void PlayReversed() => StartCoroutine(PlayReversedAnimation());
     IEnumerator PlayAnimation()
     {
-        Singleton.LoadSingleton();
         for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time
 
         foreach(Sequence sequence in AnimationSequence)
@@ -171,7 +170,6 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator PlayReversedAnimation()
     {
-        Singleton.LoadSingleton();
         Array.Reverse(AnimationSequence);
         ReverseArrayAtTime(TotalDuration);
 
@@ -656,7 +654,6 @@ public class AnimationUI : MonoBehaviour
     void InitFunction()//For preview
     {
         UpdateSequence = null;
-        Singleton.LoadSingleton();
         foreach(Sequence sequence in AnimationSequence)
         {
             // sequence.IsDone = false;
