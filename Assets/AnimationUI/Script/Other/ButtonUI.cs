@@ -263,7 +263,7 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         
         createdGo.AddComponent<ButtonUI>();
         RectTransform createdRect = createdGo.AddComponent<RectTransform>(); 
-        createdRect.sizeDelta = new Vector2(400, 100);
+        createdRect.sizeDelta = new Vector2(400, 90);
 
         createdGo.GetComponent<ButtonUI>()._imageToResize = img;
         createdGo.GetComponent<ButtonUI>()._textToTint = text;
