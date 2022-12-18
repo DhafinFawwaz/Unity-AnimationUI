@@ -44,6 +44,10 @@ public class AudioManager : MonoBehaviour
     public Sound[] SFX;
     public void PlaySound(int index)
     {
+        if(index > SFX.Length-1)
+        {
+            Debug.LogWarning("Please assign the clip at index " + index.ToString());
+        }
         PlaySound(SFX[index].Clip, SFX[index].Volume);
     }
 }

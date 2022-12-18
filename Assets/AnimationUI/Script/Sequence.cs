@@ -41,7 +41,12 @@ public class Sequence
 #endregion SetActive
 
 #region SFX
-    public AudioClip SFX;
+    public enum SFXMethod{
+        File, Index
+    }
+    public SFXMethod PlaySFXBy = SFXMethod.File;
+    public AudioClip SFXFile;
+    public int SFXIndex;
 #endregion SFX
 
 #region LoadScene

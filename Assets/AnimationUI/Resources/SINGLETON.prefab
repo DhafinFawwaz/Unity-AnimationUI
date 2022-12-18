@@ -48,15 +48,18 @@ MonoBehaviour:
   _soundSource: {fileID: 5262533743690580770}
   _defaultSound: {fileID: 8300000, guid: 94c46c3d834a4fb49a6560bf71a8d149, type: 3}
   SFX:
-  - Clip: {fileID: 8300000, guid: 94c46c3d834a4fb49a6560bf71a8d149, type: 3}
+  - Clip: {fileID: 8300000, guid: 5079c6485e0f1324b880c42e24bcbc68, type: 3}
+    Volume: 1
+    ClipName: ButtonEnter
+  - Clip: {fileID: 8300000, guid: f0b7c058310e3ea4fa5d5ec892736fb9, type: 3}
+    Volume: 6
+    ClipName: ButtonMove
+  - Clip: {fileID: 8300000, guid: 273d9f974362b2143a981f7776428896, type: 3}
     Volume: 1
     ClipName: ButtonClick
-  - Clip: {fileID: 0}
+  - Clip: {fileID: 8300000, guid: 94c46c3d834a4fb49a6560bf71a8d149, type: 3}
     Volume: 1
-    ClipName: 
-  - Clip: {fileID: 0}
-    Volume: 1
-    ClipName: 
+    ClipName: Button2
 --- !u!1 &5262533743690580772
 GameObject:
   m_ObjectHideFlags: 0

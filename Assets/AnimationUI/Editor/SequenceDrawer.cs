@@ -97,8 +97,8 @@ public class SequenceDrawer : PropertyDrawer
         }
         else if(sequenceType == Sequence.Type.SFX)
         {
-            property.FindPropertyRelative("PropertyRectHeight").floatValue = _height * 3;
-            return _height * 3;
+            property.FindPropertyRelative("PropertyRectHeight").floatValue = _height * 4;
+            return _height * 4;
         }
         else if(sequenceType == Sequence.Type.LoadScene)
         {
@@ -484,7 +484,13 @@ public class SequenceDrawer : PropertyDrawer
         else if(sequenceType == Sequence.Type.SFX)
         {
             nextPosition.y += _height;
-            EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("SFX"));
+            EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("PlaySFXBy"));
+            
+            nextPosition.y += _height;
+            if((Sequence.SFXMethod)property.FindPropertyRelative("PlaySFXBy").enumValueIndex == Sequence.SFXMethod.File)
+                EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("SFXFile"));
+            else
+                EditorGUI.PropertyField(nextPosition, property.FindPropertyRelative("SFXIndex"));
         }
         else if(sequenceType == Sequence.Type.LoadScene)
         {

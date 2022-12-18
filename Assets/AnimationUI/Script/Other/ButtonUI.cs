@@ -57,6 +57,8 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if(_imageToResize == null)
         {
             _imageToResize = GetComponent<Image>();
+            if(_imageToResize == null)_imageToResize = GetComponentInChildren<Image>();
+
             if(_imageToResize != null)
             {
                 _enterTint = _imageToResize.color;
@@ -64,15 +66,7 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 // _downColor  = _imageToResize.color;
                 _upTint    = _imageToResize.color;
             }
-            else
-            {
-                _imageToResize = GetComponentInChildren<Image>();
-                if(_imageToResize != null)
-                _enterTint = _imageToResize.color;
-                _exitTint  = _imageToResize.color;
-                // _downColor  = _imageToResize.color;
-                _upTint    = _imageToResize.color;
-            }
+                
         }
         if(_textToTint == null)
         {
@@ -108,6 +102,7 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             UnityEventTools.AddVoidPersistentListener(_pointerDownEvent, DownScaleAnimation);
             if(_imageToResize != null)UnityEventTools.AddVoidPersistentListener(_pointerDownEvent, DownTintAnimation);
             if(_textToTint != null)UnityEventTools.AddVoidPersistentListener(_pointerDownEvent, DownTextTintAnimation);
+            UnityEventTools.AddIntPersistentListener(_pointerDownEvent, PlaySound, 0);
         }
         if(_pointerUpEvent == null)
         {
@@ -120,6 +115,10 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             _pointerClickEvent = new UnityEvent ();
             UnityEventTools.AddIntPersistentListener(_pointerClickEvent, PlaySound, 0);
+
+            UnityEventTools.AddVoidPersistentListener(_pointerClickEvent, EnterScaleAnimation);
+            UnityEventTools.AddVoidPersistentListener(_pointerClickEvent, EnterTextTintAnimation);
+            UnityEventTools.AddVoidPersistentListener(_pointerClickEvent, EnterTintAnimation);
         }
         
     }
@@ -155,7 +154,7 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(_currentCursorState == CursorState.Inside)_pointerEnterEvent.Invoke();
+        if(_currentCursorState == CursorState.Inside){}// _pointerEnterEvent.Invoke();
         else if(_currentCursorState == CursorState.Outside)_pointerUpEvent.Invoke();
     }
 
@@ -230,5 +229,49 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         if(requirement == _keyTextTint)text.color = endColor;//if the key didn't change then get into endColor
     }
+
+#if UNITY_EDITOR
+    [UnityEditor.MenuItem("GameObject/UI/Create ButtonUI")]
+    static void CreateButtonUI(UnityEditor.MenuCommand menuCommand)
+    {
+        GameObject selected = UnityEditor.Selection.activeGameObject;
+        GameObject createdGo = new GameObject("ButtonUI");
+        GameObject imgGo = new GameObject("Image");
+        GameObject textGo = new GameObject("Text");
+        UnityEditor.GameObjectUtility.SetParentAndAlign(createdGo, selected);
+        UnityEditor.GameObjectUtility.SetParentAndAlign(imgGo, createdGo);
+        UnityEditor.GameObjectUtility.SetParentAndAlign(textGo, imgGo);
+
+        Image img = imgGo.AddComponent<Image>();
+        img.color = Color.white;
+        RectTransform imgRect = imgGo.GetComponent<RectTransform>();
+        imgRect.anchorMin = new Vector2(0, 0);
+        imgRect.anchorMax = new Vector2(1, 1);
+        imgRect.sizeDelta = Vector2.zero;
+        
+        TMPro.TextMeshProUGUI text = textGo.AddComponent<TMPro.TextMeshProUGUI>();
+        text.text = "Button";
+        text.color = Color.black;
+        text.alignment = TMPro.TextAlignmentOptions.Center;
+        text.fontSize = 45;
+        text.fontStyle = TMPro.FontStyles.Bold;
+        text.verticalAlignment = TMPro.VerticalAlignmentOptions.Middle;
+        RectTransform textRect = textGo.GetComponent<RectTransform>();
+        textRect.anchorMin = new Vector2(0, 0);
+        textRect.anchorMax = new Vector2(1, 1);
+        textRect.sizeDelta = Vector2.zero;
+        
+        createdGo.AddComponent<ButtonUI>();
+        RectTransform createdRect = createdGo.AddComponent<RectTransform>(); 
+        createdRect.sizeDelta = new Vector2(400, 100);
+
+        createdGo.GetComponent<ButtonUI>()._imageToResize = img;
+        createdGo.GetComponent<ButtonUI>()._textToTint = text;
+
+        UnityEditor.Undo.RegisterCreatedObjectUndo(createdGo, "Created +"+createdGo.name);
+        UnityEditor.Undo.RegisterCreatedObjectUndo(imgGo, "Created +"+imgGo.name);
+        UnityEditor.Undo.RegisterCreatedObjectUndo(textGo, "Created +"+textGo.name);
+    }
+#endif
 
 }

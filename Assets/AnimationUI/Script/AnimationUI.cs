@@ -17,6 +17,10 @@ public class AnimationUI : MonoBehaviour
         if(Application.isPlaying)
 #endif
         foreach(Sequence sequence in AnimationSequence)sequence.Init();
+
+#if UNITY_EDITOR
+        if(Application.isPlaying)
+#endif
         if(PlayOnStart)StartCoroutine(PlayAnimation());
     }
     public void Play() => StartCoroutine(PlayAnimation());
@@ -131,12 +135,17 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SFX)
             {
-                if(sequence.SFX == null)
+                if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
                 {
-                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
-                    continue;
+                    if(sequence.SFXFile == null)
+                    {
+                        // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                        continue;
+                    }
+                    Singleton.Instance.Audio.PlaySound(sequence.SFXFile);
                 }
-                Singleton.Instance.Audio.PlaySound(sequence.SFX);
+                else
+                    Singleton.Instance.Audio.PlaySound(sequence.SFXIndex);
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
@@ -274,12 +283,17 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SFX)
             {
-                if(sequence.SFX == null)
+                if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
                 {
-                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
-                    continue;
+                    if(sequence.SFXFile == null)
+                    {
+                        // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                        continue;
+                    }
+                    Singleton.Instance.Audio.PlaySound(sequence.SFXFile);
                 }
-                Singleton.Instance.Audio.PlaySound(sequence.SFX);
+                else
+                    Singleton.Instance.Audio.PlaySound(sequence.SFXIndex);
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
@@ -612,10 +626,6 @@ public class AnimationUI : MonoBehaviour
         };
     }
 
-    void OnDisable()
-    {
-        StopAllCoroutines();
-    }
     public delegate void Animation(float t);
     public Animation UpdateSequence;
 #region timing
@@ -1151,26 +1161,36 @@ public class AnimationUI : MonoBehaviour
                         if(t - sequence.StartTime > -0.01f)
                         {
                             sequence.IsDone = true;
-                            if(sequence.SFX == null)
+                            if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
                             {
-                                Debug.Log("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
-                                return;
+                                if(sequence.SFXFile == null)
+                                {
+                                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                                    return;
+                                }
+                                Singleton.Instance.Audio.PlaySound(sequence.SFXFile);
                             }
-                            Singleton.Instance.Audio.PlaySound(sequence.SFX);
+                            else
+                                Singleton.Instance.Audio.PlaySound(sequence.SFXIndex);
                         }
                     }
                     else if(t - sequence.StartTime < 0)
                     {
-                        if(sequence.SFX == null)
+                        if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
                         {
-                            Debug.Log("Please assign  for Sequence at "+sequence.StartTime.ToString()+"s");
-                            return;
+                            if(sequence.SFXFile == null)
+                            {
+                                // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                                return;
+                            }
+                            Singleton.Instance.Audio.PlaySound(sequence.SFXFile);
                         }
+                        else
+                            Singleton.Instance.Audio.PlaySound(sequence.SFXIndex);
                         sequence.IsDone = false;
-                        Singleton.Instance.Audio.PlaySound(sequence.SFX);
                     }
                 }
-                sequence.IsDone = false;
+                // sequence.IsDone = false;
                 UpdateSequence += SFX;
             }
             else if(sequence.SequenceType == Sequence.Type.UnityEvent)

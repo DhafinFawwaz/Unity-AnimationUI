@@ -223,10 +223,12 @@ public class AnimationUIInspector : Editor
             else if(sequence.SequenceType == Sequence.Type.SFX)
             {
                 sequence.Duration = 0;
-                if(sequence.SFX != null)
-                    sequence.AtTime += " ["+sequence.SFX.name+"] [SFX]";
-                else // if SFX isn't assigned in inspector
+                if((sequence.SFXFile != null) && (sequence.PlaySFXBy == Sequence.SFXMethod.File))
+                    sequence.AtTime += " ["+sequence.SFXFile.name+"] [SFX]";
+                else if((sequence.SFXFile == null) && (sequence.PlaySFXBy == Sequence.SFXMethod.File))
                     sequence.AtTime += " [Unassigned] [SFX]";
+                else
+                    sequence.AtTime += " ["+sequence.SFXIndex.ToString()+"] [SFX]";
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
