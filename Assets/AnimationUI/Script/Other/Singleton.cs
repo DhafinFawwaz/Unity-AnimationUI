@@ -1,8 +1,6 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 #if UNITY_EDITOR
-using UnityEditor;
 [ExecuteInEditMode]
 #endif
 public class Singleton : MonoBehaviour
@@ -45,7 +43,12 @@ public class Singleton : MonoBehaviour
             return;
         }
 
-        PrefabUtility.InstantiatePrefab(singleton);
+#if UNITY_EDITOR
+        UnityEditor.PrefabUtility.InstantiatePrefab(singleton);
+#else
+        Instantiate(singleton);Debug.Log("Is not in editor");
+#endif
+
         if(_instance == null)
         {
             Debug.Log("Something went wrong with loading singleton", Singleton._instance);
