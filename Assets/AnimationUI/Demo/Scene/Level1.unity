@@ -8058,11 +8058,11 @@ MonoBehaviour:
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
     TestInt: 0
-  - AtTime: At 0.01s [SetActiveAllInput to True]
+  - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
-    PropertyRectHeight: 20
+    PropertyRectHeight: 60
     PropertyRectY: 155
     SequenceType: 2
     EaseType: 1
@@ -8073,10 +8073,10 @@ MonoBehaviour:
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
-    IsUnfolded: 0
+    IsUnfolded: 1
     IsDone: 0
     Target: {fileID: 0}
-    IsActivating: 1
+    IsActivating: 0
     PlaySFXBy: 0
     SFXFile: {fileID: 0}
     SFXIndex: 0
@@ -8136,7 +8136,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 217
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -8209,7 +8209,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 239
     SequenceType: 1
     EaseType: 0
     EasePower: 0
@@ -8282,7 +8282,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 261
     SequenceType: 5
     EaseType: 1
     EasePower: 3
