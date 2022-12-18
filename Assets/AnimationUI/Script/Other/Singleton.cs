@@ -46,7 +46,7 @@ public class Singleton : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.PrefabUtility.InstantiatePrefab(singleton);
 #else
-        Instantiate(singleton);Debug.Log("Is not in editor");
+        Instantiate(singleton);
 #endif
 
         if(_instance == null)
