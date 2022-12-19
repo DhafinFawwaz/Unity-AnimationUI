@@ -5,7 +5,21 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 
 
 ## ✨ Demo Preview
-[4 images]
+<p align="center">
+  <img alt="Preview AnimationUI" src="./Images/PreviewAnimationUI.gif" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Preview Settings" src="./Images/PreviewSettings.gif" width="45%">
+</p>
+<p align="center">
+  <img alt="Preview Upgrade" src="./PreviewUpgrade.gif" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Preview Start" src="./PreviewStart.gif" width="45%">
+</p>
+
+<!-- ![Preview AnimationUI](Images/PreviewAnimationUI.gif)
+![Preview Settings](Images/PreviewSettings.gif)
+![Preview Upgrade](Images/PreviewUpgrade.gif)
+![Preview Start](Images/PreviewStart.gif) -->
 
 
 
@@ -25,11 +39,6 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 ## 📖 Instruction
 - Right click -> UI -> Create AnimationUI
 - Or you can just add the AnimationUI Component to a gameObject
-
-![Preview Settings](Images/PreviewSettings.png)
-![Preview Upgrade](Images/PreviewUpgrade.png)
-![Preview Start](Images/PreviewStart.png)
-
 
 ![Instruction 1](Images/1.gif)
 ![Instruction 2](Images/2.gif)
