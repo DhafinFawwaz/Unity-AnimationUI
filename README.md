@@ -5,31 +5,9 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 
 
 ## ✨ Demo Preview
-<p align="center">
-      <img src="./Images/PreviewAnimationUI.gif" align="left">
-      <img src="./Images/PreviewSettings.gif" align="right">
-</p>
-</br>
-<p align="center">
-      <img src="./Images/PreviewUpgrade.gif" align="left">
-      <img src="./Images/PreviewStart.gif" align="right">
-</p>
 
-<!-- <p align="center">
-  <img alt="Preview AnimationUI" src="./Images/PreviewAnimationUI.gif" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Preview Settings" src="./Images/PreviewSettings.gif" width="45%">
-</p>
-<p align="center">
-  <img alt="Preview Upgrade" src="./PreviewUpgrade.gif" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Preview Start" src="./PreviewStart.gif" width="45%">
-</p> -->
-
-<!-- ![Preview AnimationUI](Images/PreviewAnimationUI.gif)
-![Preview Settings](Images/PreviewSettings.gif)
-![Preview Upgrade](Images/PreviewUpgrade.gif)
-![Preview Start](Images/PreviewStart.gif) -->
+![Preview AnimationUI](Images/PreviewAnimationUI.gif) ![Preview Settings](Images/PreviewSettings.gif)
+![Preview Upgrade](Images/PreviewUpgrade.gif) ![Preview Start](Images/PreviewStart.gif)
 
 
 
