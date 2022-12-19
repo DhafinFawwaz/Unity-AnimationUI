@@ -6,10 +6,8 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 
 ## ✨ Demo Preview
 
-![Preview AnimationUI](Images/PreviewAnimationUI.gif) ![Preview Settings](Images/PreviewSettings.gif)
-![Preview Upgrade](Images/PreviewUpgrade.gif) ![Preview Start](Images/PreviewStart.gif)
-
-
+![Preview AnimationUI](Images/PreviewAnimationUI.gif =50%x) ![Preview Settings](Images/PreviewSettings.gif =50%x)
+![Preview Upgrade](Images/PreviewUpgrade.gif =50%x) ![Preview Start](Images/PreviewStart.gif =50%x)
 
 
 ## ✨ Features
