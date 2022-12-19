@@ -29,7 +29,8 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 - Others.
 
 
-## 📖 Instruction
+## 📘 Instruction
+
 ![Instruction 1](Images/1.gif)
 - Right click -> UI -> Create AnimationUI, or you can just add the AnimationUI Component to a gameObject
 - Choose the kind of sequence you want.
@@ -83,8 +84,8 @@ Most of the variable in the Sequence class is modifiedable, so it's possible to 
 
 Play the animation, call `LoadSceneWithLoadingBar()` after animation finished.
 ```csharp
-_animationUI.Play();
 _animationUI.AddFunctionAtEnd(LoadSceneWithLoadingBar);
+_animationUI.Play();
 ```
 
 ## 📃 Note
@@ -94,7 +95,7 @@ _animationUI.AddFunctionAtEnd(LoadSceneWithLoadingBar);
 - Theres progress indicator individually in the left side of the sequences.
 - Toggling PlayOnStart to true is usefull for transition to a new scene.
 - Make sure the Singleton prefab exist in the resources folder. Don't move it outside.
-- There's still no proper way to disable all input so please modify the SetActiveAllInput if you also want to disable input other than mouse and touch.
+- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 124 of AnimationUI.cs
 - readme to explain others category for custom button demos, etc.
 
 
