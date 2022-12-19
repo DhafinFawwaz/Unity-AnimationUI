@@ -49,8 +49,8 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 <br/>
 
 ![Instruction 4](Images/4.gif)
-- Try looking at the demo for examples. But make sure the "Level1" scene is added in the build settings
-- There are also progress bars for eace sequence in the left side of the sequence
+- Try looking at the demo for examples. But make sure the "Level1" scene is added in the build settings or you can't load the "Level1" scene
+- There are also progress bars for eace sequence in the left side of the sequence.
 <br/>
 
 ![Instruction 5](Images/5.gif)
