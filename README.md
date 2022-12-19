@@ -76,7 +76,7 @@ _animationUI.MyMethodName();
 |`Play()`                           | Play the animation |
 |`PlayReversed()`                   | Play the animation but reversed. Usefull to go back from a certain menu quickly.|
 |`AddFunctionAt(float time, delegate func)`| Add a function to be called at a certain time after the AnimationUI.Play() is called|
-|`AddFunctionAtEnd(delegate func)`  |Add a function to be called at a certain time after the animation is finished |
+|`AddFunctionAtEnd(delegate func)`  |Add a function to be called when the latest wait sequence is finished. It's intended like this so that you also have an option for this case and not just at the very end of the whole sequences. If you want to make it get called at the end of the whole sequences, you can either call `AddFunctionAt(_animationUI.TotalDuration, func)` or just add another wait sequence as the last sequence in the inspector|
 
 Most of the variable in the Sequence class is modifiedable, so it's possible to change the values of `_animationUI.AnimationSequence[MyIndex].MyVariableName` on runtime.
 
