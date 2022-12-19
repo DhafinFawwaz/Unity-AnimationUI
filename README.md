@@ -35,19 +35,23 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 - Choose the kind of sequence you want.
 - If you choose animation, assign the kind of component you want to animate to the inspector of the AnimationUI component.
 <br/>
+
 ![Instruction 2](Images/2.gif)
 - It's recomended to to to lock the inspector so that animating the values is easier.
 - You can capture the start values by clicking the set start button.
 - You can also capture the end value by changing the value, then clicking the set end button.
 <br/>
+
 ![Instruction 3](Images/3.gif)
 - Drag the progress bar to see how would the animation look like.
 - You can also play the animation in edit mode, but make sure the scene view is open or the animation might have some lag.
 <br/>
+
 ![Instruction 4](Images/4.gif)
 - Try looking at the demo for examples.
 - There are also progress bars for eace sequence in the left side of the sequence
 <br/>
+
 ![Instruction 5](Images/5.gif)
 - Try comparing the upgrade menu and the settings menu of the demo.
 - Notice that those settings position is always relative to the left side or the right side, but then it becomes relative to the middle of the screen.
