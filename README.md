@@ -19,7 +19,7 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 ## ✨ Features
 
 - Sequence for Animating values of RectTransform, Image, Camera, CanvasGroup, Transform, and Dynamic UnityEvent.
-- Sequence for instant method such as Set Active All Input, Play SFX, Wait before executing next sequence, Set Active GameObject, and UnityEvent
+- Sequence for instant method such as Set Active All Input, Play SFX, Wait before executing next sequence, Set Active GameObject, Loading scene, and UnityEvent
 - Preview animation in edit mode with Progress bar both globally and in each sequence.
 - Reorderable sequences.
 - Addable function to call at the end of animation or at certain determined time.
