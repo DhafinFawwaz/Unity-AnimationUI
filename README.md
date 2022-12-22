@@ -61,7 +61,11 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 <br/>
 
 ![Instruction 6](Images/6.gif)
-- With this tool, you can also create sequence that set active all input, play sfx, wait before executing next sequence, set active gameObject, loading scene, and do custom things with UnityEvent.
+- You can create the animation in a short time by utilizing some tricks with Unity built in list in the inspector. For example adding a new sequence will automatically copy the previous, it can be quick if the sequence is similiar with the other. Or doing something like creating many copies of wait sequence before using them.
+<br/>
+
+![Instruction 7](Images/7.png)
+- With this tool, you can also create sequence that set active all input, play sfx, wait before executing next sequence, set active gameObject, loading scene, and do custom things with UnityEvent with each of them having different color.
 
 ## 🔍 API Reference
 
