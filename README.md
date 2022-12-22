@@ -60,6 +60,9 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 - if you're not sure how to create this, you can always capture all variable with the set start or the set end button. One example is when you want to animate Rect Transform with Anchor Presets of stretch. just try enabling all variable and set everything, you might be able to produce a similiar result with the settings or upgrade menu in the demo.
 <br/>
 
+![Instruction 6](Images/6.gif)
+- With this tool, you can also create sequence that set active all input, play sfx, wait before executing next sequence, set active gameObject, loading scene, and do custom things with UnityEvent.
+
 ## 🔍 API Reference
 
 Get the reference by
