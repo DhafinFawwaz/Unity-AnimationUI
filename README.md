@@ -102,7 +102,7 @@ _animationUI.Play();
 - Theres progress indicator individually in the left side of the sequences.
 - Toggling PlayOnStart to true is usefull for transition to a new scene.
 - Make sure the Singleton prefab exist in the resources folder. Don't move it outside.
-- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 124 of AnimationUI.cs
+- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of Customizable.cs
 - readme to explain others category for custom button demos, etc.
 
 
