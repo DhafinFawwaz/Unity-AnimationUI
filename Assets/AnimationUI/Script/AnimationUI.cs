@@ -143,8 +143,8 @@ public class AnimationUI : MonoBehaviour
                     }
                     Customizable.PlaySound(sequence.SFXFile);
                 }
-                else
-                    Customizable.PlaySound(sequence.SFXFile);
+                else // if(sequence.PlaySFXBy == Sequence.SFXMethod.Index)
+                    Customizable.PlaySound(sequence.SFXIndex);
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
