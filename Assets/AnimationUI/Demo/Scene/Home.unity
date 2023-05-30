@@ -3066,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -25927,7 +25927,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     IsUnfolded: 0
-    IsDone: 1
+    IsDone: 0
     Target: {fileID: 0}
     IsActivating: 0
     PlaySFXBy: 0
@@ -26046,7 +26046,7 @@ MonoBehaviour:
     LocalPositionEnd: {x: 0, y: 0, z: 0}
     ImgState: 0
     TargetImgTask: 1
-    ColorState: 1
+    ColorState: 0
     ColorStart: {r: 1, g: 1, b: 1, a: 1}
     ColorEnd: {r: 1, g: 1, b: 1, a: 0}
     FillAmountState: 0
@@ -26167,7 +26167,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     IsUnfolded: 0
-    IsDone: 1
+    IsDone: 0
     Target: {fileID: 0}
     IsActivating: 1
     PlaySFXBy: 0
@@ -26232,7 +26232,7 @@ MonoBehaviour:
     MaxVisibleCharactersEnd: 0
     TestInt: 0
   PlayOnStart: 1
-  CurrentTime: 0.51
+  CurrentTime: 0
   IsPlayingInEditMode: 0
 --- !u!1 &2112810106
 GameObject:
