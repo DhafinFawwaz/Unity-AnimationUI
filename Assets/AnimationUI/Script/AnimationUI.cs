@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 #if UNITY_EDITOR
 [ExecuteInEditMode]
 #endif
@@ -112,6 +113,17 @@ public class AnimationUI : MonoBehaviour
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
                         StartCoroutine(TaskOrthographicSize(sequence.TargetComp.GetComponent<Camera>(), 
                             sequence.OrthographicSizeStart, sequence.OrthographicSizeEnd, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                {
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
+                        StartCoroutine(TaskTextMeshProColor(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                            sequence.TextMeshProColorStart, sequence.TextMeshProColorEnd, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
+                        StartCoroutine(TaskMaxVisibleCharacters(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                            (float)sequence.MaxVisibleCharactersStart, (float)sequence.MaxVisibleCharactersEnd, sequence.Duration, sequence.EaseFunction
                         ));
                 }
             }
@@ -259,6 +271,17 @@ public class AnimationUI : MonoBehaviour
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
                         StartCoroutine(TaskOrthographicSize(sequence.TargetComp.GetComponent<Camera>(), 
                             sequence.OrthographicSizeEnd, sequence.OrthographicSizeStart, sequence.Duration, sequence.EaseFunction
+                        ));
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                {
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
+                        StartCoroutine(TaskTextMeshProColor(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                            sequence.TextMeshProColorStart, sequence.TextMeshProColorEnd, sequence.Duration, sequence.EaseFunction
+                        ));
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
+                        StartCoroutine(TaskMaxVisibleCharacters(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                            sequence.MaxVisibleCharactersStart, sequence.MaxVisibleCharactersEnd, sequence.Duration, sequence.EaseFunction
                         ));
                 }
             }
@@ -481,7 +504,7 @@ public class AnimationUI : MonoBehaviour
     }
 #endregion CanvasGroupTask
 
-#region ImageTask
+#region CameraTask
     IEnumerator TaskBackgroundColor(Camera cam, Color start, Color end, float duration, Ease.Function easeFunction)
     {
         float startTime = Time.time;
@@ -505,6 +528,33 @@ public class AnimationUI : MonoBehaviour
             yield return null;
         }
         cam.orthographicSize = end;
+    }
+#endregion ImageTask
+
+#region TextMeshProTask
+    IEnumerator TaskTextMeshProColor(TMP_Text text, Color start, Color end, float duration, Ease.Function easeFunction)
+    {
+        float startTime = Time.time;
+        float t = (Time.time-startTime)/duration;
+        while (t <= 1)
+        {
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            text.color = Color.LerpUnclamped(start, end, easeFunction(t));
+            yield return null;
+        }
+        text.color = end;
+    }
+    IEnumerator TaskMaxVisibleCharacters(TMP_Text text, float start, float end, float duration, Ease.Function easeFunction)
+    {
+        float startTime = Time.time;
+        float t = (Time.time-startTime)/duration;
+        while (t <= 1)
+        {
+            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            text.maxVisibleCharacters = (int)Mathf.LerpUnclamped(start, end, easeFunction(t));
+            yield return null;
+        }
+        text.maxVisibleCharacters = (int)end;
     }
 #endregion ImageTask
 #endregion Tasks
@@ -1084,6 +1134,63 @@ public class AnimationUI : MonoBehaviour
                         UpdateSequence += CamBackgroundColor;
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
                         UpdateSequence += CamOrthographicSize;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                {
+                    TMP_Text text = sequence.TargetComp.GetComponent<TMP_Text>();
+                    void TextMeshProColor(float t) 
+                    {
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        {
+                            sequence.TextMeshProColorState = Sequence.State.During;
+                            text.color
+                            = Color.LerpUnclamped(sequence.TextMeshProColorStart, sequence.TextMeshProColorEnd,
+                                sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                        }
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.TextMeshProColorState == Sequence.State.During || 
+                            sequence.TextMeshProColorState == Sequence.State.Before))
+                        {
+                            text.color = sequence.TextMeshProColorEnd;
+                            sequence.TextMeshProColorState = Sequence.State.After;
+                        }
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.TextMeshProColorState == Sequence.State.During ||
+                            sequence.TextMeshProColorState == Sequence.State.After))
+                        {
+                            text.color = sequence.TextMeshProColorStart;
+                            sequence.TextMeshProColorState = Sequence.State.Before;
+                        }
+                    }
+                    void MaxVisibleCharacters(float t) 
+                    {
+                        if((0 <= t-sequence.StartTime) && (t-sequence.StartTime < sequence.Duration))
+                        {
+                            sequence.MaxVisibleCharactersState = Sequence.State.During;
+                            text.maxVisibleCharacters
+                            = (int)Mathf.LerpUnclamped(sequence.MaxVisibleCharactersStart, sequence.MaxVisibleCharactersEnd,
+                                sequence.EaseFunction(Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration)));
+                        }
+                        if((t-sequence.StartTime >= sequence.Duration) && 
+                            (sequence.MaxVisibleCharactersState == Sequence.State.During || 
+                            sequence.MaxVisibleCharactersState == Sequence.State.Before))
+                        {
+                            text.maxVisibleCharacters = sequence.MaxVisibleCharactersEnd;
+                            sequence.MaxVisibleCharactersState = Sequence.State.After;
+                        }
+                        else if((t-sequence.StartTime < 0) && 
+                            (sequence.MaxVisibleCharactersState == Sequence.State.During ||
+                            sequence.MaxVisibleCharactersState == Sequence.State.After))
+                        {
+                            text.maxVisibleCharacters = sequence.MaxVisibleCharactersStart;
+                            sequence.MaxVisibleCharactersState = Sequence.State.Before;
+                        }
+                    }
+                    
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
+                        UpdateSequence += TextMeshProColor;
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
+                        UpdateSequence += MaxVisibleCharacters;
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                 {

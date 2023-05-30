@@ -1,9 +1,7 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEditor;
-using System.Collections;
-
+using TMPro;
 [CustomEditor(typeof(AnimationUI))]
 public class AnimationUIInspector : Editor
 {
@@ -172,6 +170,14 @@ public class AnimationUIInspector : Editor
                             sequence.TargetComp = null;
                         }
                     }
+                    else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                    {
+                        if(sequence.TargetComp.GetComponent<TMP_Text>() != null)sequence.AtTime += " [TextMeshPro]";
+                        else
+                        {
+                            sequence.TargetComp = null;
+                        }
+                    }
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                     {
                         sequence.AtTime += " [UnityEvent]";
@@ -191,6 +197,8 @@ public class AnimationUIInspector : Editor
                         sequence.AtTime += " [Unassigned] [CanvasGroup]";
                     else if(sequence.TargetType == Sequence.ObjectType.Camera)
                         sequence.AtTime += " [Unassigned] [Camera]";
+                    else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                        sequence.AtTime += " [Unassigned] [TextMeshPro]";
                     else if(sequence.TargetType == Sequence.ObjectType.UnityEventDynamic)
                         sequence.AtTime += " [UnityEvent]";
                 }

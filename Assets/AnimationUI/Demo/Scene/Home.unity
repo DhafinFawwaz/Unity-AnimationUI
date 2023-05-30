@@ -2635,8 +2635,69 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &762216527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343367, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_Name
+      value: SINGLETON
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289164062052602946, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
 --- !u!1 &784818081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,7 +2873,7 @@ RectTransform:
   - {fileID: 1884527844}
   - {fileID: 2074557534}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3005,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3364,6 +3425,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
@@ -3437,6 +3505,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
@@ -3510,6 +3585,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
@@ -3583,6 +3665,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
@@ -3656,6 +3745,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
@@ -3729,6 +3825,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
@@ -3802,6 +3905,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
@@ -3875,6 +3985,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
@@ -3948,6 +4065,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
@@ -4021,6 +4145,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
@@ -4094,6 +4225,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
@@ -4167,6 +4305,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
@@ -4240,6 +4385,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Main Camera] [Camera]
     StartTime: 0.21
@@ -4313,6 +4465,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
@@ -4386,6 +4545,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Wait 0.2s]
     StartTime: 0.21
@@ -4459,6 +4625,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.41s [Settings] [SetActive to True]
     StartTime: 0.41
@@ -4532,6 +4705,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.41s [Wait 0.2s]
     StartTime: 0.41
@@ -4605,6 +4785,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [TitleDropShadow] [RectTransform]
     StartTime: 0.61
@@ -4678,6 +4865,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [1] [RectTransform]
     StartTime: 0.61
@@ -4751,6 +4945,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [1] [SFX]
     StartTime: 0.61
@@ -4824,6 +5025,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [Wait 0.05s]
     StartTime: 0.61
@@ -4897,6 +5105,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.66s [2] [RectTransform]
     StartTime: 0.66
@@ -4970,6 +5185,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.66s [1] [SFX]
     StartTime: 0.66
@@ -5043,6 +5265,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.66s [Wait 0.05s]
     StartTime: 0.66
@@ -5116,6 +5345,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [3] [RectTransform]
     StartTime: 0.71000004
@@ -5189,6 +5425,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [1] [SFX]
     StartTime: 0.71000004
@@ -5262,6 +5505,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [Wait 0.05s]
     StartTime: 0.71000004
@@ -5335,6 +5585,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.7600001s [4] [RectTransform]
     StartTime: 0.76000005
@@ -5408,6 +5665,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.7600001s [1] [SFX]
     StartTime: 0.76000005
@@ -5481,6 +5745,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.7600001s [Wait 0.05s]
     StartTime: 0.76000005
@@ -5554,6 +5825,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [Back] [RectTransform]
     StartTime: 0.81000006
@@ -5627,6 +5905,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [1] [SFX]
     StartTime: 0.81000006
@@ -5700,6 +5985,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [Wait 0.2s]
     StartTime: 0.81000006
@@ -5773,6 +6065,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.01s [Home] [SetActive to False]
     StartTime: 1.0100001
@@ -5846,6 +6145,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.01s [SetActiveAllInput to True]
     StartTime: 1.0100001
@@ -5919,6 +6225,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.01s [Wait 0.01s]
     StartTime: 1.0100001
@@ -5992,6 +6305,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   PlayOnStart: 0
   CurrentTime: 0
@@ -9156,7 +9476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1251426229
@@ -9277,6 +9597,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
@@ -9350,6 +9677,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
@@ -9423,6 +9757,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
@@ -9496,6 +9837,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
@@ -9569,6 +9917,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [1] [SFX]
     StartTime: 0.060000002
@@ -9642,6 +9997,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
@@ -9715,6 +10077,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
@@ -9788,6 +10157,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
@@ -9861,6 +10237,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
@@ -9934,6 +10317,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
@@ -10007,6 +10397,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
@@ -10080,6 +10477,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
@@ -10153,6 +10557,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
@@ -10226,6 +10637,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
@@ -10299,6 +10717,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Wait 0.2s]
     StartTime: 0.21
@@ -10372,6 +10797,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.41s [Upgrade] [SetActive to True]
     StartTime: 0.41
@@ -10445,6 +10877,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.41s [Home] [SetActive to False]
     StartTime: 0.41
@@ -10518,6 +10957,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.41s [Wait 0.3s]
     StartTime: 0.41
@@ -10591,6 +11037,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [BGYellow] [RectTransform]
     StartTime: 0.71000004
@@ -10664,6 +11117,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [1] [SFX]
     StartTime: 0.71000004
@@ -10737,6 +11197,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [Wait 0.5s]
     StartTime: 0.71000004
@@ -10810,6 +11277,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.21s [Option 3] [RectTransform]
     StartTime: 1.21
@@ -10883,6 +11357,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.21s [1] [SFX]
     StartTime: 1.21
@@ -10956,6 +11437,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.21s [Wait 0.05s]
     StartTime: 1.21
@@ -11029,6 +11517,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.26s [Option 2] [RectTransform]
     StartTime: 1.26
@@ -11102,6 +11597,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.26s [1] [SFX]
     StartTime: 1.26
@@ -11175,6 +11677,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.26s [Wait 0.05s]
     StartTime: 1.26
@@ -11248,6 +11757,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.31s [Option 1] [RectTransform]
     StartTime: 1.31
@@ -11321,6 +11837,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.31s [1] [SFX]
     StartTime: 1.31
@@ -11394,6 +11917,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.31s [Wait 0.05s]
     StartTime: 1.31
@@ -11467,6 +11997,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.36s [Upgrade1] [RectTransform]
     StartTime: 1.3599999
@@ -11540,6 +12077,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.36s [1] [SFX]
     StartTime: 1.3599999
@@ -11613,6 +12157,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.36s [Wait 0.05s]
     StartTime: 1.3599999
@@ -11686,6 +12237,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.41s [Upgrade1 (1)] [RectTransform]
     StartTime: 1.4099998
@@ -11759,6 +12317,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.41s [1] [SFX]
     StartTime: 1.4099998
@@ -11832,6 +12397,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.41s [Wait 0.05s]
     StartTime: 1.4099998
@@ -11905,6 +12477,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.46s [Back] [RectTransform]
     StartTime: 1.4599998
@@ -11978,6 +12557,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.46s [Upgrade1 (2)] [RectTransform]
     StartTime: 1.4599998
@@ -12051,6 +12637,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.46s [1] [SFX]
     StartTime: 1.4599998
@@ -12124,6 +12717,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.46s [Wait 0.05s]
     StartTime: 1.4599998
@@ -12197,6 +12797,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.51s [Upgrade1 (3)] [RectTransform]
     StartTime: 1.5099998
@@ -12270,6 +12877,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.51s [1] [SFX]
     StartTime: 1.5099998
@@ -12343,6 +12957,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.51s [Wait 0.05s]
     StartTime: 1.5099998
@@ -12416,6 +13037,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.56s [SetActiveAllInput to True]
     StartTime: 1.5599997
@@ -12489,6 +13117,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.56s [Wait 0.01s]
     StartTime: 1.5599997
@@ -12562,6 +13197,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   PlayOnStart: 0
   CurrentTime: 0
@@ -12684,6 +13326,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
@@ -12757,6 +13406,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.01s [Main Camera] [Camera]
     StartTime: 0.01
@@ -12830,6 +13486,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 5
     OrthographicSizeEnd: 0.5
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
@@ -12903,6 +13566,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
@@ -12976,6 +13646,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
@@ -13049,6 +13726,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
@@ -13122,6 +13806,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
@@ -13195,6 +13886,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
@@ -13268,6 +13966,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
@@ -13341,6 +14046,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
@@ -13414,6 +14126,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
@@ -13487,6 +14206,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
@@ -13560,6 +14286,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
@@ -13633,6 +14366,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
@@ -13706,6 +14446,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.21s [Wait 0.05s]
     StartTime: 0.21
@@ -13779,6 +14526,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.26s [1] [SFX]
     StartTime: 0.26
@@ -13852,6 +14606,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.26s [Wait 0.25s]
     StartTime: 0.26
@@ -13925,6 +14686,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.51s [Right] [Image]
     StartTime: 0.51
@@ -13998,6 +14766,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.51s [Left] [Image]
     StartTime: 0.51
@@ -14071,6 +14846,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.51s [Wait 0.1s]
     StartTime: 0.51
@@ -14144,6 +14926,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [Right (1)] [Image]
     StartTime: 0.61
@@ -14217,6 +15006,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [Left (1)] [Image]
     StartTime: 0.61
@@ -14290,6 +15086,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.61s [Wait 0.1s]
     StartTime: 0.61
@@ -14363,6 +15166,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [Right (2)] [Image]
     StartTime: 0.71000004
@@ -14436,6 +15246,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [Left (2)] [Image]
     StartTime: 0.71000004
@@ -14509,6 +15326,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.71s [Wait 0.1s]
     StartTime: 0.71000004
@@ -14582,6 +15406,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [Right (3)] [Image]
     StartTime: 0.81000006
@@ -14655,6 +15486,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [Left (3)] [Image]
     StartTime: 0.81000006
@@ -14728,6 +15566,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 0.8100001s [Wait 0.8s]
     StartTime: 0.81000006
@@ -14801,6 +15646,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   - AtTime: At 1.61s [Level1] [LoadScene]
     StartTime: 1.6100001
@@ -14874,6 +15726,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 122
   PlayOnStart: 0
   CurrentTime: 0
@@ -20487,7 +21346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365589282
 GameObject:
@@ -23169,7 +24028,7 @@ RectTransform:
   - {fileID: 836549047}
   - {fileID: 1103618394}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23251,6 +24110,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781256528}
+  m_CullTransparentMesh: 1
+--- !u!1 &1795985176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795985177}
+  - component: {fileID: 1795985179}
+  - component: {fileID: 1795985178}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1795985177
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795985176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1936744054}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 248.75, y: -85}
+  m_SizeDelta: {x: -1154.5, y: -771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1795985178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795985176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Ayam Bebek Angsa masak di kuali.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5f5466f9f1f545f43ae490ad0ec5f013, type: 2}
+  m_sharedMaterial: {fileID: -3388997479985545262, guid: 5f5466f9f1f545f43ae490ad0ec5f013, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1795985179
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795985176}
   m_CullTransparentMesh: 1
 --- !u!1 &1803727615
 GameObject:
@@ -23908,8 +24902,9 @@ RectTransform:
   - {fileID: 1610808857}
   - {fileID: 1232707534}
   - {fileID: 820927126}
+  - {fileID: 1795985177}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24398,7 +25393,7 @@ Transform:
   - {fileID: 1254518952}
   - {fileID: 2105848138}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073050972
 GameObject:
@@ -24908,6 +25903,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
@@ -24921,6 +25923,86 @@ MonoBehaviour:
     TargetType: 3
     TargetComp: {fileID: 820927126}
     Duration: 0
+    EventDynamic:
+      m_PersistentCalls:
+        m_Calls: []
+    IsUnfolded: 0
+    IsDone: 1
+    Target: {fileID: 0}
+    IsActivating: 0
+    PlaySFXBy: 0
+    SFXFile: {fileID: 0}
+    SFXIndex: 0
+    SceneToLoad: 
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
+    TargetRtTask: 0
+    AnchoredPositionState: 0
+    AnchoredPositionStart: {x: 0, y: 0, z: 0}
+    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
+    LocalScaleState: 0
+    LocalScaleStart: {x: 0, y: 0, z: 0}
+    LocalScaleEnd: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesState: 0
+    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
+    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
+    SizeDeltaState: 0
+    SizeDeltaStart: {x: 0, y: 0, z: 0}
+    SizeDeltaEnd: {x: 0, y: 0, z: 0}
+    AnchorMinState: 0
+    AnchorMinStart: {x: 0, y: 0, z: 0}
+    AnchorMinEnd: {x: 0, y: 0, z: 0}
+    AnchorMaxState: 0
+    AnchorMaxStart: {x: 0, y: 0, z: 0}
+    AnchorMaxEnd: {x: 0, y: 0, z: 0}
+    PivotState: 0
+    PivotStart: {x: 0, y: 0, z: 0}
+    PivotEnd: {x: 0, y: 0, z: 0}
+    TransState: 0
+    TargetTransTask: 0
+    LocalPositionState: 0
+    LocalPositionStart: {x: 0, y: 0, z: 0}
+    LocalPositionEnd: {x: 0, y: 0, z: 0}
+    ImgState: 0
+    TargetImgTask: 1
+    ColorState: 1
+    ColorStart: {r: 1, g: 1, b: 1, a: 1}
+    ColorEnd: {r: 1, g: 1, b: 1, a: 0}
+    FillAmountState: 0
+    FillAmountStart: 0
+    FillAmountEnd: 0
+    TargetCgTask: 0
+    AlphaState: 0
+    AlphaStart: 0
+    AlphaEnd: 0
+    TargetCamTask: 0
+    BackgroundColorState: 0
+    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
+    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    OrthographicSizeState: 0
+    OrthographicSizeStart: 0
+    OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
+    TestInt: 0
+  - AtTime: At 0.01s [Image] [Image]
+    StartTime: 0.01
+    TriggerStart: 0
+    TriggerEnd: 0
+    PropertyRectHeight: 20
+    PropertyRectY: 177
+    SequenceType: 0
+    EaseType: 1
+    EasePower: 3
+    TargetType: 3
+    TargetComp: {fileID: 820927126}
+    Duration: 0.5
     EventDynamic:
       m_PersistentCalls:
         m_Calls: []
@@ -24981,79 +26063,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
-    TestInt: 0
-  - AtTime: At 0.01s [Image] [Image]
-    StartTime: 0.01
-    TriggerStart: 0
-    TriggerEnd: 0
-    PropertyRectHeight: 20
-    PropertyRectY: 177
-    SequenceType: 0
-    EaseType: 1
-    EasePower: 3
-    TargetType: 3
-    TargetComp: {fileID: 820927126}
-    Duration: 0.5
-    EventDynamic:
-      m_PersistentCalls:
-        m_Calls: []
-    IsUnfolded: 0
-    IsDone: 0
-    Target: {fileID: 0}
-    IsActivating: 0
-    PlaySFXBy: 0
-    SFXFile: {fileID: 0}
-    SFXIndex: 0
-    SceneToLoad: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    TargetRtTask: 0
-    AnchoredPositionState: 0
-    AnchoredPositionStart: {x: 0, y: 0, z: 0}
-    AnchoredPositionEnd: {x: 0, y: 0, z: 0}
-    LocalScaleState: 0
-    LocalScaleStart: {x: 0, y: 0, z: 0}
-    LocalScaleEnd: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesState: 0
-    LocalEulerAnglesStart: {x: 0, y: 0, z: 0}
-    LocalEulerAnglesEnd: {x: 0, y: 0, z: 0}
-    SizeDeltaState: 0
-    SizeDeltaStart: {x: 0, y: 0, z: 0}
-    SizeDeltaEnd: {x: 0, y: 0, z: 0}
-    AnchorMinState: 0
-    AnchorMinStart: {x: 0, y: 0, z: 0}
-    AnchorMinEnd: {x: 0, y: 0, z: 0}
-    AnchorMaxState: 0
-    AnchorMaxStart: {x: 0, y: 0, z: 0}
-    AnchorMaxEnd: {x: 0, y: 0, z: 0}
-    PivotState: 0
-    PivotStart: {x: 0, y: 0, z: 0}
-    PivotEnd: {x: 0, y: 0, z: 0}
-    TransState: 0
-    TargetTransTask: 0
-    LocalPositionState: 0
-    LocalPositionStart: {x: 0, y: 0, z: 0}
-    LocalPositionEnd: {x: 0, y: 0, z: 0}
-    ImgState: 0
-    TargetImgTask: 1
-    ColorState: 0
-    ColorStart: {r: 1, g: 1, b: 1, a: 1}
-    ColorEnd: {r: 1, g: 1, b: 1, a: 0}
-    FillAmountState: 0
-    FillAmountStart: 0
-    FillAmountEnd: 0
-    TargetCgTask: 0
-    AlphaState: 0
-    AlphaStart: 0
-    AlphaEnd: 0
-    TargetCamTask: 0
-    BackgroundColorState: 0
-    BackgroundColorStart: {r: 0, g: 0, b: 0, a: 0}
-    BackgroundColorEnd: {r: 0, g: 0, b: 0, a: 0}
-    OrthographicSizeState: 0
-    OrthographicSizeStart: 0
-    OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.01s [Wait 0.5s]
     StartTime: 0.01
@@ -25127,6 +26143,13 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   - AtTime: At 0.51s [SetActiveAllInput to True]
     StartTime: 0.51
@@ -25144,7 +26167,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     IsUnfolded: 0
-    IsDone: 0
+    IsDone: 1
     Target: {fileID: 0}
     IsActivating: 1
     PlaySFXBy: 0
@@ -25200,9 +26223,16 @@ MonoBehaviour:
     OrthographicSizeState: 0
     OrthographicSizeStart: 0
     OrthographicSizeEnd: 0
+    TargetTextMeshProTask: 1
+    TextMeshProColorState: 0
+    TextMeshProColorStart: {r: 0, g: 0, b: 0, a: 0}
+    TextMeshProColorEnd: {r: 0, g: 0, b: 0, a: 0}
+    MaxVisibleCharactersState: 0
+    MaxVisibleCharactersStart: 0
+    MaxVisibleCharactersEnd: 0
     TestInt: 0
   PlayOnStart: 1
-  CurrentTime: 0
+  CurrentTime: 0.51
   IsPlayingInEditMode: 0
 --- !u!1 &2112810106
 GameObject:

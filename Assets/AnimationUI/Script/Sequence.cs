@@ -19,7 +19,7 @@ public class Sequence
     public Ease.Type EaseType = Ease.Type.Out;
     public Ease.Power EasePower = Ease.Power.Quart;
     public enum ObjectType{// Only for Animation
-        Automatic, RectTransform, Transform, Image, CanvasGroup, Camera, UnityEventDynamic
+        Automatic, RectTransform, Transform, Image, CanvasGroup, Camera, TextMeshPro, UnityEventDynamic
     }
     public ObjectType TargetType = ObjectType.Automatic;
     
@@ -185,7 +185,26 @@ public class Sequence
     public float OrthographicSizeStart;
     public float OrthographicSizeEnd;
 #endregion Camera
-    
+
+#region TextMeshPro
+    [System.Flags]
+    public enum TextMeshProTask
+    {
+        None = 0,
+        Color = 1 << 0,
+        MaxVisibleCharacters = 2 << 0,
+    }
+    public TextMeshProTask TargetTextMeshProTask = TextMeshProTask.Color;
+
+    public State TextMeshProColorState = State.Before;
+    public Color TextMeshProColorStart;
+    public Color TextMeshProColorEnd;
+
+
+    public State MaxVisibleCharactersState = State.Before;
+    public int MaxVisibleCharactersStart;
+    public int MaxVisibleCharactersEnd;
+#endregion Camera    
 
     public Ease.Function EaseFunction;
     public void Init()
