@@ -1,7 +1,6 @@
 using UnityEngine;
-using AnimationUISingleton;
 // Please modify this class
-public class Customizable
+public static class AnimationUICustomizable
 {
     public static void SetActiveAllInput(bool isActivating)
     {

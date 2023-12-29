@@ -591,17 +591,17 @@ public class AnimationUI : MonoBehaviour
     void SetActiveAllInput(bool isActivating)
     {
         OnSetActiveAllInput?.Invoke(isActivating);
-        Customizable.SetActiveAllInput(isActivating);
+        AnimationUICustomizable.SetActiveAllInput(isActivating);
     }
     void PlaySound(AudioClip _SFXFile)
     {
         OnPlaySoundByFile?.Invoke(_SFXFile);
-        Customizable.PlaySound(_SFXFile);
+        AnimationUICustomizable.PlaySound(_SFXFile);
     }
     void PlaySound(int _index)
     {
         OnPlaySoundByIndex?.Invoke(_index);
-        Customizable.PlaySound(_index);
+        AnimationUICustomizable.PlaySound(_index);
     }
 
 #endregion

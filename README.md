@@ -91,7 +91,7 @@ _animationUI.MyMethodName();
 |`OnPlaySoundByFile`       | `Action<AudioClip>` | Play the animation but reversed.   |
 |`OnPlaySoundByIndex`      | `Action<int>`       | Play the animation but reversed.   |
 
-There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify Customizable.cs. You can also subscribe the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, or OnPlaySoundByIndex to change its behaviour. Example of how to achieve this is in the Demo folder which is AudioManager.cs.
+There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify AnimationUICustomizable.cs. You can also subscribe the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, or OnPlaySoundByIndex to change its behaviour. Example of how to achieve this is in the Demo folder which is AudioManager.cs.
 Most of the variable in the Sequence class is modifiedable, so it's possible to change the values of `_animationUI.AnimationSequence[MyIndex].MyVariableName` on runtime.
 
 ### 📖 Examples
@@ -103,13 +103,13 @@ _animationUI.Play();
 ```
 
 ## 📃 Note
-- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of Customizable.cs
+- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of AnimationUICustomizable.cs
 - There's a bonus component for ButtonUI
 - There's also reverse sequence button usefull to go back from other menu.
 - Make sure to press the preview start because you may accidentally do something like disabling all input
 - Theres progress indicator individually in the left side of the sequences.
 - Toggling PlayOnStart to true is usefull for transition to a new scene.
-- You can delete the Demo folder just fine. But make sure to modify Customizable.cs or subscribe to the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, and OnPlaySoundByIndex.
+- You can delete the Demo folder just fine. But make sure to modify AnimationUICustomizable.cs or subscribe to the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, and OnPlaySoundByIndex.
 
 
 ## 📝 License
