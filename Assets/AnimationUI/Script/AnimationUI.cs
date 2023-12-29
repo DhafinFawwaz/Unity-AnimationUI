@@ -77,11 +77,11 @@ public class AnimationUI : MonoBehaviour
                         StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
                             sequence.LocalPositionStart, sequence.LocalPositionEnd, sequence.Duration, sequence.EaseFunction
                         ));
-                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
                         StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
                             sequence.LocalEulerAnglesStart, sequence.LocalEulerAnglesEnd, sequence.Duration, sequence.EaseFunction
                         ));
-                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
                         StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
                             sequence.LocalScaleStart, sequence.LocalScaleEnd, sequence.Duration, sequence.EaseFunction
                         ));
@@ -133,7 +133,7 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
             {
-                Customizable.SetActiveAllInput(sequence.IsActivating);
+                SetActiveAllInput(sequence.IsActivating);
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
             {
@@ -153,10 +153,10 @@ public class AnimationUI : MonoBehaviour
                         // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
                         continue;
                     }
-                    Customizable.PlaySound(sequence.SFXFile);
+                    PlaySound(sequence.SFXFile);
                 }
                 else // if(sequence.PlaySFXBy == Sequence.SFXMethod.Index)
-                    Customizable.PlaySound(sequence.SFXIndex);
+                    PlaySound(sequence.SFXIndex);
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
@@ -235,11 +235,11 @@ public class AnimationUI : MonoBehaviour
                         StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
                             sequence.LocalPositionEnd, sequence.LocalPositionStart, sequence.Duration, sequence.EaseFunction
                         ));
-                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
                         StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
                             sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration, sequence.EaseFunction
                         ));
-                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
                         StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
                             sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration, sequence.EaseFunction
                         ));
@@ -291,7 +291,7 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
             {
-                Customizable.SetActiveAllInput(!sequence.IsActivating);
+                SetActiveAllInput(!sequence.IsActivating);
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
             {
@@ -311,10 +311,10 @@ public class AnimationUI : MonoBehaviour
                         // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
                         continue;
                     }
-                    Customizable.PlaySound(sequence.SFXFile);
+                    PlaySound(sequence.SFXFile);
                 }
                 else
-                    Customizable.PlaySound(sequence.SFXFile);
+                    PlaySound(sequence.SFXIndex);
             }
             else if(sequence.SequenceType == Sequence.Type.LoadScene)
             {
@@ -585,6 +585,16 @@ public class AnimationUI : MonoBehaviour
 #endregion Event
 
 
+#region Overidable
+    public virtual void SetActiveAllInput(bool isActivating)
+        => Customizable.SetActiveAllInput(isActivating);
+    public virtual void PlaySound(AudioClip _SFXFile)
+        => Customizable.PlaySound(_SFXFile);
+    public virtual void PlaySound(int _index)
+        => Customizable.PlaySound(_index);
+
+#endregion
+
 
 
 #if UNITY_EDITOR
@@ -654,6 +664,103 @@ public class AnimationUI : MonoBehaviour
         CurrentTime = 0;
         IsPlayingInEditMode = false;
         UpdateSequence(0);
+
+        Array.Reverse(AnimationSequence);
+        foreach(Sequence sequence in AnimationSequence)
+        {
+            if(sequence.SequenceType == Sequence.Type.Animation)
+            {
+                if(sequence.TargetComp == null)
+                {
+                    Debug.Log("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                
+                if(sequence.TargetType == Sequence.ObjectType.RectTransform)
+                {
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchoredPosition = sequence.AnchoredPositionStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalEulerAngles))
+                        sequence.TargetComp.GetComponent<RectTransform>().localEulerAngles = sequence.LocalEulerAnglesStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalScale))
+                        sequence.TargetComp.GetComponent<RectTransform>().localScale = sequence.LocalScaleStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchorMax = sequence.AnchorMaxStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchorMin = sequence.AnchorMinStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
+                        sequence.TargetComp.GetComponent<RectTransform>().sizeDelta = sequence.SizeDeltaStart;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
+                        sequence.TargetComp.GetComponent<RectTransform>().pivot = sequence.PivotStart;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Transform)
+                {
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
+                        sequence.TargetComp.transform.localPosition = sequence.LocalPositionStart;
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                        sequence.TargetComp.transform.localEulerAngles = sequence.LocalEulerAnglesStart;
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                        sequence.TargetComp.transform.localScale = sequence.LocalScaleStart;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Image)
+                {
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
+                        sequence.TargetComp.GetComponent<Image>().color = sequence.ColorStart;
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
+                        sequence.TargetComp.GetComponent<Image>().fillAmount = sequence.FillAmountStart;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        sequence.TargetComp.GetComponent<CanvasGroup>().alpha = sequence.AlphaStart;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Camera)
+                {
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.BackgroundColor))
+                        sequence.TargetComp.GetComponent<Camera>().backgroundColor = sequence.BackgroundColorStart;
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
+                        sequence.TargetComp.GetComponent<Camera>().orthographicSize = sequence.OrthographicSizeStart;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                {
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
+                        sequence.TargetComp.GetComponent<TMP_Text>().color = sequence.TextMeshProColorStart;
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
+                        sequence.TargetComp.GetComponent<TMP_Text>().maxVisibleCharacters = sequence.MaxVisibleCharactersStart;
+                }
+            }
+            else if(sequence.SequenceType == Sequence.Type.Wait)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
+            {
+
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActive)
+            {
+                if(sequence.Target == null)
+                {
+                    // Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                sequence.Target.SetActive(sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SFX)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.UnityEvent)
+            {
+
+            }
+        }
+
+        Array.Reverse(AnimationSequence);
     }
     public void PreviewEnd()
     {
@@ -667,6 +774,101 @@ public class AnimationUI : MonoBehaviour
         IsPlayingInEditMode = false;
         CurrentTime = TotalDuration;
         UpdateSequence(Mathf.Clamp01(TotalDuration));
+
+
+        foreach(Sequence sequence in AnimationSequence)
+        {
+            if(sequence.SequenceType == Sequence.Type.Animation)
+            {
+                if(sequence.TargetComp == null)
+                {
+                    Debug.Log("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                
+                if(sequence.TargetType == Sequence.ObjectType.RectTransform)
+                {
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchoredPosition = sequence.AnchoredPositionEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalEulerAngles))
+                        sequence.TargetComp.GetComponent<RectTransform>().localEulerAngles = sequence.LocalEulerAnglesEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalScale))
+                        sequence.TargetComp.GetComponent<RectTransform>().localScale = sequence.LocalScaleEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchorMax = sequence.AnchorMaxEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
+                        sequence.TargetComp.GetComponent<RectTransform>().anchorMin = sequence.AnchorMinEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
+                        sequence.TargetComp.GetComponent<RectTransform>().sizeDelta = sequence.SizeDeltaEnd;
+                    if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
+                        sequence.TargetComp.GetComponent<RectTransform>().pivot = sequence.PivotEnd;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Transform)
+                {
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
+                        sequence.TargetComp.transform.localPosition = sequence.LocalPositionEnd;
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
+                        sequence.TargetComp.transform.localEulerAngles = sequence.LocalEulerAnglesEnd;
+                    if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
+                        sequence.TargetComp.transform.localScale = sequence.LocalScaleEnd;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Image)
+                {
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
+                        sequence.TargetComp.GetComponent<Image>().color = sequence.ColorEnd;
+                    if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
+                        sequence.TargetComp.GetComponent<Image>().fillAmount = sequence.FillAmountEnd;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
+                {
+                    if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
+                        sequence.TargetComp.GetComponent<CanvasGroup>().alpha = sequence.AlphaEnd;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.Camera)
+                {
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.BackgroundColor))
+                        sequence.TargetComp.GetComponent<Camera>().backgroundColor = sequence.BackgroundColorEnd;
+                    if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
+                        sequence.TargetComp.GetComponent<Camera>().orthographicSize = sequence.OrthographicSizeEnd;
+                }
+                else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
+                {
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
+                        sequence.TargetComp.GetComponent<TMP_Text>().color = sequence.TextMeshProColorEnd;
+                    if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
+                        sequence.TargetComp.GetComponent<TMP_Text>().maxVisibleCharacters = sequence.MaxVisibleCharactersEnd;
+                }
+            }
+            else if(sequence.SequenceType == Sequence.Type.Wait)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
+            {
+
+            }
+            else if(sequence.SequenceType == Sequence.Type.SetActive)
+            {
+                if(sequence.Target == null)
+                {
+                    // Debug.LogError("Please assign Target for Sequence at "+sequence.StartTime.ToString()+"s");
+                    continue;
+                }
+                sequence.Target.SetActive(!sequence.IsActivating);
+            }
+            else if(sequence.SequenceType == Sequence.Type.SFX)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.LoadScene)
+            {
+                
+            }
+            else if(sequence.SequenceType == Sequence.Type.UnityEvent)
+            {
+
+            }
+        }
     }
     void Reset() //For the default value. A hacky way because the inspector reset the value for Serialized class
     {
@@ -1210,25 +1412,25 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SetActiveAllInput)
             {
-                void SetActiveALlInput(float t)
-                {
-                    float time = Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration);
-                    if(!sequence.IsDone) // so that SetActiveAllInput in the first frame can also be called
-                    {
-                        if(t - sequence.StartTime > -0.01f)
-                        {
-                            sequence.IsDone = true;
-                            Customizable.SetActiveAllInput(sequence.IsActivating);
-                        }
-                    }
-                    else if(t - sequence.StartTime < 0)
-                    {
-                        sequence.IsDone = false;
-                        Customizable.SetActiveAllInput(!sequence.IsActivating);
-                    }
-                }
+                // void SetActiveALlInput(float t)
+                // {
+                //     float time = Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration);
+                //     if(!sequence.IsDone) // so that SetActiveAllInput in the first frame can also be called
+                //     {
+                //         if(t - sequence.StartTime > -0.01f)
+                //         {
+                //             sequence.IsDone = true;
+                //             SetActiveAllInput(sequence.IsActivating);
+                //         }
+                //     }
+                //     else if(t - sequence.StartTime < 0)
+                //     {
+                //         sequence.IsDone = false;
+                //         SetActiveAllInput(!sequence.IsActivating);
+                //     }
+                // }
                 // sequence.IsDone = false;
-                UpdateSequence += SetActiveALlInput;
+                // UpdateSequence += SetActiveALlInput;
             }
             else if(sequence.SequenceType == Sequence.Type.SetActive)
             {
@@ -1259,46 +1461,46 @@ public class AnimationUI : MonoBehaviour
             }
             else if(sequence.SequenceType == Sequence.Type.SFX)
             {
-                void SFX(float t)
-                {
-                    float time = Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration);
-                    if(!sequence.IsDone) // so that SetActiveAllInput in the first frame can also be called
-                    {
-                        if(t - sequence.StartTime > -0.01f)
-                        {
-                            sequence.IsDone = true;
-                            if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
-                            {
-                                if(sequence.SFXFile == null)
-                                {
-                                    // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
-                                    return;
-                                }
-                                Customizable.PlaySound(sequence.SFXFile);
-                            }
-                            else
-                                Customizable.PlaySound(sequence.SFXFile);
-                        }
-                    }
-                    else if(t - sequence.StartTime < 0)
-                    {
-                        if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
-                        {
-                            if(sequence.SFXFile == null)
-                            {
-                                // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
-                                return;
-                            }
-                            Customizable.PlaySound(sequence.SFXFile);
-                        }
-                        else
-                            Customizable.PlaySound(sequence.SFXFile);
+                // void SFX(float t)
+                // {
+                //     float time = Mathf.Clamp01((t-sequence.StartTime)/sequence.Duration);
+                //     if(!sequence.IsDone) // so that SetActiveAllInput in the first frame can also be called
+                //     {
+                //         if(t - sequence.StartTime > -0.01f)
+                //         {
+                //             sequence.IsDone = true;
+                //             if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
+                //             {
+                //                 if(sequence.SFXFile == null)
+                //                 {
+                //                     // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                //                     return;
+                //                 }
+                //                 PlaySound(sequence.SFXFile);
+                //             }
+                //             else
+                //                 PlaySound(sequence.SFXIndex);
+                //         }
+                //     }
+                //     else if(t - sequence.StartTime < 0)
+                //     {
+                //         if(sequence.PlaySFXBy == Sequence.SFXMethod.File)
+                //         {
+                //             if(sequence.SFXFile == null)
+                //             {
+                //                 // Debug.LogWarning("Please assign SFX for Sequence at "+sequence.StartTime.ToString()+"s");
+                //                 return;
+                //             }
+                //             PlaySound(sequence.SFXFile);
+                //         }
+                //         else
+                //             PlaySound(sequence.SFXIndex);
                         
-                        sequence.IsDone = false;
-                    }
-                }
+                //         sequence.IsDone = false;
+                //     }
+                // }
                 // sequence.IsDone = false;
-                UpdateSequence += SFX;
+                // UpdateSequence += SFX;
             }
             else if(sequence.SequenceType == Sequence.Type.UnityEvent)
             {
