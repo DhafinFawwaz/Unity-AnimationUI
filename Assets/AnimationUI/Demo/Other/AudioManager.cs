@@ -4,6 +4,16 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    void OnEnable()
+    {
+        AnimationUI.OnPlaySoundByFile += PlaySound;
+        AnimationUI.OnPlaySoundByIndex += PlaySound;
+    }
+    void OnDisable()
+    {
+        AnimationUI.OnPlaySoundByFile -= PlaySound;
+        AnimationUI.OnPlaySoundByIndex -= PlaySound;
+    }
     [SerializeField] AudioSource _soundSource;
     // [SerializeField] AudioMixer _soundMixer;
     [SerializeField] AudioClip _defaultSound;

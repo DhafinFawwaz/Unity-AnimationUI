@@ -82,9 +82,16 @@ _animationUI.MyMethodName();
 |:--------                          | :------------------------------    |
 |`Play()`                           | Play the animation |
 |`PlayReversed()`                   | Play the animation but reversed. Usefull to go back from a certain menu quickly.|
-|`AddFunctionAt(float time, delegate func)`| Add a function to be called at a certain time after the AnimationUI.Play() is called|
-|`AddFunctionAtEnd(delegate func)`  |Add a function to be called when the latest wait sequence is finished. It's intended like this so that you also have an option for this case and not just at the very end of the whole sequences. If you want to make it get called at the end of the whole sequences, you can either call `AddFunctionAt(_animationUI.TotalDuration, func)` or just add another wait sequence as the last sequence in the inspector|
+|`AddFunctionAt(float time, Action func)`| Add a function to be called at a certain time after the AnimationUI.Play() is called|
+|`AddFunctionAtEnd(Action func)`  |Add a function to be called when the latest wait sequence is finished. It's intended like this so that you also have an option for this case and not just at the very end of the whole sequences. If you want to make it get called at the end of the whole sequences, you can either call `AddFunctionAt(_animationUI.TotalDuration, func)` or just add another wait sequence as the last sequence in the inspector|
 
+| Properties               | Type                | Description                        |
+|:--------                 | :--------           | :------------------------------    |
+|`OnSetActiveAllInput`     | `Action<bool>`      | Play the animation                 |
+|`OnPlaySoundByFile`       | `Action<AudioClip>` | Play the animation but reversed.   |
+|`OnPlaySoundByIndex`      | `Action<int>`       | Play the animation but reversed.   |
+
+There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify Customizable.cs. You can also subscribe the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, or OnPlaySoundByIndex to change its behaviour. Example of how to achieve this is in the Demo folder which is AudioManager.cs.
 Most of the variable in the Sequence class is modifiedable, so it's possible to change the values of `_animationUI.AnimationSequence[MyIndex].MyVariableName` on runtime.
 
 ### 📖 Examples
@@ -96,14 +103,13 @@ _animationUI.Play();
 ```
 
 ## 📃 Note
+- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of Customizable.cs
 - There's a bonus component for ButtonUI
 - There's also reverse sequence button usefull to go back from other menu.
 - Make sure to press the preview start because you may accidentally do something like disabling all input
 - Theres progress indicator individually in the left side of the sequences.
 - Toggling PlayOnStart to true is usefull for transition to a new scene.
-- Make sure the Singleton prefab exist in the resources folder. Don't move it outside.
-- There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of Customizable.cs
-- readme to explain others category for custom button demos, etc.
+- You can delete the Demo folder just fine. But make sure to modify Customizable.cs or subscribe to the static event of AnimationUI which are OnSetActiveAllInput, OnPlaySoundByFile, and OnPlaySoundByIndex.
 
 
 ## 📝 License

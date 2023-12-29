@@ -560,24 +560,23 @@ public class AnimationUI : MonoBehaviour
 #endregion Tasks
 
 #region Event
-    public delegate void AnimationUIEvent();
-    AnimationUIEvent atEndEvents;
-    List<AnimationUIEvent> atTimeEvents = new List<AnimationUIEvent>();
+    Action atEndEvents;
+    List<Action> atTimeEvents = new List<Action>();
     List<float> atTimes = new List<float>();
 
-    IEnumerator AtTimeEvent(AnimationUIEvent atTimeEvent, float time)
+    IEnumerator AtTimeEvent(Action atTimeEvent, float time)
     {
         yield return new WaitForSecondsRealtime(time);
         atTimeEvent();
     }
-    public AnimationUI AddFunctionAt(float time, AnimationUIEvent func)
+    public AnimationUI AddFunctionAt(float time, Action func)
     {
         atTimes.Add(time);
         atTimeEvents.Add(func);
         return this;
     }
     
-    public AnimationUI AddFunctionAtEnd(AnimationUIEvent func)
+    public AnimationUI AddFunctionAtEnd(Action func)
     {
         atEndEvents += func;
         return this;
@@ -586,12 +585,24 @@ public class AnimationUI : MonoBehaviour
 
 
 #region Overidable
-    public virtual void SetActiveAllInput(bool isActivating)
-        => Customizable.SetActiveAllInput(isActivating);
-    public virtual void PlaySound(AudioClip _SFXFile)
-        => Customizable.PlaySound(_SFXFile);
-    public virtual void PlaySound(int _index)
-        => Customizable.PlaySound(_index);
+    public static event Action<bool> OnSetActiveAllInput;
+    public static event Action<AudioClip> OnPlaySoundByFile;
+    public static event Action<int> OnPlaySoundByIndex;
+    void SetActiveAllInput(bool isActivating)
+    {
+        OnSetActiveAllInput?.Invoke(isActivating);
+        Customizable.SetActiveAllInput(isActivating);
+    }
+    void PlaySound(AudioClip _SFXFile)
+    {
+        OnPlaySoundByFile?.Invoke(_SFXFile);
+        Customizable.PlaySound(_SFXFile);
+    }
+    void PlaySound(int _index)
+    {
+        OnPlaySoundByIndex?.Invoke(_index);
+        Customizable.PlaySound(_index);
+    }
 
 #endregion
 

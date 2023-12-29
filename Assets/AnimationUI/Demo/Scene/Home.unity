@@ -1939,8 +1939,8 @@ RectTransform:
   m_Father: {fileID: 802595057}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.99999946, y: 0.5}
-  m_AnchorMax: {x: 0.99999946, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 207, y: -5}
   m_SizeDelta: {x: 270.1485, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22714,7 +22714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 341.99994, y: 125}
+  m_AnchoredPosition: {x: 342, y: 125}
   m_SizeDelta: {x: 400, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610808858
@@ -23226,6 +23226,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626585844}
   m_CullTransparentMesh: 1
+--- !u!1001 &1679693061
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343366, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262533744184343367, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
+      propertyPath: m_Name
+      value: SINGLETON
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9447622cd4214c2438b92d180da472ca, type: 3}
 --- !u!1 &1715748826
 GameObject:
   m_ObjectHideFlags: 0
@@ -25985,7 +26042,7 @@ MonoBehaviour:
     LocalPositionEnd: {x: 0, y: 0, z: 0}
     ImgState: 0
     TargetImgTask: 1
-    ColorState: 0
+    ColorState: 1
     ColorStart: {r: 1, g: 1, b: 1, a: 1}
     ColorEnd: {r: 1, g: 1, b: 1, a: 0}
     FillAmountState: 0
@@ -26171,7 +26228,7 @@ MonoBehaviour:
     MaxVisibleCharactersEnd: 0
     TestInt: 0
   PlayOnStart: 1
-  CurrentTime: 0
+  CurrentTime: 0.51
   IsPlayingInEditMode: 0
 --- !u!1 &2112810106
 GameObject:

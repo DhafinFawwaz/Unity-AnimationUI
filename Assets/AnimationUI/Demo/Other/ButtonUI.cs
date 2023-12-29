@@ -128,11 +128,11 @@ public class ButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void Start() => _easeFunction = Ease.GetEase(_easeType, _easePower);
     public void PlaySound(AudioClip audioClip)
     {
-        Customizable.PlaySound(audioClip);
+        AnimationUISingleton.Singleton.Instance.Audio.PlaySound(audioClip);
     }
     public void PlaySound(int index)
     {
-        Customizable.PlaySound(index);
+        AnimationUISingleton.Singleton.Instance.Audio.PlaySound(index);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
