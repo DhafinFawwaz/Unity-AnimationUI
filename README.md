@@ -102,6 +102,34 @@ _animationUI.AddFunctionAtEnd(LoadSceneWithLoadingBar);
 _animationUI.Play();
 ```
 
+Subscribe to customizable AnimationUI events.
+```csharp
+void OnEnable()
+{
+    AnimationUI.OnSetActiveAllInput += SetActiveAllInput
+    AnimationUI.OnPlaySoundByFile += PlaySoundByFile
+    AnimationUI.OnPlaySoundByIndex += PlaySoundByIndex
+}
+void OnDisable()
+{
+    AnimationUI.OnSetActiveAllInput -= SetActiveAllInput
+    AnimationUI.OnPlaySoundByFile -= PlaySoundByFile
+    AnimationUI.OnPlaySoundByIndex -= PlaySoundByIndex
+}
+void SetActiveAllInput(bool isActive)
+{
+    Debug.Log("SetActive");
+}
+void PlaySoundByFile(AudioClip clip)
+{
+    Debug.Log("Playing " + clip.name);
+}
+void PlaySoundByIndex(int index)
+{
+    Debug.Log("Playing clip at index " + index.ToString());
+}
+```
+
 ## 📃 Note
 - There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of AnimationUICustomizable.cs
 - There's a bonus component for ButtonUI

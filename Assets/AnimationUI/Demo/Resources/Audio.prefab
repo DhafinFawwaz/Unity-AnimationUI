@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5611951853495638023}
   - component: {fileID: 5611951853495638022}
+  - component: {fileID: 2477764773426688146}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -60,6 +61,19 @@ MonoBehaviour:
   - Clip: {fileID: 8300000, guid: 94c46c3d834a4fb49a6560bf71a8d149, type: 3}
     Volume: 1
     ClipName: Button2
+--- !u!114 &2477764773426688146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611951853495638020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cb00e2594cb5b419de32372e892925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audio: {fileID: 5611951853495638022}
 --- !u!1 &5611951854663702214
 GameObject:
   m_ObjectHideFlags: 0
