@@ -51,6 +51,9 @@ public static class Ease
         Linear, Quad, Cubic, Quart, Quint
     }
     
+    // Func<float,float> is longer and harder to type than Ease.Function
+    // Also it make sure the kind of function that gets passed are function that has
+    // a return float that is normalized between 0 and 1 (can also overshoot but the main part is between 0 and 1)
     public delegate float Function(float x);
     public static Function GetEase(Type type, Power power)
     {

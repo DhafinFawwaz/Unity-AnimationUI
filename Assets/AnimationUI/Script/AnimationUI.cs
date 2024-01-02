@@ -889,8 +889,7 @@ public class AnimationUI : MonoBehaviour
         };
     }
 
-    public delegate void Animation(float t);
-    public Animation UpdateSequence;
+    public Action<float> UpdateSequence;
 #region timing
     public void InitTime()
     {
