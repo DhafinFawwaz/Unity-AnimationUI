@@ -1,0 +1,20 @@
+{
+    "name": "com.dhafinfawwaz.animationui",
+    "version": "1.2.0",
+    "displayName": "AnimationUI",
+    "description": "Usefull Unity tool for animating UI with just drag and drop",
+    "unity": "2021.3",
+    "keywords": [
+        "Tween",
+        "Animation",
+        "Animation Sequence",
+        "Tweening Function",
+        "UI",
+        "GUI"
+    ],
+    "author": {
+        "name": "Dhafin Fawwaz Ikramullah",
+        "email": "dhafin.fawwaz@gmail.com",
+        "url": "https://dhafinfawwaz.github.io/"
+    }
+}
