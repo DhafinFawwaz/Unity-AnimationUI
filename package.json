@@ -6,6 +6,9 @@
     "unity": "2021.3",
     "documentationUrl": "https://github.com/DhafinFawwaz/Unity-AnimationUI",
     "licensesUrl": "https://github.com/DhafinFawwaz/Unity-AnimationUI/blob/main/LICENSE",
+    "dependencies": {
+      "com.unity.textmeshpro": "3.0.6"
+   },
     "keywords": [
         "Unity",
         "Tween",
