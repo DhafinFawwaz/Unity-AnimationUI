@@ -12,20 +12,57 @@ public class AnimationUI : MonoBehaviour
     [HideInInspector] public float TotalDuration = 0; //Value automatically taken care of by AnimationUIInspector
     public Sequence[] AnimationSequence;
     [HideInInspector] public bool PlayOnStart = false;
+    private bool _isSequencesInitialized = false;
+    
+    void Awake()
+    {
+#if UNITY_EDITOR
+        if(Application.isPlaying)
+#endif
+        InitializeSequences();
+    }
+
     void Start()
     {
 #if UNITY_EDITOR
         if(Application.isPlaying)
 #endif
-        foreach(Sequence sequence in AnimationSequence)sequence.Init();
-
-#if UNITY_EDITOR
-        if(Application.isPlaying)
-#endif
         if(PlayOnStart)StartCoroutine(PlayAnimation());
     }
-    public void Play() => StartCoroutine(PlayAnimation());
-    public void PlayReversed() => StartCoroutine(PlayReversedAnimation());
+
+    /// <summary>
+    /// Initialize all sequences
+    /// </summary>
+    void InitializeSequences()
+    {
+        foreach(Sequence sequence in AnimationSequence)sequence.Init();
+    }
+
+    /// <summary>
+    /// Play the animation
+    /// </summary>
+    public void Play()
+    {
+        if(!_isSequencesInitialized)
+        {
+            InitializeSequences();
+            _isSequencesInitialized = true;
+        }
+        StartCoroutine(PlayAnimation());
+    }
+
+    /// <summary>
+    /// Play the animation in reverse
+    /// </summary>
+    public void PlayReversed()
+    {
+        if(!_isSequencesInitialized)
+        {
+            InitializeSequences();
+            _isSequencesInitialized = true;
+        }
+        StartCoroutine(PlayReversedAnimation());
+    }
     IEnumerator PlayAnimation()
     {
         for(int i = 0; i < atTimeEvents.Count; i++)StartCoroutine(AtTimeEvent(atTimeEvents[i], atTimes[i])); //Function to call at time

@@ -206,13 +206,9 @@ public class Sequence
     public int MaxVisibleCharactersEnd;
 #endregion Camera    
 
-    public Ease.Function EaseFunction;
+    public Ease.Function EaseFunction = Ease.OutQuart;
     public void Init()
     {
         EaseFunction = Ease.GetEase(EaseType, EasePower);
     }
-
-
-    public int TestInt = 0;
-
 }
