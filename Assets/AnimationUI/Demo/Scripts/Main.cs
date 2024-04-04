@@ -1,5 +1,7 @@
 using UnityEngine;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
 public class Main
 {
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -7,4 +9,6 @@ public class Main
     {
         Singleton.Initialize();
     }
+}
+
 }

@@ -12,6 +12,9 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
+
 public class ButtonUI : Selectable, IPointerClickHandler, ISubmitHandler
 {
     [SerializeField] ColorBlock _textColors = ColorBlock.defaultColorBlock;
@@ -545,3 +548,5 @@ public class ButtonUI2Editor : Editor
     }
 }
 #endif
+
+}

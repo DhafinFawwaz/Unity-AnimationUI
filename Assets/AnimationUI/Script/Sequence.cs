@@ -1,6 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
+
+namespace DhafinFawwaz.AnimationUILib
+{
+
 [System.Serializable]
 public class Sequence
 {
@@ -211,4 +214,6 @@ public class Sequence
     {
         EaseFunction = Ease.GetEase(EaseType, EasePower);
     }
+}
+
 }

@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
+
 [CustomEditor(typeof(AudioManager))]
 public class AudioManagerInspector : Editor
 {
@@ -60,4 +63,6 @@ public class AudioManagerInspector : Editor
         serializedObject.ApplyModifiedProperties();
 
     }
+}
+
 }

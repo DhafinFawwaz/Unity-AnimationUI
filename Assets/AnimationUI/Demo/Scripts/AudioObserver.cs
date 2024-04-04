@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
 public class AudioObserver : MonoBehaviour
 {
     [SerializeField] AudioManager _audio;
@@ -29,4 +31,6 @@ public class AudioObserver : MonoBehaviour
     void ButtonEnter() => _audio.PlaySound(3);
     void ButtonOnClick() => _audio.PlaySound(2);
     void ButtonDown() => _audio.PlaySound(0);
+}
+
 }

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
+
 #if UNITY_EDITOR
 using UnityEditor;
 [ExecuteInEditMode]
@@ -40,4 +43,6 @@ public class Singleton : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
     }
+}
+
 }

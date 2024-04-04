@@ -3,6 +3,9 @@ using System.Collections;
 using System.Linq;
 using System;
 using UnityEditor;
+
+namespace DhafinFawwaz.AnimationUILib.EditorLib
+{
 public static class SerializedPropertyExtensions
 {
     public static T GetSerializedValue<T>(this SerializedProperty property)
@@ -48,4 +51,6 @@ public static class SerializedPropertyExtensions
 
         return (T)@object;
     }
+}
+
 }

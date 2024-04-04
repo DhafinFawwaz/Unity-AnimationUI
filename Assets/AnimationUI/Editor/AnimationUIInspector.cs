@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using TMPro;
+
+namespace DhafinFawwaz.AnimationUILib.EditorLib
+{
+
 [CustomEditor(typeof(AnimationUI))]
 public class AnimationUIInspector : Editor
 {
@@ -274,5 +278,7 @@ public class AnimationUIInspector : Editor
         
     }
 
+
+}
 
 }

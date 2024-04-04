@@ -1,4 +1,8 @@
 using UnityEngine;
+
+namespace DhafinFawwaz.AnimationUILib
+{
+
 // Please modify this class
 public static class AnimationUICustomizable
 {
@@ -20,4 +24,5 @@ public static class AnimationUICustomizable
         // Please modify this line to use your own Singleton class.
         // Singleton.Instance.Audio.PlaySound(_index);
     }
+}
 }

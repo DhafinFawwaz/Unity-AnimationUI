@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource _soundSource;
@@ -50,4 +52,6 @@ public class AudioManager : MonoBehaviour
         }
         PlaySound(SFX[index].Clip, SFX[index].Volume);
     }
+}
+
 }

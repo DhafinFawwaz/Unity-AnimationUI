@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+
+namespace DhafinFawwaz.AnimationUILib
+{
+    
 #if UNITY_EDITOR
 [ExecuteInEditMode]
 #endif
@@ -205,9 +209,9 @@ public class AnimationUI : MonoBehaviour
             }
         }
 
-        atEndEvents?.Invoke(); //Function to call at end
+        OnAnimationEnded?.Invoke(); //Function to call at end
 
-        atEndEvents = null;
+        OnAnimationEnded = null;
         atTimeEvents.Clear();
         atTimes.Clear();
     }
@@ -363,10 +367,10 @@ public class AnimationUI : MonoBehaviour
             }
         }
 
-        atEndEvents?.Invoke(); //Function to call at end
+        OnAnimationEnded?.Invoke(); //Function to call at end
 
         Array.Reverse(AnimationSequence);
-        atEndEvents = null;
+        OnAnimationEnded = null;
         atTimeEvents.Clear();
         atTimes.Clear();
     }
@@ -597,7 +601,7 @@ public class AnimationUI : MonoBehaviour
 #endregion Tasks
 
 #region Event
-    Action atEndEvents;
+    public Action OnAnimationEnded;
     List<Action> atTimeEvents = new List<Action>();
     List<float> atTimes = new List<float>();
 
@@ -613,11 +617,6 @@ public class AnimationUI : MonoBehaviour
         return this;
     }
     
-    public AnimationUI AddFunctionAtEnd(Action func)
-    {
-        atEndEvents += func;
-        return this;
-    }
 #endregion Event
 
 
@@ -1575,4 +1574,7 @@ public class AnimationUI : MonoBehaviour
         }
     }
 #endif
+}
+
+
 }

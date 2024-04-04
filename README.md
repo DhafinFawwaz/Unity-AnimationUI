@@ -72,21 +72,33 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 Get the reference by
 
 ```csharp
-AnimationUI _animationUI;
-_animationUI.MyMethodName();
+using DhafinFawwaz.AnimationUILib;
+
+public class Something : MonoBehaviour
+{
+    AnimationUI _animationUI;
+    void DoSomething()
+    {
+        _animationUI.Play();
+    }
+}
 ```
 
 ### 🔗 Syntax
 
-| Method                            | Description                        |
+| Methods                           | Description                        |
 |:--------                          | :------------------------------    |
 |`Play()`                           | Play the animation |
 |`PlayReversed()`                   | Play the animation but reversed. Usefull to go back from a certain menu quickly.|
 |`AddFunctionAt(float time, Action func)`| Add a function to be called at a certain time after the AnimationUI.Play() is called|
-|`AddFunctionAtEnd(Action func)`  |Add a function to be called when the latest wait sequence is finished. It's intended like this so that you also have an option for this case and not just at the very end of the whole sequences. If you want to make it get called at the end of the whole sequences, you can either call `AddFunctionAt(_animationUI.TotalDuration, func)` or just add another wait sequence as the last sequence in the inspector|
 
-| Properties               | Type                | Description                        |
+| Member Properties        | Type                | Description                        |
 |:--------                 | :--------           | :------------------------------    |
+|`OnAnimationEnded`        | `Action`            | Callback when the latest wait sequence is finished. It's intended like this so that you also have an option for this case and not just at the very end of the whole sequences. If you want to make it get called at the end of the whole sequences, you can either call `AddFunctionAt(_animationUI.TotalDuration, func)` or just add another wait sequence as the last sequence in the inspector  |
+
+| Static Properties        | Type                | Description                        |
+|:--------                 | :--------           | :------------------------------    |
+|`OnSetActiveAllInput`     | `Action<bool>`      | Play the animation                 |
 |`OnSetActiveAllInput`     | `Action<bool>`      | Play the animation                 |
 |`OnPlaySoundByFile`       | `Action<AudioClip>` | Play the animation but reversed.   |
 |`OnPlaySoundByIndex`      | `Action<int>`       | Play the animation but reversed.   |
@@ -98,7 +110,7 @@ Most of the variable in the Sequence class is modifiedable, so it's possible to 
 
 Play the animation, call `LoadSceneWithLoadingBar()` after animation finished.
 ```csharp
-_animationUI.AddFunctionAtEnd(LoadSceneWithLoadingBar);
+_animationUI.OnAnimationEnded += LoadSceneWithLoadingBar;
 _animationUI.Play();
 ```
 

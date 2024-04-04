@@ -1,5 +1,7 @@
 using UnityEngine;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
 public class GameManager : MonoBehaviour
 {
     void OnEnable()
@@ -14,4 +16,6 @@ public class GameManager : MonoBehaviour
     {
         transform.GetChild(0).gameObject.SetActive(!isActive);
     }
+}
+
 }

@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+namespace DhafinFawwaz.AnimationUILib.Demo
+{
     [Serializable]
     /// <summary>
     /// Structure that stores the state of a Scale transition on a Selectable.
@@ -219,3 +221,5 @@ using UnityEngine.Serialization;
             return base.GetHashCode();
         }
     }
+
+}

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEditor;
 
+namespace DhafinFawwaz.AnimationUILib.EditorLib
+{
 public class AnimationUICustomMenu
 {
     [MenuItem("GameObject/UI/Create AnimationUI")]
@@ -12,5 +14,7 @@ public class AnimationUICustomMenu
         GameObjectUtility.SetParentAndAlign(createdGo, selected);
         Undo.RegisterCreatedObjectUndo(createdGo, "Created +"+createdGo.name);
     }
+
+}
 
 }

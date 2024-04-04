@@ -1,3 +1,5 @@
+namespace DhafinFawwaz.AnimationUILib
+{
 public static class Ease
 {
     public static float InQuint(float x) => x*x*x*x*x;
@@ -96,3 +98,4 @@ public static class Ease
     }
 }
 
+}

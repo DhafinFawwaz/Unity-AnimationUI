@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+namespace DhafinFawwaz.AnimationUILib.EditorLib
+{
+
 [CustomPropertyDrawer(typeof(Sequence))]
 public class SequenceDrawer : PropertyDrawer
 {
@@ -559,4 +562,6 @@ public class SequenceDrawer : PropertyDrawer
         }
 #endregion others
     }
+}
+
 }
