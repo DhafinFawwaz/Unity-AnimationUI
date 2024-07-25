@@ -224,7 +224,7 @@ public class AnimationUI : MonoBehaviour
 
         OnAnimationEnded?.Invoke(); //Function to call at end
 
-        OnAnimationEnded = null;
+        // OnAnimationEnded = null;
         atTimeEvents.Clear();
         atTimes.Clear();
     }
@@ -255,88 +255,88 @@ public class AnimationUI : MonoBehaviour
                 if(sequence.TargetType == Sequence.ObjectType.RectTransform)
                 {
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchoredPosition))
-                        StartCoroutine(TaskAnchoredPosition(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskAnchoredPosition(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.AnchoredPositionEnd, sequence.AnchoredPositionStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalEulerAngles))
-                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.LocalScale))
-                        StartCoroutine(TaskLocalScale(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskLocalScale(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMax))
-                        StartCoroutine(TaskAnchorMax(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskAnchorMax(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.AnchorMaxEnd, sequence.AnchorMaxStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.AnchorMin))
-                        StartCoroutine(TaskAnchorMin(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskAnchorMin(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.AnchorMinEnd, sequence.AnchorMinStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.SizeDelta))
-                        StartCoroutine(TaskSizeDelta(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskSizeDelta(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.SizeDeltaEnd, sequence.SizeDeltaStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetRtTask.HasFlag(Sequence.RtTask.Pivot))
-                        StartCoroutine(TaskPivot(sequence.TargetComp.GetComponent<RectTransform>(), 
+                        _coroutines.Add(StartCoroutine(TaskPivot(sequence.TargetComp.GetComponent<RectTransform>(), 
                             sequence.PivotEnd, sequence.PivotStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.Transform)
                 {
                     if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalPosition))
-                        StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
+                        _coroutines.Add(StartCoroutine(TaskLocalPosition(sequence.TargetComp.transform, 
                             sequence.LocalPositionEnd, sequence.LocalPositionStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalEulerAngles))
-                        StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
+                        _coroutines.Add(StartCoroutine(TaskLocalEulerAngles(sequence.TargetComp.transform, 
                             sequence.LocalEulerAnglesEnd, sequence.LocalEulerAnglesStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetTransTask.HasFlag(Sequence.TransTask.LocalScale))
-                        StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
+                        _coroutines.Add(StartCoroutine(TaskLocalScale(sequence.TargetComp.transform, 
                             sequence.LocalScaleEnd, sequence.LocalScaleStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.Image)
                 {
                     if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.Color))
-                        StartCoroutine(TaskColor(sequence.TargetComp.GetComponent<Image>(), 
+                        _coroutines.Add(StartCoroutine(TaskColor(sequence.TargetComp.GetComponent<Image>(), 
                             sequence.ColorEnd, sequence.ColorStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetImgTask.HasFlag(Sequence.ImgTask.FillAmount))
-                        StartCoroutine(TaskFillAmount(sequence.TargetComp.GetComponent<Image>(), 
+                        _coroutines.Add(StartCoroutine(TaskFillAmount(sequence.TargetComp.GetComponent<Image>(), 
                             sequence.FillAmountEnd, sequence.FillAmountStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.CanvasGroup)
                 {
                     if(sequence.TargetCgTask.HasFlag(Sequence.CgTask.Alpha))
-                        StartCoroutine(TaskAlpha(sequence.TargetComp.GetComponent<CanvasGroup>(), 
+                        _coroutines.Add(StartCoroutine(TaskAlpha(sequence.TargetComp.GetComponent<CanvasGroup>(), 
                             sequence.AlphaEnd, sequence.AlphaStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.Camera)
                 {
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.BackgroundColor))
-                        StartCoroutine(TaskBackgroundColor(sequence.TargetComp.GetComponent<Camera>(), 
+                        _coroutines.Add(StartCoroutine(TaskBackgroundColor(sequence.TargetComp.GetComponent<Camera>(), 
                             sequence.BackgroundColorEnd, sequence.BackgroundColorStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetCamTask.HasFlag(Sequence.CamTask.OrthographicSize))
-                        StartCoroutine(TaskOrthographicSize(sequence.TargetComp.GetComponent<Camera>(), 
+                        _coroutines.Add(StartCoroutine(TaskOrthographicSize(sequence.TargetComp.GetComponent<Camera>(), 
                             sequence.OrthographicSizeEnd, sequence.OrthographicSizeStart, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
                 else if(sequence.TargetType == Sequence.ObjectType.TextMeshPro)
                 {
                     if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
-                        StartCoroutine(TaskTextMeshProColor(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                        _coroutines.Add(StartCoroutine(TaskTextMeshProColor(sequence.TargetComp.GetComponent<TMP_Text>(), 
                             sequence.TextMeshProColorStart, sequence.TextMeshProColorEnd, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                     if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
-                        StartCoroutine(TaskMaxVisibleCharacters(sequence.TargetComp.GetComponent<TMP_Text>(), 
+                        _coroutines.Add(StartCoroutine(TaskMaxVisibleCharacters(sequence.TargetComp.GetComponent<TMP_Text>(), 
                             sequence.MaxVisibleCharactersStart, sequence.MaxVisibleCharactersEnd, sequence.Duration, sequence.EaseFunction
-                        ));
+                        )));
                 }
             }
             else if(sequence.SequenceType == Sequence.Type.Wait)
@@ -383,7 +383,7 @@ public class AnimationUI : MonoBehaviour
         OnAnimationEnded?.Invoke(); //Function to call at end
 
         Array.Reverse(AnimationSequence);
-        OnAnimationEnded = null;
+        // OnAnimationEnded = null;
         atTimeEvents.Clear();
         atTimes.Clear();
     }
