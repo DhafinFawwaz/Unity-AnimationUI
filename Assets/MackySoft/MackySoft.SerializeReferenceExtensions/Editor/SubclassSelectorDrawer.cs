@@ -30,6 +30,11 @@ namespace MackySoft.SerializeReferenceExtensions.Editor
 
 		SerializedProperty m_TargetProperty;
 
+
+		const float PROPS_MOVE_LEFT = 15;
+		const float SELECTOR_LEFT_MARGIN = 70;
+
+
 		public override void OnGUI (Rect position, SerializedProperty property, GUIContent label)
 		{
 			EditorGUI.BeginProperty(position, label, property);
@@ -42,7 +47,13 @@ namespace MackySoft.SerializeReferenceExtensions.Editor
 
 				// NOTE: IndentedRect should be disabled as it causes extra indentation.
 				//foldoutLabelRect = EditorGUI.IndentedRect(foldoutLabelRect);
+				float defaultLabelWidth = EditorGUIUtility.labelWidth;
+				EditorGUIUtility.labelWidth += SELECTOR_LEFT_MARGIN;
 				Rect popupPosition = EditorGUI.PrefixLabel(foldoutLabelRect, label);
+				EditorGUIUtility.labelWidth = defaultLabelWidth;
+
+				popupPosition.x -= PROPS_MOVE_LEFT;
+				popupPosition.width += PROPS_MOVE_LEFT;
 
 #if UNITY_2021_3_OR_NEWER
 				// Override the label text with the ToString() of the managed reference.
@@ -102,6 +113,8 @@ namespace MackySoft.SerializeReferenceExtensions.Editor
 							float foldoutDifference = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
 							indentedRect.height = customDrawer.GetPropertyHeight(property, label);
 							indentedRect.y += foldoutDifference;
+							indentedRect.x -= PROPS_MOVE_LEFT;
+							indentedRect.width += PROPS_MOVE_LEFT;
 							customDrawer.OnGUI(indentedRect, property, label);
 						}
 						else
