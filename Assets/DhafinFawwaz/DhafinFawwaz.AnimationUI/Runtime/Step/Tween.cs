@@ -61,8 +61,8 @@ namespace DhafinFawwaz.AnimationUI {
             SetTargetValueAsTo();
         }
         
-        public abstract void SetTargetValueAsFrom();
-        public abstract void SetTargetValueAsTo();
+        public virtual void SetTargetValueAsFrom(){}
+        public virtual void SetTargetValueAsTo(){}
 
         public void OnSequenceReversed() {
             if (typeof(UFrom) == typeof(VTo))
@@ -78,12 +78,41 @@ namespace DhafinFawwaz.AnimationUI {
             return $"[{Target.gameObject.name}] [{Duration} s]";
         }
 
-        Func<UFrom, VTo, float, WInterpolationOutput> _lerpFunction;
+        protected Func<UFrom, VTo, float, WInterpolationOutput> _lerpFunction;
         protected Tween() {
             _lerpFunction = InterpolationFunction;
         }
         protected abstract Func<UFrom, VTo, float, WInterpolationOutput> InterpolationFunction {get;}
         
         
+
+
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetDuration(float duration) {
+            Duration = duration;
+            return this;
+        }
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetEase(Ease easeType){
+            EaseType = easeType;
+            return this;
+        }
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetFrom(UFrom from) {
+            From = from;
+            return this;
+        }
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetTo(VTo to) {
+            To = to;
+            return this;
+        }
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetTarget(TComponent target) {
+            Target = target;
+            return this;
+        }
+        public Tween<TComponent, UFrom, VTo, WInterpolationOutput> SetParam(UFrom from, VTo to, float duration, Ease easeType) {
+            From = from;
+            To = to;
+            Duration = duration;
+            EaseType = easeType;
+            return this;
+        }
     }
 }
