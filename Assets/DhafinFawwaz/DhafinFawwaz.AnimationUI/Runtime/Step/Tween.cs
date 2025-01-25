@@ -11,10 +11,9 @@ namespace DhafinFawwaz.AnimationUI {
     /// <typeparam name="VTo">To value or component value</typeparam>
     /// <typeparam name="WInterpolationOutput">Interpolation function return type</typeparam>
     [BGColor("#ff000015")]
-    public abstract class Tween<TComponent, UFrom, VTo, WInterpolationOutput> : Step, ITweenable, IReverseSequenceHandler where TComponent : Component
+    public abstract class Tween<TComponent, UFrom, VTo, WInterpolationOutput> : Step, ITweenable, IReverseSequenceHandler
     {
         public TComponent Target;
-        public Component GetTarget() => Target;
         public float Duration = 0.5f;
         public float GetDuration() => Duration;
         public Ease EaseType = Ease.OutQuart;
@@ -22,7 +21,7 @@ namespace DhafinFawwaz.AnimationUI {
         public VTo To;
         public abstract void ApplyInterpolation(WInterpolationOutput value);
         public void ApplyInterpolationSafe(WInterpolationOutput value) {
-            if(!Target) return;
+            if(Target == null) return;
             ApplyInterpolation(value);
         }
         
@@ -47,14 +46,14 @@ namespace DhafinFawwaz.AnimationUI {
         }
 
         public void SetTargetValueAsFromSafe() {
-            if(!Target) {
+            if(Target == null) {
                 Debug.LogErrorFormat($"Target is null. Please assign a target first.", Target);
                 return;
             }
             SetTargetValueAsFrom();
         }
         public void SetTargetValueAsToSafe() {
-            if(!Target) {
+            if(Target == null) {
                 Debug.LogErrorFormat($"Target is null. Please assign a target first.", Target);
                 return;
             }
@@ -75,7 +74,13 @@ namespace DhafinFawwaz.AnimationUI {
 
         public override string GetDisplayName(){
             if(Target == null) return $"[null] [{Duration} s]";
-            return $"[{Target.gameObject.name}] [{Duration} s]";
+            Component c = Target as Component;
+            if(c != null) return $"[{c.gameObject.name}] [{Duration} s]";
+
+            UnityEngine.Object o = Target as UnityEngine.Object;
+            if(o != null) return $"[{o.name}] [{Duration} s]";
+
+            return $"[{Duration} s]";
         }
 
         protected Func<UFrom, VTo, float, WInterpolationOutput> _lerpFunction;
