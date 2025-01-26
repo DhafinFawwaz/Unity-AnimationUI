@@ -15,11 +15,11 @@ namespace DhafinFawwaz.AnimationUI {
 		}
 
 		public static bool TryFindThisOrAnyParentContainBGColorAttribute(Type type, out BGColorAttribute attr) {
-			if(_cache.TryGetValue(type, out attr)) return true;
 			if(type == null) {
 				attr = null;
 				return false;
 			}
+			if(_cache.TryGetValue(type, out attr)) return true;
 			attr = Attribute.GetCustomAttribute(type, typeof(BGColorAttribute)) as BGColorAttribute;
 			if(attr != null) {
 				_cache[type] = attr;
