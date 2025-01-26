@@ -25,8 +25,8 @@ namespace DhafinFawwaz.AnimationUI
             Color color = new Color(1,0,0,0.0f);
             var prop = it.managedReferenceValue; 
 
-			
-            if(DhafinFawwaz.AnimationUI.BGColorAttribute.TryFindThisOrAnyParentContainBGColorAttribute(prop.GetType(), out DhafinFawwaz.AnimationUI.BGColorAttribute attr)) {
+			// prop will be null after undoing
+            if(prop != null && DhafinFawwaz.AnimationUI.BGColorAttribute.TryFindThisOrAnyParentContainBGColorAttribute(prop.GetType(), out DhafinFawwaz.AnimationUI.BGColorAttribute attr)) {
                 color = attr.Color;
             }
 
@@ -45,6 +45,7 @@ namespace DhafinFawwaz.AnimationUI
 		const float PROGRESS_WIDTH = 3;
 		// const float PROGERSS_WIDTH_HORIZONTAL_RIGHT_PADDING = 33;
 		public static void DrawProgressOnTheLeftSide(Rect position, SerializedProperty it) {
+			if (it == null || it.managedReferenceValue == null) return; // it.managedReferenceValue will be null after undoing
 			Color color = new Color(0,1,0,0.2f);
 			var prop = it.managedReferenceValue as Step;
 			float progress = prop.EditorOnlyProgress;
