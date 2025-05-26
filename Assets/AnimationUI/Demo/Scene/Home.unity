@@ -2674,7 +2674,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 133
+    PropertyRectY: 143
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -2748,13 +2748,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 155
+    PropertyRectY: 165
     SequenceType: 2
     EaseType: 3
     EasePower: 3
@@ -2828,13 +2827,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 187
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -2908,13 +2906,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 209
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -2988,13 +2985,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 231
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3068,13 +3064,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 243
+    PropertyRectY: 253
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3148,13 +3143,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 265
+    PropertyRectY: 275
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3228,13 +3222,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 287
+    PropertyRectY: 297
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -3308,13 +3301,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 309
+    PropertyRectY: 319
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3388,13 +3380,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 331
+    PropertyRectY: 341
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3468,13 +3459,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 353
+    PropertyRectY: 363
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -3548,13 +3538,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 375
+    PropertyRectY: 385
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3628,13 +3617,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 397
+    PropertyRectY: 407
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3708,13 +3696,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Main Camera] [Camera]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 419
+    PropertyRectY: 429
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -3788,13 +3775,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 441
+    PropertyRectY: 451
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -3868,13 +3854,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Wait 0.2s]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 463
+    PropertyRectY: 473
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -3948,13 +3933,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.41s [Settings] [SetActive to True]
     StartTime: 0.41
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 485
+    PropertyRectY: 495
     SequenceType: 3
     EaseType: 2
     EasePower: 3
@@ -4028,13 +4012,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.41s [Wait 0.2s]
     StartTime: 0.41
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 507
+    PropertyRectY: 517
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -4108,13 +4091,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [TitleDropShadow] [RectTransform]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 529
+    PropertyRectY: 539
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -4188,13 +4170,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [1] [RectTransform]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 551
+    PropertyRectY: 561
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -4268,13 +4249,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [1] [SFX]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 573
+    PropertyRectY: 583
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -4348,13 +4328,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [Wait 0.05s]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 595
+    PropertyRectY: 605
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -4428,13 +4407,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.66s [2] [RectTransform]
     StartTime: 0.66
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 617
+    PropertyRectY: 627
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -4508,13 +4486,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.66s [1] [SFX]
     StartTime: 0.66
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 639
+    PropertyRectY: 649
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -4588,13 +4565,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.66s [Wait 0.05s]
     StartTime: 0.66
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 661
+    PropertyRectY: 671
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -4668,13 +4644,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [3] [RectTransform]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 683
+    PropertyRectY: 693
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -4748,13 +4723,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [1] [SFX]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 705
+    PropertyRectY: 715
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -4828,13 +4802,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [Wait 0.05s]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 727
+    PropertyRectY: 737
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -4908,13 +4881,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.7600001s [4] [RectTransform]
     StartTime: 0.76000005
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 749
+    PropertyRectY: 759
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -4988,13 +4960,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.7600001s [1] [SFX]
     StartTime: 0.76000005
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 771
+    PropertyRectY: 781
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -5068,13 +5039,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.7600001s [Wait 0.05s]
     StartTime: 0.76000005
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 793
+    PropertyRectY: 803
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -5148,13 +5118,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [Back] [RectTransform]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 815
+    PropertyRectY: 825
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -5228,13 +5197,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [1] [SFX]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 837
+    PropertyRectY: 847
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -5308,13 +5276,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [Wait 0.2s]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 859
+    PropertyRectY: 869
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -5388,13 +5355,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.01s [Home] [SetActive to False]
     StartTime: 1.0100001
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 773
+    PropertyRectY: 891
     SequenceType: 3
     EaseType: 2
     EasePower: 3
@@ -5468,13 +5434,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.01s [SetActiveAllInput to True]
     StartTime: 1.0100001
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 795
+    PropertyRectY: 913
     SequenceType: 2
     EaseType: 2
     EasePower: 3
@@ -5548,13 +5513,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.01s [Wait 0.01s]
     StartTime: 1.0100001
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 817
+    PropertyRectY: 935
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -5628,8 +5592,8 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   PlayOnStart: 0
+  UseUnscaledTime: 1
   CurrentTime: 0
   IsPlayingInEditMode: 0
 --- !u!1 &852432911
@@ -7749,7 +7713,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 133
+    PropertyRectY: 143
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -7823,13 +7787,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 155
+    PropertyRectY: 165
     SequenceType: 2
     EaseType: 3
     EasePower: 3
@@ -7903,13 +7866,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 187
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -7983,13 +7945,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 209
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -8063,13 +8024,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 231
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -8143,13 +8103,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [1] [SFX]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 243
+    PropertyRectY: 253
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -8223,13 +8182,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 265
+    PropertyRectY: 275
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -8303,13 +8261,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 287
+    PropertyRectY: 297
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -8383,13 +8340,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 309
+    PropertyRectY: 319
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -8463,13 +8419,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 331
+    PropertyRectY: 341
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -8543,13 +8498,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 353
+    PropertyRectY: 363
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -8623,13 +8577,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 375
+    PropertyRectY: 385
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -8703,13 +8656,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 397
+    PropertyRectY: 407
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -8783,13 +8735,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 419
+    PropertyRectY: 429
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -8863,13 +8814,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 441
+    PropertyRectY: 451
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -8943,13 +8893,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Wait 0.2s]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 463
+    PropertyRectY: 473
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -9023,13 +8972,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.41s [Upgrade] [SetActive to True]
     StartTime: 0.41
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 485
+    PropertyRectY: 495
     SequenceType: 3
     EaseType: 2
     EasePower: 3
@@ -9103,13 +9051,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.41s [Home] [SetActive to False]
     StartTime: 0.41
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 507
+    PropertyRectY: 517
     SequenceType: 3
     EaseType: 2
     EasePower: 3
@@ -9183,13 +9130,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.41s [Wait 0.3s]
     StartTime: 0.41
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 529
+    PropertyRectY: 539
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -9263,13 +9209,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [BGYellow] [RectTransform]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 551
+    PropertyRectY: 561
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -9343,13 +9288,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [1] [SFX]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 573
+    PropertyRectY: 583
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -9423,13 +9367,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [Wait 0.5s]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 595
+    PropertyRectY: 605
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -9503,13 +9446,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.21s [Option 3] [RectTransform]
     StartTime: 1.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 617
+    PropertyRectY: 627
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -9583,13 +9525,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.21s [1] [SFX]
     StartTime: 1.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 639
+    PropertyRectY: 649
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -9663,13 +9604,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.21s [Wait 0.05s]
     StartTime: 1.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 661
+    PropertyRectY: 671
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -9743,13 +9683,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.26s [Option 2] [RectTransform]
     StartTime: 1.26
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 683
+    PropertyRectY: 693
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -9823,13 +9762,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.26s [1] [SFX]
     StartTime: 1.26
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 705
+    PropertyRectY: 715
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -9903,13 +9841,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.26s [Wait 0.05s]
     StartTime: 1.26
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 727
+    PropertyRectY: 737
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -9983,13 +9920,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.31s [Option 1] [RectTransform]
     StartTime: 1.31
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 749
+    PropertyRectY: 759
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -10063,13 +9999,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.31s [1] [SFX]
     StartTime: 1.31
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 771
+    PropertyRectY: 781
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -10143,13 +10078,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.31s [Wait 0.05s]
     StartTime: 1.31
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 793
+    PropertyRectY: 803
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -10223,13 +10157,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.36s [Upgrade1] [RectTransform]
     StartTime: 1.3599999
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 815
+    PropertyRectY: 825
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -10303,13 +10236,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.36s [1] [SFX]
     StartTime: 1.3599999
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 837
+    PropertyRectY: 847
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -10383,13 +10315,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.36s [Wait 0.05s]
     StartTime: 1.3599999
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 751
+    PropertyRectY: 869
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -10463,13 +10394,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.41s [Upgrade1 (1)] [RectTransform]
     StartTime: 1.4099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 773
+    PropertyRectY: 891
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -10543,13 +10473,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.41s [1] [SFX]
     StartTime: 1.4099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 795
+    PropertyRectY: 913
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -10623,13 +10552,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.41s [Wait 0.05s]
     StartTime: 1.4099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 817
+    PropertyRectY: 935
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -10703,13 +10631,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.46s [Back] [RectTransform]
     StartTime: 1.4599998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 839
+    PropertyRectY: 957
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -10783,13 +10710,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.46s [Upgrade1 (2)] [RectTransform]
     StartTime: 1.4599998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 861
+    PropertyRectY: 979
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -10863,13 +10789,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.46s [1] [SFX]
     StartTime: 1.4599998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 883
+    PropertyRectY: 1001
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -10943,13 +10868,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.46s [Wait 0.05s]
     StartTime: 1.4599998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 905
+    PropertyRectY: 1023
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -11023,13 +10947,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.51s [Upgrade1 (3)] [RectTransform]
     StartTime: 1.5099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 927
+    PropertyRectY: 1045
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -11103,13 +11026,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.51s [1] [SFX]
     StartTime: 1.5099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 949
+    PropertyRectY: 1067
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -11183,13 +11105,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.51s [Wait 0.05s]
     StartTime: 1.5099998
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 971
+    PropertyRectY: 1089
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -11263,13 +11184,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.56s [SetActiveAllInput to True]
     StartTime: 1.5599997
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 993
+    PropertyRectY: 1111
     SequenceType: 2
     EaseType: 2
     EasePower: 3
@@ -11343,13 +11263,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.56s [Wait 0.01s]
     StartTime: 1.5599997
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 1015
+    PropertyRectY: 1133
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -11423,8 +11342,8 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   PlayOnStart: 0
+  UseUnscaledTime: 1
   CurrentTime: 0
   IsPlayingInEditMode: 0
 --- !u!1 &1254518951
@@ -11478,7 +11397,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 133
+    PropertyRectY: 143
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -11552,13 +11471,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 155
+    PropertyRectY: 165
     SequenceType: 2
     EaseType: 3
     EasePower: 3
@@ -11632,13 +11550,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [Main Camera] [Camera]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 187
     SequenceType: 0
     EaseType: 0
     EasePower: 2
@@ -11712,13 +11629,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.01s [Wait 0.05s]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 209
     SequenceType: 1
     EaseType: 3
     EasePower: 3
@@ -11792,13 +11708,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.06s [Title] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 231
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -11872,13 +11787,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Start] [RectTransform]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 243
+    PropertyRectY: 253
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -11952,13 +11866,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.06s [Wait 0.05s]
     StartTime: 0.060000002
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 265
+    PropertyRectY: 275
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -12032,13 +11945,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Upgrade] [RectTransform]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 287
+    PropertyRectY: 297
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -12112,13 +12024,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [1] [SFX]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 309
+    PropertyRectY: 319
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -12192,13 +12103,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.11s [Wait 0.05s]
     StartTime: 0.11
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 331
+    PropertyRectY: 341
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -12272,13 +12182,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Settings] [RectTransform]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 353
+    PropertyRectY: 363
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -12352,13 +12261,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [1] [SFX]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 375
+    PropertyRectY: 385
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -12432,13 +12340,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.16s [Wait 0.05s]
     StartTime: 0.16
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 397
+    PropertyRectY: 407
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -12512,13 +12419,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Exit] [RectTransform]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 419
+    PropertyRectY: 429
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -12592,13 +12498,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [1] [SFX]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 441
+    PropertyRectY: 451
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -12672,13 +12577,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.21s [Wait 0.05s]
     StartTime: 0.21
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 463
+    PropertyRectY: 473
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -12752,13 +12656,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.26s [1] [SFX]
     StartTime: 0.26
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 485
+    PropertyRectY: 495
     SequenceType: 4
     EaseType: 2
     EasePower: 3
@@ -12832,13 +12735,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.26s [Wait 0.25s]
     StartTime: 0.26
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 507
+    PropertyRectY: 517
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -12912,13 +12814,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.51s [Right] [Image]
     StartTime: 0.51
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 529
+    PropertyRectY: 539
     SequenceType: 0
     EaseType: 2
     EasePower: 1
@@ -12992,13 +12893,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.51s [Left] [Image]
     StartTime: 0.51
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 551
+    PropertyRectY: 561
     SequenceType: 0
     EaseType: 2
     EasePower: 1
@@ -13072,13 +12972,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.51s [Wait 0.1s]
     StartTime: 0.51
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 573
+    PropertyRectY: 583
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -13152,13 +13051,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [Right (1)] [Image]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 595
+    PropertyRectY: 605
     SequenceType: 0
     EaseType: 2
     EasePower: 2
@@ -13232,13 +13130,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [Left (1)] [Image]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 617
+    PropertyRectY: 627
     SequenceType: 0
     EaseType: 2
     EasePower: 2
@@ -13312,13 +13209,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.61s [Wait 0.1s]
     StartTime: 0.61
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 639
+    PropertyRectY: 649
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -13392,13 +13288,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [Right (2)] [Image]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 661
+    PropertyRectY: 671
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -13472,13 +13367,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [Left (2)] [Image]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 683
+    PropertyRectY: 693
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -13552,13 +13446,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.71s [Wait 0.1s]
     StartTime: 0.71000004
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 705
+    PropertyRectY: 715
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -13632,13 +13525,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [Right (3)] [Image]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 727
+    PropertyRectY: 737
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -13712,13 +13604,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [Left (3)] [Image]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 749
+    PropertyRectY: 759
     SequenceType: 0
     EaseType: 2
     EasePower: 3
@@ -13792,13 +13683,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 0.8100001s [Wait 0.8s]
     StartTime: 0.81000006
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 771
+    PropertyRectY: 781
     SequenceType: 1
     EaseType: 2
     EasePower: 3
@@ -13872,13 +13762,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   - AtTime: At 1.61s [Level1] [LoadScene]
     StartTime: 1.6100001
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 793
+    PropertyRectY: 803
     SequenceType: 5
     EaseType: 2
     EasePower: 3
@@ -13952,8 +13841,8 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 122
   PlayOnStart: 0
+  UseUnscaledTime: 1
   CurrentTime: 0
   IsPlayingInEditMode: 0
 --- !u!1 &1298456871
@@ -22748,7 +22637,7 @@ MonoBehaviour:
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 133
+    PropertyRectY: 143
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -22822,13 +22711,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [SetActiveAllInput to False]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 155
+    PropertyRectY: 165
     SequenceType: 2
     EaseType: 1
     EasePower: 3
@@ -22902,13 +22790,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [Image] [Image]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 177
+    PropertyRectY: 187
     SequenceType: 0
     EaseType: 1
     EasePower: 3
@@ -22982,13 +22869,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.01s [Wait 0.5s]
     StartTime: 0.01
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 199
+    PropertyRectY: 209
     SequenceType: 1
     EaseType: 1
     EasePower: 3
@@ -23062,13 +22948,12 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   - AtTime: At 0.51s [SetActiveAllInput to True]
     StartTime: 0.51
     TriggerStart: 0
     TriggerEnd: 0
     PropertyRectHeight: 20
-    PropertyRectY: 221
+    PropertyRectY: 231
     SequenceType: 2
     EaseType: 1
     EasePower: 3
@@ -23142,8 +23027,8 @@ MonoBehaviour:
     MaxVisibleCharactersState: 0
     MaxVisibleCharactersStart: 0
     MaxVisibleCharactersEnd: 0
-    TestInt: 0
   PlayOnStart: 1
+  UseUnscaledTime: 1
   CurrentTime: 0
   IsPlayingInEditMode: 0
 --- !u!1 &2112810106
