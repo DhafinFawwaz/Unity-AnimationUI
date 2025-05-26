@@ -331,11 +331,11 @@ public class AnimationUI : MonoBehaviour
                 {
                     if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.Color))
                         _coroutines.Add(StartCoroutine(TaskTextMeshProColor(sequence.TargetComp.GetComponent<TMP_Text>(), 
-                            sequence.TextMeshProColorStart, sequence.TextMeshProColorEnd, sequence.Duration, sequence.EaseFunction
+                            sequence.TextMeshProColorEnd, sequence.TextMeshProColorStart, sequence.Duration, sequence.EaseFunction
                         )));
                     if(sequence.TargetTextMeshProTask.HasFlag(Sequence.TextMeshProTask.MaxVisibleCharacters))
                         _coroutines.Add(StartCoroutine(TaskMaxVisibleCharacters(sequence.TargetComp.GetComponent<TMP_Text>(), 
-                            sequence.MaxVisibleCharactersStart, sequence.MaxVisibleCharactersEnd, sequence.Duration, sequence.EaseFunction
+                            sequence.MaxVisibleCharactersEnd, sequence.MaxVisibleCharactersStart, sequence.Duration, sequence.EaseFunction
                         )));
                 }
             }
