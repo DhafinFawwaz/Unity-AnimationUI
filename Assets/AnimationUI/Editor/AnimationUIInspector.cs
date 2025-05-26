@@ -72,6 +72,7 @@ public class AnimationUIInspector : Editor
         GUI.backgroundColor = defaultColor;
         
         animationUI.PlayOnStart = GUILayout.Toggle(animationUI.PlayOnStart, new GUIContent("PlayOnStart"));
+        animationUI.UseUnscaledTime = GUILayout.Toggle(animationUI.UseUnscaledTime, new GUIContent("UseUnscaledTime", "Use `Time.unscaledTime` for animation progress"));
 
         DrawDefaultInspector();
         if(GUILayout.Button("Reverse Sequence"))

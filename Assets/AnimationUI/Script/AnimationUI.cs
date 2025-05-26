@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using JetBrains.Annotations;
 using TMPro;
 
 namespace DhafinFawwaz.AnimationUILib
@@ -17,6 +18,8 @@ public class AnimationUI : MonoBehaviour
     public Sequence[] AnimationSequence;
     [HideInInspector] public bool PlayOnStart = false;
     private bool _isSequencesInitialized = false;
+
+    [SerializeField, UsedImplicitly, HideInInspector] public bool UseUnscaledTime;
     
     void Awake()
     {
@@ -40,6 +43,18 @@ public class AnimationUI : MonoBehaviour
     void InitializeSequences()
     {
         foreach(Sequence sequence in AnimationSequence)sequence.Init();
+    }
+
+    /// <summary>
+    /// Get the current time
+    /// </summary>
+    /// <returns></returns>
+    private float GetTime()
+    {
+        if (UseUnscaledTime)
+            return Time.unscaledTime;
+        else
+            return Time.time;
     }
 
     /// <summary>
@@ -393,11 +408,11 @@ public class AnimationUI : MonoBehaviour
 #region RectTransform
     IEnumerator TaskAnchoredPosition(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.anchoredPosition = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -405,11 +420,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskLocalScale(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.localScale = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -417,11 +432,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskLocalEulerAngles(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.localEulerAngles = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -429,11 +444,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskAnchorMax(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.anchorMax = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -441,11 +456,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskAnchorMin(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.anchorMin = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -453,11 +468,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskSizeDelta(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.sizeDelta = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -465,11 +480,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskPivot(RectTransform rt, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             rt.pivot = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -480,11 +495,11 @@ public class AnimationUI : MonoBehaviour
 #region TransformTask
     IEnumerator TaskLocalPosition(Transform trans, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             trans.localPosition = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -492,11 +507,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskLocalScale(Transform trans, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             trans.localScale = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -504,11 +519,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskLocalEulerAngles(Transform trans, Vector3 start, Vector3 end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             trans.localEulerAngles = Vector3.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -519,11 +534,11 @@ public class AnimationUI : MonoBehaviour
 #region ImageTask
     IEnumerator TaskColor(Image img, Color start, Color end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             img.color = Color.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -531,11 +546,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskFillAmount(Image img, float start, float end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             img.fillAmount = Mathf.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -546,11 +561,11 @@ public class AnimationUI : MonoBehaviour
 #region CanvasGroupTask
     IEnumerator TaskAlpha(CanvasGroup cg, float start, float end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             cg.alpha = Mathf.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -561,11 +576,11 @@ public class AnimationUI : MonoBehaviour
 #region CameraTask
     IEnumerator TaskBackgroundColor(Camera cam, Color start, Color end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             cam.backgroundColor = Color.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -573,11 +588,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskOrthographicSize(Camera cam, float start, float end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             cam.orthographicSize = Mathf.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -588,11 +603,11 @@ public class AnimationUI : MonoBehaviour
 #region TextMeshProTask
     IEnumerator TaskTextMeshProColor(TMP_Text text, Color start, Color end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             text.color = Color.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -600,11 +615,11 @@ public class AnimationUI : MonoBehaviour
     }
     IEnumerator TaskMaxVisibleCharacters(TMP_Text text, float start, float end, float duration, Ease.Function easeFunction)
     {
-        float startTime = Time.time;
-        float t = (Time.time-startTime)/duration;
+        float startTime = GetTime();
+        float t = (GetTime()-startTime)/duration;
         while (t <= 1)
         {
-            t = Mathf.Clamp((Time.time-startTime)/duration, 0, 2);
+            t = Mathf.Clamp((GetTime()-startTime)/duration, 0, 2);
             text.maxVisibleCharacters = (int)Mathf.LerpUnclamped(start, end, easeFunction(t));
             yield return null;
         }
@@ -681,7 +696,7 @@ public class AnimationUI : MonoBehaviour
 
         if(IsPlayingInEditMode && CurrentTime < TotalDuration)
         {
-            CurrentTime = Mathf.Clamp(Time.time - _startTime, 0, TotalDuration);
+            CurrentTime = Mathf.Clamp(GetTime() - _startTime, 0, TotalDuration);
             UpdateSequence(CurrentTime);
         } 
         else
@@ -708,7 +723,7 @@ public class AnimationUI : MonoBehaviour
             Debug.Log("No animation exist");
             return;
         }
-        _startTime = Time.time;
+        _startTime = GetTime();
         CurrentTime = 0;
         IsPlayingInEditMode = true;
         UpdateSequence(0);// Make sure the first frame is called
