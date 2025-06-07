@@ -76,7 +76,10 @@ public class AnimationUI : MonoBehaviour
     [ContextMenu("Stop Animation")]
     public void Stop()
     {
-        foreach(Coroutine coroutine in _coroutines)StopCoroutine(coroutine);
+        foreach(Coroutine coroutine in _coroutines)
+            {
+                if(coroutine != null)StopCoroutine(coroutine);
+            }
         _coroutines.Clear();
     }
 
