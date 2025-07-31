@@ -51,6 +51,8 @@ public class SequenceDrawer : PropertyDrawer
                 if(rtTask.HasFlag(Sequence.RtTask.AnchorMax))totalHeight+=_height*3;
                 if(rtTask.HasFlag(Sequence.RtTask.AnchorMin))totalHeight+=_height*3;
                 if(rtTask.HasFlag(Sequence.RtTask.Pivot))totalHeight+=_height*3;
+
+                totalHeight += 20;
             }
             else if(objectType == Sequence.ObjectType.Transform)
             {
@@ -58,7 +60,9 @@ public class SequenceDrawer : PropertyDrawer
                 if(transTask.HasFlag(Sequence.TransTask.LocalPosition))totalHeight+=_height*3;
                 if(transTask.HasFlag(Sequence.TransTask.LocalScale))totalHeight+=_height*3;
                 if(transTask.HasFlag(Sequence.TransTask.LocalEulerAngles))totalHeight+=_height*3;
-            }
+
+                    totalHeight += 20;
+                }
             else if(objectType == Sequence.ObjectType.Image)
             {
                 Sequence.ImgTask imgTask = (Sequence.ImgTask)property.FindPropertyRelative("TargetImgTask").enumValueFlag;
@@ -251,8 +255,18 @@ public class SequenceDrawer : PropertyDrawer
                     EditorGUI.LabelField(new Rect(nextPosition.x, nextPosition.y, nextPosition.width, _height),
                         new GUIContent(name)
                     );
-                
+
                     nextPosition.y += _height;
+                    if (GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width / 4 - 5, _height), "Switch"))
+                    {
+                        var startProp = property.FindPropertyRelative(name + "Start");
+                        var endProp = property.FindPropertyRelative(name + "End");
+                        Vector3 temp = startProp.vector3Value;
+                        startProp.vector3Value = endProp.vector3Value;
+                        endProp.vector3Value = temp;
+                    }
+
+                        nextPosition.y += _height;
                     if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set Start"))
                     {
                         if(name == "AnchoredPosition")property.FindPropertyRelative(name+"Start").vector3Value = 
@@ -297,6 +311,7 @@ public class SequenceDrawer : PropertyDrawer
                         new Rect(nextPosition.x+nextPosition.width/4, nextPosition.y, nextPosition.width*3/4, _height),
                         property.FindPropertyRelative(name+"End"), GUIContent.none
                     );
+                    nextPosition.y += _height + 20;
                 }
                 Sequence.RtTask rtTask = (Sequence.RtTask)property.FindPropertyRelative("TargetRtTask").enumValueFlag;
                 if(rtTask.HasFlag(Sequence.RtTask.AnchoredPosition))DrawRtTask("AnchoredPosition");
@@ -317,8 +332,18 @@ public class SequenceDrawer : PropertyDrawer
                     EditorGUI.LabelField(new Rect(nextPosition.x, nextPosition.y, nextPosition.width, _height),
                         new GUIContent(name)
                     );
-                
+
                     nextPosition.y += _height;
+                    if (GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width / 4 - 5, _height), "Switch"))
+                    {
+                        var startProp = property.FindPropertyRelative(name + "Start");
+                        var endProp = property.FindPropertyRelative(name + "End");
+                        Vector3 temp = startProp.vector3Value;
+                        startProp.vector3Value = endProp.vector3Value;
+                        endProp.vector3Value = temp;
+                    }
+
+                        nextPosition.y += _height;
                     if(GUI.Button(new Rect(nextPosition.x, nextPosition.y, nextPosition.width/4-5, _height),"Set Start"))
                     {
                         if(name == "LocalPosition")property.FindPropertyRelative(name+"Start").vector3Value = 
