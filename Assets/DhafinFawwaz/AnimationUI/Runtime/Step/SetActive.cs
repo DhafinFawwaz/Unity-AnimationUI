@@ -3,10 +3,18 @@ using UnityEngine;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// A step that activates or deactivates a GameObject.
+    /// Can be reversed when using ReverseSequence().
+    /// </summary>
     [Serializable, BGColor("#00ff0015")]
     public class SetActive : Step, IExecutable, IReverseSequenceHandler
     {
         [SerializeField] GameObject Target;
+        
+        /// <summary>
+        /// Whether to activate (true) or deactivate (false) the target GameObject.
+        /// </summary>
         public bool ToActive = true;
         public void Execute()
         {

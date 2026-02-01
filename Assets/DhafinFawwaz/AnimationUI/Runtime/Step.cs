@@ -3,6 +3,10 @@ using System;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// Base class for all animation steps (tweens, waits, executables, etc.).
+    /// Inherit from this to create custom step types.
+    /// </summary>
     [Serializable, AutoTypeMenu]
     public abstract class Step
     {
@@ -37,6 +41,11 @@ namespace DhafinFawwaz.AnimationUI {
 #endif
         }
 
+        /// <summary>
+        /// Override this to provide a custom display name for the step in the inspector.
+        /// Default returns empty string.
+        /// </summary>
+        /// <returns>The display name shown in the inspector</returns>
         public virtual string GetDisplayName() => "";
     }
 }

@@ -3,10 +3,21 @@ using UnityEngine;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// A step that plays a sound effect using AudioSource.PlayOneShot().
+    /// Executes instantly when the animation reaches this step.
+    /// </summary>
     [Serializable, BGColor("#FFFF0015")]
     public class SFX : Step, IExecutable
     {
+        /// <summary>
+        /// The AudioSource component to play the sound on.
+        /// </summary>
         public AudioSource Source;
+        
+        /// <summary>
+        /// The audio clip to play.
+        /// </summary>
         public AudioClip Clip;
 
 #if UNITY_EDITOR

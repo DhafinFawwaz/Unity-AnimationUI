@@ -3,10 +3,18 @@ using UnityEngine;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// A step that captures a tween's target current value and sets it as the FROM value at runtime.
+    /// Useful for creating dynamic animations based on the current state.
+    /// </summary>
     [Serializable, BGColor("#e600ff15")]
     public class SetTargetAsFrom : Step, IExecutable, IInjectable
     {
         [SerializeField] AnimationUI _animationUI;
+        
+        /// <summary>
+        /// The index of the tween step whose FROM value should be captured.
+        /// </summary>
         [SerializeField] int _index = 0;
 
 

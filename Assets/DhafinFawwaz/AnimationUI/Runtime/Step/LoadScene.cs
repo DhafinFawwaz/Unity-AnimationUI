@@ -3,9 +3,16 @@ using UnityEngine;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// A step that loads a scene using SceneManager.LoadScene().
+    /// Only executes in play mode.
+    /// </summary>
     [Serializable, BGColor("#964B0015")]
     public class LoadScene : Step, IExecutable
     {
+        /// <summary>
+        /// The name of the scene to load.
+        /// </summary>
         public string SceneName = "SceneName";
 #if UNITY_EDITOR
         LoadScene(){

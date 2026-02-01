@@ -5,6 +5,10 @@ using UnityEngine.Audio;
 
 namespace DhafinFawwaz.AnimationUI {
 
+    /// <summary>
+    /// Main component for creating and controlling animations using a sequence of steps.
+    /// Supports automatic tween detection, real-time preview, and flexible animation control.
+    /// </summary>
     [ExecuteAlways]
     public class AnimationUI : MonoBehaviour
     {
@@ -100,24 +104,63 @@ namespace DhafinFawwaz.AnimationUI {
 
 #endif
 
+        /// <summary>
+        /// Gets the list of all animation steps in this sequence.
+        /// </summary>
         public List<Step> Sequence => _sequence;
+        
+        /// <summary>
+        /// Gets a step at the specified index as a specific type.
+        /// </summary>
+        /// <typeparam name="T">The step type to cast to</typeparam>
+        /// <param name="idx">The index of the step</param>
+        /// <returns>The step cast to type T, or null if the cast fails</returns>
         public T Get<T>(int idx) where T : Step => _sequence[idx] as T;
 
+        /// <summary>
+        /// Adds a new step to the end of the sequence.
+        /// </summary>
+        /// <param name="step">The step to add</param>
         public void Add(Step step) {
             _sequence.Add(step);
         }
 
+        /// <summary>
+        /// Returns true if the animation is not currently playing (stopped or never started).
+        /// </summary>
         public bool IsNotPlaying => _state == AnimationUIState.IsNotPlaying;
-        public bool IsPlaying => _state == AnimationUIState.IsPlaying; // Cannot use CurrentAnimationTime > 0 because it will be true even if the animation is finished. So we use AnimationUIState instead
+        
+        /// <summary>
+        /// Returns true if the animation is currently playing.
+        /// </summary>
+        public bool IsPlaying => _state == AnimationUIState.IsPlaying;
+        
+        /// <summary>
+        /// Returns true if the animation is paused.
+        /// </summary>
         public bool IsPaused => _state == AnimationUIState.IsPaused;
 
-
+        /// <summary>
+        /// If true, the animation will automatically play when Start() is called.
+        /// </summary>
         public bool PlayOnStart = false;
+        
+        /// <summary>
+        /// If true, uses unscaled time (Time.unscaledDeltaTime). Useful for pause menu animations.
+        /// </summary>
         public bool IgnoreTimeScale = false;
+        
+        /// <summary>
+        /// The current time position in the animation sequence.
+        /// </summary>
         [HideInInspector] public float CurrentAnimationTime = 0;
         float _startPlayTime = 0;
         [SerializeReference, SubclassSelectorAnimationUI] List<Step> _sequence = new List<Step>();
         AnimationUIState _state = AnimationUIState.IsNotPlaying;
+        
+        /// <summary>
+        /// Gets the current state of the animation (IsPlaying, IsPaused, or IsNotPlaying).
+        /// </summary>
         public AnimationUIState State => _state;
 
         
@@ -158,6 +201,9 @@ namespace DhafinFawwaz.AnimationUI {
 #endif
         }
 
+        /// <summary>
+        /// Starts the animation from the beginning. If already playing, restarts from the beginning.
+        /// </summary>
         public void Play() {
 #if UNITY_EDITOR
             // if(gameObject.activeInHierarchy == false) {
@@ -195,14 +241,25 @@ namespace DhafinFawwaz.AnimationUI {
             SubscribeUpdateLoop();
         }
 
+        /// <summary>
+        /// Pauses the animation at the current time. Call Resume() to continue.
+        /// </summary>
         public void Pause() {
             _state = AnimationUIState.IsPaused;
             UnsubscribeUpdateLoop();
         }
+        
+        /// <summary>
+        /// Stops the current animation and immediately starts it again from the beginning.
+        /// </summary>
         public void StopAndPlay() {
             Stop();
             Play();
         }
+        
+        /// <summary>
+        /// Stops the animation and resets the current time to 0.
+        /// </summary>
         public void Stop() {
             _state = AnimationUIState.IsNotPlaying;
             UnsubscribeUpdateLoop();
@@ -215,6 +272,9 @@ namespace DhafinFawwaz.AnimationUI {
             _waitUntilTime = 0;
             _tweenableDict[_waitUntilTime] = new ();
         }
+        /// <summary>
+        /// Resumes the animation from where it was paused.
+        /// </summary>
         public void Resume() {
             if(!_tweenableDict.ContainsKey(_waitUntilTime)) _tweenableDict[_waitUntilTime] = new ();
             // CurrentAnimationTime is set by other script or from inspector
@@ -274,6 +334,10 @@ namespace DhafinFawwaz.AnimationUI {
             }
         }
 
+        /// <summary>
+        /// Reverses the order of all steps in the sequence and calls OnSequenceReversed() on steps that implement IReverseSequenceHandler.
+        /// Useful for creating "close" animations from "open" animations.
+        /// </summary>
         public void ReverseSequence() {
             _sequence.Reverse();
             foreach(var step in _sequence) {
@@ -382,6 +446,10 @@ namespace DhafinFawwaz.AnimationUI {
             }
         }
 
+        /// <summary>
+        /// Calculates and returns the total duration of the animation sequence in seconds.
+        /// </summary>
+        /// <returns>The total duration in seconds</returns>
         public float CalculateTotalDuration() {
             float max = 0;
             float currentTime = 0;
@@ -401,13 +469,25 @@ namespace DhafinFawwaz.AnimationUI {
         }
 
 
+        /// <summary>
+        /// Instantly applies all steps to their final state (end of animation).
+        /// </summary>
         public void ApplyToFinish() {
             float totalDuration = CalculateTotalDuration();
             ApplyAllAtTime(totalDuration);
         }
+        
+        /// <summary>
+        /// Instantly applies all steps to their initial state (start of animation).
+        /// </summary>
         public void ApplyToStart() {
             ApplyAllAtTime(0);
         }
+        
+        /// <summary>
+        /// Instantly applies all steps to their state at the specified time.
+        /// </summary>
+        /// <param name="t">The time position in seconds</param>
         public void ApplyAllAtTime(float t) {
             // Iterate from start to current, get the index.
             float currentTime = 0;
@@ -482,6 +562,10 @@ namespace DhafinFawwaz.AnimationUI {
         }
 
 
+        /// <summary>
+        /// Sets the FROM value of all tweens to their target's current value.
+        /// Useful for quickly capturing the starting state of all animations.
+        /// </summary>
         public void SetAllTweenTargetValueAsFrom() {
             foreach(var step in _sequence) {
                 if(step is ITweenable tweenable) {
@@ -490,6 +574,10 @@ namespace DhafinFawwaz.AnimationUI {
             }
         }
 
+        /// <summary>
+        /// Sets the FROM value of a specific tween to its target's current value.
+        /// </summary>
+        /// <param name="index">The index of the tween step</param>
         public void SetTweenTargetValueAsFrom(int index) {
             if(index < 0 || index >= _sequence.Count) {
                 Debug.LogError($"Index {index} is out of range");
@@ -501,6 +589,10 @@ namespace DhafinFawwaz.AnimationUI {
             }
         }
 
+        /// <summary>
+        /// Sets the TO value of all tweens to their target's current value.
+        /// Useful for quickly capturing the ending state of all animations.
+        /// </summary>
         public void SetAllTweenTargetValueAsTo() {
             foreach(var step in _sequence) {
                 if(step is ITweenable tweenable) {
@@ -509,6 +601,10 @@ namespace DhafinFawwaz.AnimationUI {
             }
         }
 
+        /// <summary>
+        /// Sets the TO value of a specific tween to its target's current value.
+        /// </summary>
+        /// <param name="index">The index of the tween step</param>
         public void SetTweenTargetValueAsTo(int index) {
             if(index < 0 || index >= _sequence.Count) {
                 Debug.LogError($"Index {index} is out of range");

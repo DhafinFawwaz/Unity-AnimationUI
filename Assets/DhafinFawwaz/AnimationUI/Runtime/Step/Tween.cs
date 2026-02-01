@@ -4,15 +4,18 @@ using System;
 namespace DhafinFawwaz.AnimationUI {
 
     /// <summary>
-    /// Class that will interpolate a value from From to To and apply it to a certain object property.
+    /// Base class for all tweens that interpolate a value from From to To over time.
     /// </summary>
-    /// <typeparam name="TComponent">Component target that will have its property interpolated</typeparam>
-    /// <typeparam name="UFrom">From value or component value</typeparam>
-    /// <typeparam name="VTo">To value or component value</typeparam>
-    /// <typeparam name="WInterpolationOutput">Interpolation function return type</typeparam>
+    /// <typeparam name="TComponent">The Unity component being animated (Transform, Image, etc.)</typeparam>
+    /// <typeparam name="UFrom">Type of the FROM value</typeparam>
+    /// <typeparam name="VTo">Type of the TO value (usually same as UFrom)</typeparam>
+    /// <typeparam name="WInterpolationOutput">Return type of the interpolation function (usually same as UFrom)</typeparam>
     [BGColor("#ff000015")]
     public abstract class Tween<TComponent, UFrom, VTo, WInterpolationOutput> : Step, ITweenable, IReverseSequenceHandler where TComponent : UnityEngine.Object
     {
+        /// <summary>
+        /// The component being animated.
+        /// </summary>
         public TComponent Target;
         public void SetTarget(UnityEngine.Object target) {
             Target = target as TComponent;
@@ -20,11 +23,32 @@ namespace DhafinFawwaz.AnimationUI {
         }
         public UnityEngine.Object GetTarget() => Target;
         
+        /// <summary>
+        /// Duration of the tween in seconds.
+        /// </summary>
         public float Duration = 0.5f;
         public float GetDuration() => Duration;
+        
+        /// <summary>
+        /// The easing function to use for interpolation.
+        /// </summary>
         public Ease EaseType = Ease.OutQuart;
+        
+        /// <summary>
+        /// The starting value for the animation.
+        /// </summary>
         public UFrom From;
+        
+        /// <summary>
+        /// The ending value for the animation.
+        /// </summary>
         public VTo To;
+        
+        /// <summary>
+        /// Applies the interpolated value to the target component.
+        /// Override this to define where/how the value is applied (e.g., Target.position = value).
+        /// </summary>
+        /// <param name="value">The interpolated value to apply</param>
         public abstract void ApplyInterpolation(WInterpolationOutput value);
         public void ApplyInterpolationSafe(WInterpolationOutput value) {
             if(Target == null) return;
@@ -66,7 +90,16 @@ namespace DhafinFawwaz.AnimationUI {
             SetToAsTargetValue();
         }
         
+        /// <summary>
+        /// Override this to capture the target's current value and set it as the FROM value.
+        /// Called when user clicks "Set From" button in inspector.
+        /// </summary>
         public virtual void SetFromAsTargetValue(){}
+        
+        /// <summary>
+        /// Override this to capture the target's current value and set it as the TO value.
+        /// Called when user clicks "Set To" button in inspector.
+        /// </summary>
         public virtual void SetToAsTargetValue(){}
 
         public void OnSequenceReversed() {
@@ -93,8 +126,20 @@ namespace DhafinFawwaz.AnimationUI {
         protected Tween() {
             _lerpFunction = InterpolationFunction;
         }
+        
+        /// <summary>
+        /// Override this to define the interpolation function.
+        /// Should return a Func that takes (from, to, normalizedTime) and returns the interpolated value.
+        /// </summary>
+        /// <example>
+        /// protected override Func&lt;Vector3, Vector3, float, Vector3&gt; InterpolationFunction => Vector3.LerpUnclamped;
+        /// </example>
         protected abstract Func<UFrom, VTo, float, WInterpolationOutput> InterpolationFunction {get;}
         
+        /// <summary>
+        /// Called when a target is assigned to this tween.
+        /// Default implementation calls SetFromAsTargetValue() and SetToAsTargetValue().
+        /// </summary>
         public virtual void OnTargetAssigned() {
             SetFromAsTargetValue();
             SetToAsTargetValue();

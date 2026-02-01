@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 namespace DhafinFawwaz.AnimationUI {
-    // Singleton
+    /// <summary>
+    /// Singleton MonoBehaviour that runs the update loop for all AnimationUI instances.
+    /// Automatically created and persists across scenes.
+    /// </summary>
     public class AnimationUIRunner : MonoBehaviour
     {
 
