@@ -615,6 +615,39 @@ namespace DhafinFawwaz.AnimationUI {
                 tweenable.SetToAsTargetValueSafe();
             }
         }
+
+        #region Static Tween API
+        
+        /// <summary>
+        /// Plays a single tween without needing to add an AnimationUI component.
+        /// Automatically creates a temporary GameObject, plays the tween, and cleans up when finished.
+        /// </summary>
+        /// <param name="tweenable">The tween to play</param>
+        /// <returns>The temporary AnimationUI instance (can be used to control playback)</returns>
+        public static AnimationUI PlayTween(ITweenable tweenable) {
+            GameObject go = new GameObject("TempTween");
+            AnimationUI aui = go.AddComponent<AnimationUI>();
+            
+            if(tweenable is Step step) {
+                aui.Add(step);
+            }
+            
+            DontDestroyOnLoad(go);
+            AnimationUIRunner.Instance.Tweenables += CheckAndCleanup;
+            
+            void CheckAndCleanup() {
+                if(aui == null || aui.IsNotPlaying) {
+                    AnimationUIRunner.Instance.Tweenables -= CheckAndCleanup;
+                    if(go != null) Destroy(go);
+                }
+            }
+            
+            aui.Play();
+            
+            return aui;
+        }
+        
+        #endregion
     }
 
 }
