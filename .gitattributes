@@ -68,21 +68,24 @@ Assets/TextMesh[[:space:]]Pro/** linguist-vendored
 *.pdf lfs-file
 
 # Image formats
-*.afdesign lfs-file
-*.afphoto lfs-file
-*.ai lfs-file
-*.bmp lfs-file
-*.dds lfs-file
-*.jpg lfs-file
-*.gif lfs-file
-*.iff lfs-file
-*.pict lfs-file
-*.png lfs-file
-*.psd lfs-file
-*.svg lfs-file
-*.tga lfs-file
-*.tiff lfs-file
-*.webp lfs-file
+# *.afdesign lfs-file
+# *.afphoto lfs-file
+# *.ai lfs-file
+# *.bmp lfs-file
+# *.dds lfs-file
+# *.jpg lfs-file
+# *.gif lfs-file
+# *.iff lfs-file
+# *.pict lfs-file
+# *.png lfs-file
+# *.psd lfs-file
+# *.svg lfs-file
+# *.tga lfs-file
+# *.tiff lfs-file
+# *.webp lfs-file
+*.png   -text
+*.jpg   -text
+*.jpeg  -text
 
 # Audio formats
 *.aif lfs-file
